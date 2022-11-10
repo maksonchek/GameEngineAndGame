@@ -1,4 +1,4 @@
 int main()
 {
-	std::cout << "Fuck you!" << std::endl;
+	std::cout << "Dungeun master, я буду поздно!" << std::endl;
 }
