@@ -1,0 +1,6 @@
+C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/build/CMakeFiles/GameEngineAndGame.dir
+C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/build/external/glfw/CMakeFiles/ALL_BUILD.dir
+C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/build/external/glfw/src/CMakeFiles/glfw.dir
+C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/build/external/glfw/src/CMakeFiles/update_mappings.dir
