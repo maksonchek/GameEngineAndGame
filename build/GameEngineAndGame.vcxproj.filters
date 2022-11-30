@@ -4,11 +4,22 @@
     <ClCompile Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\src\Renderer\ShaderManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\src\Renderer\ShaderManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{A2B81D1D-1B42-3D4F-90B0-E135BC7C6E96}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Source Files">
       <UniqueIdentifier>{8D9E05DF-9927-3DF2-9A16-2A6F7831E26F}</UniqueIdentifier>
     </Filter>

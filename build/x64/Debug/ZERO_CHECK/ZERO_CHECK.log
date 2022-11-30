@@ -1,0 +1,29 @@
+﻿  Checking Build System
+  CMake is re-running because C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/build/CMakeFiles/generate.stamp is out-of-date.
+    the file 'C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/CMakeLists.txt'
+    is newer than 'C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/build/CMakeFiles/generate.stamp.depend'
+    result='-1'
+  -- Selecting Windows SDK version 10.0.16299.0 to target Windows 10.0.19044.
+  CMake Error at CMakeLists.txt:6 (project):
+    The CMAKE_C_COMPILER:
+  
+      C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30037/bin/Hostx64/x64/cl.exe
+  
+    is not a full path to an existing compiler tool.
+  
+  
+  
+  CMake Error at CMakeLists.txt:6 (project):
+    The CMAKE_CXX_COMPILER:
+  
+      C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30037/bin/Hostx64/x64/cl.exe
+  
+    is not a full path to an existing compiler tool.
+  
+  
+  
+  -- Configuring incomplete, errors occurred!
+  See also "C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/build/CMakeFiles/CMakeOutput.log".
+  See also "C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/build/CMakeFiles/CMakeError.log".
+  CMake Configure step failed.  Build files cannot be regenerated correctly.  Attempting to stop IDE build.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets(241,5): error MSB8066: пользовательская сборка для "C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\CMakeFiles\1490f4799b1a4584c7bb2a4871f3893d\generate.stamp.rule" завершила работу с кодом 1.
