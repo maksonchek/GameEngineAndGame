@@ -170,9 +170,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\GameEngineAndGame.vcxproj">
-      <Project>{B0D272B4-A877-3A74-8A40-1D5DE1AD9EB1}</Project>
-      <Name>GameEngineAndGame</Name>
+    <ProjectReference Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\GameEngine.vcxproj">
+      <Project>{1D308DA6-C333-3D80-97E9-91A911847B44}</Project>
+      <Name>GameEngine</Name>
     </ProjectReference>
     <ProjectReference Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\external\glad\glad.vcxproj">
       <Project>{3410A9E9-23A2-3169-BE91-7A9F5F352230}</Project>
