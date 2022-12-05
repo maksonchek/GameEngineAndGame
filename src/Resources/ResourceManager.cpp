@@ -1,9 +1,13 @@
 #include "ResourceManager.h"
 #include "../Renderer/ShaderManager.h"
-
+#include "../Renderer/TextureManager.h"
 #include <sstream>
 #include <fstream>
 #include <iostream>
+
+#define STB_IMAGE_IMPLEMENTATION
+#define STBI_ONLY_PNG
+#include "stb_image.h";
 
 ResourceManager::ResourceManager(const std::string& exePath)
 {
@@ -49,6 +53,40 @@ std::shared_ptr<Renderer::ShaderManager> ResourceManager::GetShader(const std::s
 	}
 	std::cerr << "Не нашелся шейдер" << shaderName << std::endl;
 	return nullptr;
+}
+
+
+
+std::shared_ptr<Renderer::TextureManager> ResourceManager::GetTexture(const std::string& textureName)
+{
+	TexturesManagersMap_t::const_iterator iter = mapTexturesManager.find(textureName);
+	if (iter != mapTexturesManager.end())
+	{
+		return iter->second;
+	}
+	std::cerr << "Не нашлась текстура" << textureName << std::endl;
+	return nullptr;
+}
+
+std::shared_ptr<Renderer::TextureManager> ResourceManager::LoadTexture(const std::string& textureName, const std::string& texturePath)
+{
+	int colorChannels = 0;
+	int width = 0;
+	int height = 0;
+
+	stbi_set_flip_vertically_on_load(true);
+	unsigned char* pixels = stbi_load(std::string(resPath + "/" + texturePath).c_str(), &width, &height, &colorChannels, 0);
+	if (!pixels)
+	{
+		std::cerr << "Произошла ошибка при загрузке текстур" << std::endl;
+		return nullptr;
+	}
+
+	std::shared_ptr<Renderer::TextureManager> newTexture = mapTexturesManager.emplace(textureName, std::make_shared<Renderer::TextureManager>(width, height, pixels, colorChannels, GL_NEAREST, GL_CLAMP_TO_EDGE)).first->second;
+
+	stbi_image_free(pixels);
+
+	return newTexture;
 }
 
 std::string ResourceManager::GetTextFromFile(const std::string& relativeFilePath) const
