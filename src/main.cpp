@@ -7,7 +7,10 @@
 
 #include "Renderer/ShaderManager.h"
 #include "Renderer/TextureManager.h"
+<<<<<<< HEAD
 #include "Renderer/Sprite.h"
+=======
+>>>>>>> 6b4f5a3531bde0d598e6d6c8ed7e6ec3735fbb18
 #include "Resources/ResourceManager.h"
 
 GLfloat points[] =
@@ -86,6 +89,7 @@ int main(int argc, char** argv)
 
     ResourceManager resourceManager(argv[0]);
     auto pDefaultShaderProgram = resourceManager.LoadShaderManager("DefaultShader", "res/shaders/vertex.txt", "res/shaders/fragment.txt");
+<<<<<<< HEAD
     if (!pDefaultShaderProgram)
     {
         std::cerr << "Can't create shader program: " << "DefaultShader" << std::endl;
@@ -101,6 +105,10 @@ int main(int argc, char** argv)
 
     auto pSprite = resourceManager.LoadSprite("NewSprite", "DefaultTexture", "SpriteShader", 50, 100);
     pSprite->SetPosition(glm::vec2(300, 100));
+=======
+    
+    auto texture = resourceManager.LoadTexture("DefaultTexture", "res/textures/assets.png");
+>>>>>>> 6b4f5a3531bde0d598e6d6c8ed7e6ec3735fbb18
     //std::string vertexShader(vertex_shader);
     //std::string fragmentShader(fragment_shader);
 
@@ -149,11 +157,15 @@ int main(int argc, char** argv)
      
     glm::mat4 projectionMatrix = glm::ortho(0.f, (float)windowSize.x, 0.f, (float)windowSize.y, -1.f, 1.f);
 
+<<<<<<< HEAD
     pSpriteShaderProgram->SetMatrix4x4("projectionMat", projectionMatrix);
     pSpriteShaderProgram->UseShader();
     pSpriteShaderProgram->SetInt("textures", 0);
 
     pSpriteShaderProgram->SetMatrix4x4("projectionMat", projectionMatrix);
+=======
+    pDefaultShaderProgram->SetMatrix4x4("projectionMat", projectionMatrix);
+>>>>>>> 6b4f5a3531bde0d598e6d6c8ed7e6ec3735fbb18
 
     while (!glfwWindowShouldClose(pWindow))
     {
@@ -162,8 +174,16 @@ int main(int argc, char** argv)
         pDefaultShaderProgram->UseShader();
         glBindVertexArray(vao);
         texture->Bind();
+<<<<<<< HEAD
         
         pDefaultShaderProgram->SetMatrix4x4("modelMat", modelMatrix1);
+=======
+
+        pDefaultShaderProgram->SetMatrix4x4("modelMat", modelMatrix1);
+        glDrawArrays(GL_TRIANGLES, 0, 3);
+
+        pDefaultShaderProgram->SetMatrix4x4("modelMat", modelMatrix2);
+>>>>>>> 6b4f5a3531bde0d598e6d6c8ed7e6ec3735fbb18
         glDrawArrays(GL_TRIANGLES, 0, 3);
 
         pDefaultShaderProgram->SetMatrix4x4("modelMat", modelMatrix2);

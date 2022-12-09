@@ -90,6 +90,7 @@ std::shared_ptr<Renderer::TextureManager> ResourceManager::LoadTexture(const std
 	return newTexture;
 }
 
+<<<<<<< HEAD
 std::shared_ptr<Renderer::Sprite> ResourceManager::LoadSprite(const std::string& spriteName, const std::string& textureName, const std::string& shaderName, const unsigned int spriteWidth, const int spriteHeight)
 {
 	auto pTexture = GetTexture(textureName);
@@ -120,6 +121,8 @@ std::shared_ptr<Renderer::Sprite> ResourceManager::GetSprite(const std::string& 
 	return nullptr;
 }
 
+=======
+>>>>>>> 6b4f5a3531bde0d598e6d6c8ed7e6ec3735fbb18
 std::string ResourceManager::GetTextFromFile(const std::string& relativeFilePath) const
 {
 	std::ifstream f;

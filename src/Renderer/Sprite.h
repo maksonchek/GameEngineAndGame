@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #pragma once
+=======
+#pragma.once
+>>>>>>> 6b4f5a3531bde0d598e6d6c8ed7e6ec3735fbb18
 
 #include <glad/glad.h>
 #include <memory>
@@ -27,9 +31,15 @@ namespace Renderer
 	private:
 		std::shared_ptr<TextureManager> pTexture;
 		std::shared_ptr<ShaderManager> pShader;
+<<<<<<< HEAD
 		glm::vec2 this_size;
 		glm::vec2 this_position;
 		float this_rotation;
+=======
+		glm::vec2 size;
+		glm::vec2 position;
+		float rotation;
+>>>>>>> 6b4f5a3531bde0d598e6d6c8ed7e6ec3735fbb18
 		GLuint VAO;
 		GLuint vetrexCoordsVBO;
 		GLuint textureCoordsVBO;
