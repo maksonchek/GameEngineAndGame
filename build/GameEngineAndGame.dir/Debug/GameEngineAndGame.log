@@ -1,5 +1,0 @@
-﻿  ShaderManager.cpp
-C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\src\Renderer\ShaderManager.cpp(69,2): error C2084: функция "void Renderer::ShaderManager::UseShader(void) const" уже имеет текст реализации
-C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\src\Renderer\ShaderManager.h(18): message : см. предыдущее определение "UseShader"
-  main.cpp
-  Создание кода...

@@ -86,7 +86,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glfw\include;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glfw\include;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glm\glm\..;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -101,10 +101,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glfw\include;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glfw\include;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glm\glm\..;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glfw\include;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glfw\include;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glm\glm\..;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -139,7 +139,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glfw\include;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glfw\include;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glm\glm\..;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
@@ -154,10 +154,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glfw\include;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glfw\include;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glm\glm\..;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glfw\include;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glfw\include;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glm\glm\..;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -192,7 +192,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glfw\include;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glfw\include;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glm\glm\..;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
@@ -207,10 +207,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glfw\include;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glfw\include;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glm\glm\..;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glfw\include;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glfw\include;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glm\glm\..;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -245,7 +245,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glfw\include;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glfw\include;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glm\glm\..;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -259,10 +259,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glfw\include;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glfw\include;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glm\glm\..;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glfw\include;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glfw\include;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glm\glm\..;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -361,6 +361,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\src\Resources\stb_image.h" />
     <ClCompile Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\src\Renderer\TextureManager.cpp" />
     <ClInclude Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\src\Renderer\TextureManager.h" />
+    <ClInclude Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\src\Renderer\Sprite.h" />
+    <ClCompile Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\src\Renderer\Sprite.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\ZERO_CHECK.vcxproj">

@@ -1,5 +1,3 @@
 ﻿  ResourceManager.cpp
-C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\src\Resources\ResourceManager.cpp(10,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
-  main.cpp
-  Создание кода...
+C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\src\Resources\ResourceManager.cpp(11,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
   GameEngine.vcxproj -> C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\bin\Debug\GameEngine.exe
