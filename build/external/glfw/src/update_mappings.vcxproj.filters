@@ -1,24 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\CMakeFiles\f976ea5ee9c6fdee5e486ecbd8eaee7b\update_mappings.rule">
+    <CustomBuild Include="C:\Users\Maksim\Desktop\1\build1\build\CMakeFiles\9017dacabe8b30409663684d9f479636\update_mappings.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glfw\src\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\Maksim\Desktop\1\build1\external\glfw\src\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glfw\src\mappings.h.in">
+    <None Include="C:\Users\Maksim\Desktop\1\build1\external\glfw\src\mappings.h.in">
       <Filter>Header Files</Filter>
     </None>
-    <None Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glfw\CMake\GenerateMappings.cmake" />
-    <None Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\external\glfw\src\CMakeFiles\update_mappings" />
+    <None Include="C:\Users\Maksim\Desktop\1\build1\external\glfw\CMake\GenerateMappings.cmake" />
+    <None Include="C:\Users\Maksim\Desktop\1\build1\build\external\glfw\src\CMakeFiles\update_mappings" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{90BC4527-6238-35DF-80F6-3FF0B9008B7F}</UniqueIdentifier>
+      <UniqueIdentifier>{3B427640-7812-38F8-8F50-0FB8835B236A}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{A2B81D1D-1B42-3D4F-90B0-E135BC7C6E96}</UniqueIdentifier>
+      <UniqueIdentifier>{B2114EA5-E907-3B04-A919-3E2F962627D2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

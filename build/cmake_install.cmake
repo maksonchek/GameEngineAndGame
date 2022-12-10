@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame
+# Install script for directory: C:/Users/Maksim/Desktop/1/build1
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/GameEngine")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/BattleCity")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,17 +34,17 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/build/external/glfw/cmake_install.cmake")
+  include("C:/Users/Maksim/Desktop/1/build1/build/external/glfw/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/build/external/glm/cmake_install.cmake")
+  include("C:/Users/Maksim/Desktop/1/build1/build/external/glm/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/build/external/glad/cmake_install.cmake")
+  include("C:/Users/Maksim/Desktop/1/build1/build/external/glad/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -55,5 +55,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/Maksim/Desktop/1/build1/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

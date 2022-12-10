@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/external/glfw/src
+# Install script for directory: C:/Users/Maksim/Desktop/1/build1/external/glfw/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/GameEngine")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/BattleCity")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

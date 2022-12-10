@@ -1,6 +1,6 @@
-^C:\USERS\MAKSIM\DESKTOP\2COURSE1SEMESTR\C++\COURSACH\GAMEENGINEANDGAME\EXTERNAL\GLAD\CMAKELISTS.TXT
+^C:\USERS\MAKSIM\DESKTOP\1\BUILD1\EXTERNAL\GLAD\CMAKELISTS.TXT
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame -BC:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/build --check-stamp-file C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/build/external/glad/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Maksim/Desktop/1/build1 -BC:/Users/Maksim/Desktop/1/build1/build --check-stamp-file C:/Users/Maksim/Desktop/1/build1/build/external/glad/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

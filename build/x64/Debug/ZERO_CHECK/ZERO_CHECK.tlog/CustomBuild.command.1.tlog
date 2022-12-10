@@ -1,6 +1,6 @@
-^C:\USERS\MAKSIM\DESKTOP\2COURSE1SEMESTR\C++\COURSACH\GAMEENGINEANDGAME\BUILD\CMAKEFILES\1490F4799B1A4584C7BB2A4871F3893D\GENERATE.STAMP.RULE
+^C:\USERS\MAKSIM\DESKTOP\1\BUILD1\BUILD\CMAKEFILES\4CC8A7D6972539A8181379C7AA23BD44\GENERATE.STAMP.RULE
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame -BC:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/build/GameEngine.sln
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Maksim/Desktop/1/build1 -BC:/Users/Maksim/Desktop/1/build1/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Maksim/Desktop/1/build1/build/GameEngine.sln
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

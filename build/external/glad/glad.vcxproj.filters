@@ -1,24 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glad\src\glad.c">
+    <ClCompile Include="C:\Users\Maksim\Desktop\1\build1\external\glad\src\glad.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glad\include\glad\glad.h">
+    <ClInclude Include="C:\Users\Maksim\Desktop\1\build1\external\glad\include\glad\glad.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glad\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\Maksim\Desktop\1\build1\external\glad\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{A2B81D1D-1B42-3D4F-90B0-E135BC7C6E96}</UniqueIdentifier>
+      <UniqueIdentifier>{B2114EA5-E907-3B04-A919-3E2F962627D2}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{8D9E05DF-9927-3DF2-9A16-2A6F7831E26F}</UniqueIdentifier>
+      <UniqueIdentifier>{CACA6F9D-43E9-393E-BE0D-2ECA4FF6EF36}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
