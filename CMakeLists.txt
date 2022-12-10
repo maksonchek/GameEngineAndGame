@@ -14,6 +14,8 @@ add_executable(${PROJECT_NAME}
 	src/Renderer/TextureManager.h
 	src/Renderer/Sprite.h
 	src/Renderer/Sprite.cpp
+	src/Renderer/SpriteAnimator.h
+	src/Renderer/SpriteAnimator.cpp
 )
 
 

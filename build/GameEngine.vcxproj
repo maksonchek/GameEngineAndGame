@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{C08AC33F-9B43-3095-8AA6-5F0083A5B183}</ProjectGuid>
+    <ProjectGuid>{1D308DA6-C333-3D80-97E9-91A911847B44}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>x64</Platform>
@@ -59,25 +59,25 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Maksim\Desktop\1\build1\build\bin\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\bin\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">GameEngine.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">GameEngine</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Maksim\Desktop\1\build1\build\bin\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\bin\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">GameEngine.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">GameEngine</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Maksim\Desktop\1\build1\build\bin\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\bin\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">GameEngine.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">GameEngine</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Maksim\Desktop\1\build1\build\bin\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\bin\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">GameEngine.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">GameEngine</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
@@ -86,7 +86,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\1\build1\external\glfw\include;C:\Users\Maksim\Desktop\1\build1\external\glm;C:\Users\Maksim\Desktop\1\build1\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glfw\include;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glm;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -95,18 +95,16 @@
       <Optimization>Disabled</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
-      <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
-      <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\1\build1\external\glfw\include;C:\Users\Maksim\Desktop\1\build1\external\glm;C:\Users\Maksim\Desktop\1\build1\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glfw\include;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glm;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\1\build1\external\glfw\include;C:\Users\Maksim\Desktop\1\build1\external\glm;C:\Users\Maksim\Desktop\1\build1\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glfw\include;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glm;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -116,7 +114,7 @@
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory C:/Users/Maksim/Desktop/1/build1/res C:/Users/Maksim/Desktop/1/build1/build/bin/Debug/res
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/res C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/build/bin/Debug/res
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -131,8 +129,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/Maksim/Desktop/1/build1/build/Debug/GameEngine.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/Maksim/Desktop/1/build1/build/bin/Debug/GameEngine.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/build/Debug/GameEngine.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/build/bin/Debug/GameEngine.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -141,16 +139,14 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\1\build1\external\glfw\include;C:\Users\Maksim\Desktop\1\build1\external\glm;C:\Users\Maksim\Desktop\1\build1\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glfw\include;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glm;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <Optimization>MaxSpeed</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
-      <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
@@ -158,10 +154,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\1\build1\external\glfw\include;C:\Users\Maksim\Desktop\1\build1\external\glm;C:\Users\Maksim\Desktop\1\build1\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glfw\include;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glm;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\1\build1\external\glfw\include;C:\Users\Maksim\Desktop\1\build1\external\glm;C:\Users\Maksim\Desktop\1\build1\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glfw\include;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glm;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -171,7 +167,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory C:/Users/Maksim/Desktop/1/build1/res C:/Users/Maksim/Desktop/1/build1/build/bin/Release/res
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/res C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/build/bin/Release/res
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -186,8 +182,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/Maksim/Desktop/1/build1/build/Release/GameEngine.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/Maksim/Desktop/1/build1/build/bin/Release/GameEngine.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/build/Release/GameEngine.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/build/bin/Release/GameEngine.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -196,16 +192,14 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\1\build1\external\glfw\include;C:\Users\Maksim\Desktop\1\build1\external\glm;C:\Users\Maksim\Desktop\1\build1\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glfw\include;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glm;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
       <Optimization>MinSpace</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
-      <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
@@ -213,10 +207,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\1\build1\external\glfw\include;C:\Users\Maksim\Desktop\1\build1\external\glm;C:\Users\Maksim\Desktop\1\build1\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glfw\include;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glm;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\1\build1\external\glfw\include;C:\Users\Maksim\Desktop\1\build1\external\glm;C:\Users\Maksim\Desktop\1\build1\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glfw\include;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glm;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -226,7 +220,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory C:/Users/Maksim/Desktop/1/build1/res C:/Users/Maksim/Desktop/1/build1/build/bin/MinSizeRel/res
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/res C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/build/bin/MinSizeRel/res
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -241,8 +235,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/Maksim/Desktop/1/build1/build/MinSizeRel/GameEngine.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/Maksim/Desktop/1/build1/build/bin/MinSizeRel/GameEngine.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/build/MinSizeRel/GameEngine.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/build/bin/MinSizeRel/GameEngine.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -251,7 +245,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\1\build1\external\glfw\include;C:\Users\Maksim\Desktop\1\build1\external\glm;C:\Users\Maksim\Desktop\1\build1\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glfw\include;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glm;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -259,18 +253,16 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Optimization>MaxSpeed</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
-      <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\1\build1\external\glfw\include;C:\Users\Maksim\Desktop\1\build1\external\glm;C:\Users\Maksim\Desktop\1\build1\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glfw\include;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glm;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\1\build1\external\glfw\include;C:\Users\Maksim\Desktop\1\build1\external\glm;C:\Users\Maksim\Desktop\1\build1\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glfw\include;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glm;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -280,7 +272,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory C:/Users/Maksim/Desktop/1/build1/res C:/Users/Maksim/Desktop/1/build1/build/bin/RelWithDebInfo/res
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/res C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/build/bin/RelWithDebInfo/res
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -295,8 +287,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/Maksim/Desktop/1/build1/build/RelWithDebInfo/GameEngine.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/Maksim/Desktop/1/build1/build/bin/RelWithDebInfo/GameEngine.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/build/RelWithDebInfo/GameEngine.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/build/bin/RelWithDebInfo/GameEngine.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -304,11 +296,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Maksim\Desktop\1\build1\CMakeLists.txt">
+    <CustomBuild Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Maksim/Desktop/1/build1/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Maksim/Desktop/1/build1 -BC:/Users/Maksim/Desktop/1/build1/build --check-stamp-file C:/Users/Maksim/Desktop/1/build1/build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame -BC:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/build --check-stamp-file C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -316,12 +308,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\WindowsPaths.cmake;C:\Users\Maksim\Desktop\1\build1\build\CMakeFiles\3.22.2\CMakeCCompiler.cmake;C:\Users\Maksim\Desktop\1\build1\build\CMakeFiles\3.22.2\CMakeCXXCompiler.cmake;C:\Users\Maksim\Desktop\1\build1\build\CMakeFiles\3.22.2\CMakeRCCompiler.cmake;C:\Users\Maksim\Desktop\1\build1\build\CMakeFiles\3.22.2\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Maksim\Desktop\1\build1\build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\WindowsPaths.cmake;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\CMakeFiles\3.22.2\CMakeCCompiler.cmake;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\CMakeFiles\3.22.2\CMakeCXXCompiler.cmake;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\CMakeFiles\3.22.2\CMakeRCCompiler.cmake;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\CMakeFiles\3.22.2\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Maksim/Desktop/1/build1/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Maksim/Desktop/1/build1 -BC:/Users/Maksim/Desktop/1/build1/build --check-stamp-file C:/Users/Maksim/Desktop/1/build1/build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame -BC:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/build --check-stamp-file C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -329,12 +321,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\WindowsPaths.cmake;C:\Users\Maksim\Desktop\1\build1\build\CMakeFiles\3.22.2\CMakeCCompiler.cmake;C:\Users\Maksim\Desktop\1\build1\build\CMakeFiles\3.22.2\CMakeCXXCompiler.cmake;C:\Users\Maksim\Desktop\1\build1\build\CMakeFiles\3.22.2\CMakeRCCompiler.cmake;C:\Users\Maksim\Desktop\1\build1\build\CMakeFiles\3.22.2\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Maksim\Desktop\1\build1\build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\WindowsPaths.cmake;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\CMakeFiles\3.22.2\CMakeCCompiler.cmake;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\CMakeFiles\3.22.2\CMakeCXXCompiler.cmake;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\CMakeFiles\3.22.2\CMakeRCCompiler.cmake;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\CMakeFiles\3.22.2\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/Maksim/Desktop/1/build1/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Maksim/Desktop/1/build1 -BC:/Users/Maksim/Desktop/1/build1/build --check-stamp-file C:/Users/Maksim/Desktop/1/build1/build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame -BC:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/build --check-stamp-file C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -342,12 +334,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\WindowsPaths.cmake;C:\Users\Maksim\Desktop\1\build1\build\CMakeFiles\3.22.2\CMakeCCompiler.cmake;C:\Users\Maksim\Desktop\1\build1\build\CMakeFiles\3.22.2\CMakeCXXCompiler.cmake;C:\Users\Maksim\Desktop\1\build1\build\CMakeFiles\3.22.2\CMakeRCCompiler.cmake;C:\Users\Maksim\Desktop\1\build1\build\CMakeFiles\3.22.2\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Maksim\Desktop\1\build1\build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\WindowsPaths.cmake;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\CMakeFiles\3.22.2\CMakeCCompiler.cmake;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\CMakeFiles\3.22.2\CMakeCXXCompiler.cmake;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\CMakeFiles\3.22.2\CMakeRCCompiler.cmake;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\CMakeFiles\3.22.2\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/Maksim/Desktop/1/build1/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Maksim/Desktop/1/build1 -BC:/Users/Maksim/Desktop/1/build1/build --check-stamp-file C:/Users/Maksim/Desktop/1/build1/build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame -BC:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/build --check-stamp-file C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -355,36 +347,38 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\WindowsPaths.cmake;C:\Users\Maksim\Desktop\1\build1\build\CMakeFiles\3.22.2\CMakeCCompiler.cmake;C:\Users\Maksim\Desktop\1\build1\build\CMakeFiles\3.22.2\CMakeCXXCompiler.cmake;C:\Users\Maksim\Desktop\1\build1\build\CMakeFiles\3.22.2\CMakeRCCompiler.cmake;C:\Users\Maksim\Desktop\1\build1\build\CMakeFiles\3.22.2\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Maksim\Desktop\1\build1\build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\WindowsPaths.cmake;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\CMakeFiles\3.22.2\CMakeCCompiler.cmake;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\CMakeFiles\3.22.2\CMakeCXXCompiler.cmake;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\CMakeFiles\3.22.2\CMakeRCCompiler.cmake;C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\CMakeFiles\3.22.2\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\Maksim\Desktop\1\build1\src\main.cpp" />
-    <ClCompile Include="C:\Users\Maksim\Desktop\1\build1\src\Renderer\ShaderManager.cpp" />
-    <ClInclude Include="C:\Users\Maksim\Desktop\1\build1\src\Renderer\ShaderManager.h" />
-    <ClCompile Include="C:\Users\Maksim\Desktop\1\build1\src\Resources\ResourceManager.cpp" />
-    <ClInclude Include="C:\Users\Maksim\Desktop\1\build1\src\Resources\ResourceManager.h" />
-    <ClInclude Include="C:\Users\Maksim\Desktop\1\build1\src\Resources\stb_image.h" />
-    <ClCompile Include="C:\Users\Maksim\Desktop\1\build1\src\Renderer\TextureManager.cpp" />
-    <ClInclude Include="C:\Users\Maksim\Desktop\1\build1\src\Renderer\TextureManager.h" />
-    <ClInclude Include="C:\Users\Maksim\Desktop\1\build1\src\Renderer\Sprite.h" />
-    <ClCompile Include="C:\Users\Maksim\Desktop\1\build1\src\Renderer\Sprite.cpp" />
+    <ClCompile Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\src\main.cpp" />
+    <ClCompile Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\src\Renderer\ShaderManager.cpp" />
+    <ClInclude Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\src\Renderer\ShaderManager.h" />
+    <ClCompile Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\src\Resources\ResourceManager.cpp" />
+    <ClInclude Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\src\Resources\ResourceManager.h" />
+    <ClInclude Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\src\Resources\stb_image.h" />
+    <ClCompile Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\src\Renderer\TextureManager.cpp" />
+    <ClInclude Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\src\Renderer\TextureManager.h" />
+    <ClInclude Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\src\Renderer\Sprite.h" />
+    <ClCompile Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\src\Renderer\Sprite.cpp" />
+    <ClInclude Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\src\Renderer\SpriteAnimator.h" />
+    <ClCompile Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\src\Renderer\SpriteAnimator.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Users\Maksim\Desktop\1\build1\build\ZERO_CHECK.vcxproj">
-      <Project>{428705C3-802C-3AA2-9203-FF29A8CFDC0F}</Project>
+    <ProjectReference Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\ZERO_CHECK.vcxproj">
+      <Project>{96C5A289-58E8-38F1-A664-DBF538D6B217}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Maksim\Desktop\1\build1\build\external\glad\glad.vcxproj">
-      <Project>{1FBCBB9A-C59D-313C-B7E8-A5E8F65D0FDE}</Project>
+    <ProjectReference Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\external\glad\glad.vcxproj">
+      <Project>{3410A9E9-23A2-3169-BE91-7A9F5F352230}</Project>
       <Name>glad</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Maksim\Desktop\1\build1\build\external\glfw\src\glfw.vcxproj">
-      <Project>{35FAB6D6-0913-314B-8B5B-41067806EC7B}</Project>
+    <ProjectReference Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\external\glfw\src\glfw.vcxproj">
+      <Project>{009E6B88-934D-39D0-865A-18C7E70EE87E}</Project>
       <Name>glfw</Name>
     </ProjectReference>
   </ItemGroup>

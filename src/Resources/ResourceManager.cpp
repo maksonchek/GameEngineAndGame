@@ -2,6 +2,7 @@
 #include "../Renderer/ShaderManager.h"
 #include "../Renderer/TextureManager.h"
 #include "../Renderer/Sprite.h"
+#include "../Renderer/SpriteAnimator.h"
 
 #include <sstream>
 #include <fstream>
@@ -102,10 +103,47 @@ std::shared_ptr<Renderer::Sprite> ResourceManager::LoadSprite(const std::string&
 
 std::shared_ptr<Renderer::Sprite> ResourceManager::GetSprite(const std::string& spriteName)
 {
-    mapSprite::const_iterator it = sprites.find(spriteName);
-    if (it != sprites.end())
+    mapSprite::const_iterator iter = sprites.find(spriteName);
+    if (iter != sprites.end())
     {
-        return it->second;
+        return iter->second;
+    }
+    std::cerr << "Can't find the sprite: " << spriteName << std::endl;
+    return nullptr;
+}
+
+std::shared_ptr<Renderer::SpriteAnimator> ResourceManager::LoadSpriteAnimator(const std::string& spriteName,
+                                                                                const std::string& textureName, const std::string& shaderName, 
+                                                                                  const unsigned int spriteWidth, const unsigned int spriteHeight, 
+                                                                                    const std::string& titleName)
+{
+    auto pTexture = GetTextureManager(textureName);
+    if (!pTexture)
+    {
+        std::cerr << "Can't find the texture: " << textureName << " for the sprite: " << spriteName << std::endl;
+    }
+
+    auto pShader = GetShaderManager(shaderName);
+    if (!pShader)
+    {
+        std::cerr << "Can't find the shader: " << shaderName << " for the sprite: " << spriteName << std::endl;
+    }
+
+    std::shared_ptr<Renderer::SpriteAnimator> newSprite = animateSprites.emplace(textureName, std::make_shared<Renderer::SpriteAnimator>(pTexture,
+        titleName,
+        pShader,
+        glm::vec2(0.f, 0.f),
+        glm::vec2(spriteWidth, spriteHeight))).first->second;
+
+    return newSprite;
+}
+
+std::shared_ptr<Renderer::SpriteAnimator> ResourceManager::GetSpriteAnimator(const std::string& spriteName)
+{
+    mapSpriteAnimators::const_iterator iter = animateSprites.find(spriteName);
+    if (iter != animateSprites.end())
+    {
+        return iter->second;
     }
     std::cerr << "Can't find the sprite: " << spriteName << std::endl;
     return nullptr;
@@ -147,9 +185,9 @@ std::shared_ptr<Renderer::TextureManager> ResourceManager::LoadTexture(const std
     return newTexture;
 }
 
-std::shared_ptr<Renderer::TextureManager> ResourceManager::LoatTextureAtlas(const std::string textureName,
-                                                                              const std::string texturePath,
-                                                                                 const std::vector<std::string> tilesNames,
+std::shared_ptr<Renderer::TextureManager> ResourceManager::LoatTextureAtlas(std::string textureName,
+                                                                              std::string texturePath,
+                                                                                 std::vector<std::string> tilesNames,
                                                                                     const unsigned int tileWidth,
                                                                                        const unsigned int tileHeight) {
     auto pTexture = LoadTexture(std::move(textureName), std::move(texturePath));
@@ -159,7 +197,7 @@ std::shared_ptr<Renderer::TextureManager> ResourceManager::LoatTextureAtlas(cons
         const unsigned int textureHeight = pTexture->GetHeight();
         unsigned int currentTextureOffsetX = 0;
         unsigned int currentTextureOffsetY = textureHeight;
-        for (const auto& currentTileName : tilesNames)
+        for (auto& currentTileName : tilesNames)
         {
             glm::vec2 leftBottom(static_cast<float>(currentTextureOffsetX) / textureWidth, static_cast<float>(currentTextureOffsetY - tileHeight) / textureHeight);
             glm::vec2 rightTop(static_cast<float>(currentTextureOffsetX + tileWidth) / textureWidth, static_cast<float>(currentTextureOffsetY) / textureHeight);

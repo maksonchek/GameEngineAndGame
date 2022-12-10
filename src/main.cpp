@@ -5,11 +5,13 @@
 #include <glm/gtc/matrix_transform.hpp>
 
 #include <iostream>
+#include<chrono>
 
 #include "Renderer/ShaderManager.h"
 #include "Resources/ResourceManager.h"
 #include "Renderer/TextureManager.h"
 #include "Renderer/Sprite.h"
+#include "Renderer/SpriteAnimator.h"
 
 GLfloat point[] = {
      0.0f,  50.f, 0.0f,
@@ -101,11 +103,57 @@ int main(int argc, char** argv)
 
         auto tex = resourceManager.LoadTexture("DefaultTexture", "res/textures/assets.png");
 
-        std::vector<std::string> tilesNames = { "block", "topBlock", "bottomBlock", "leftBlock", "rightBlock", "topLeftBlock", "topRightBlock", "bottomLeftBlock", "bottomRightBlock", "beton" };
+        std::vector<std::string> tilesNames = 
+        { 
+            "block",
+            "topBlock",
+            "bottomBlock",
+            "leftBlock",
+            "rightBlock",
+            "topLeftBlock",
+            "topRightBlock",
+            "bottomLeftBlock",
+
+            "bottomRightBlock",
+            "beton",
+            "topBeton",
+            "bottomBeton",
+            "leftBeton",
+            "rightBeton",
+            "topLeftBeton",
+            "topRightBeton",
+
+            "bottomLeftBeton",
+            "bottomRightBeton",
+            "water1",
+            "water2",
+            "water3",
+            "trees",
+            "ice",
+            "wall",
+
+            "eagle",
+            "deadEagle",
+            "nothing",
+            "respawn1",
+            "respawn2",
+            "respawn3",
+            "respawn4"
+        };
         auto pTextureAtlas = resourceManager.LoatTextureAtlas("DefaultTextureAtlas", "res/textures/assets.png", std::move(tilesNames), 16, 16);
 
         auto pSprite = resourceManager.LoadSprite("NewSprite", "DefaultTextureAtlas", "SpriteShader", 50, 50, "bottomRightBlock");
         pSprite->SetPosition(glm::vec2(0, 0));
+
+        auto pSpriteAnimator = resourceManager.LoadSpriteAnimator("NewSpriteAnimator", "DefaultTextureAtlas", "SpriteShader", 50, 50, "bottomRightBlock");
+        pSpriteAnimator->SetPosition(glm::vec2(300, 300));
+        std::vector<std::pair<std::string, uint64_t>> spriteState;
+        spriteState.emplace_back(std::make_pair<std::string, uint64_t>("water1", 1000000000));
+        spriteState.emplace_back(std::make_pair<std::string, uint64_t>("water2", 1000000000));
+        spriteState.emplace_back(std::make_pair<std::string, uint64_t>("water3", 1000000000));
+
+        pSpriteAnimator->InsertState("spriteState", std::move(spriteState));
+        pSpriteAnimator->SetState("spriteState");
 
         GLuint pointsVBO = 0;
         glGenBuffers(1, &pointsVBO);
@@ -155,10 +203,16 @@ int main(int argc, char** argv)
         pSpriteShaderProgram->SetInt("textures", 0);
         pSpriteShaderProgram->SetMatrix4x4("projectionMat", projectionMatrix);
 
+        auto lastTime = std::chrono::high_resolution_clock::now();
         //int i = 0;
         /* Игровой цикл */
         while (!glfwWindowShouldClose(pWindow))
         {
+            auto currentTime = std::chrono::high_resolution_clock::now();
+            uint64_t timeDuration = std::chrono::duration_cast<std::chrono::nanoseconds>(currentTime - lastTime).count();
+            lastTime = currentTime;
+            pSpriteAnimator->UpdateFrame(timeDuration);
+
             /* Покадровая отрисовка */
             glClear(GL_COLOR_BUFFER_BIT);
 
@@ -174,7 +228,7 @@ int main(int argc, char** argv)
             //i++;
             //pSprite->SetPosition(glm::vec2(i/1000, i/1000));
             pSprite->Render();
-
+            pSpriteAnimator->Render();
             glfwSwapBuffers(pWindow);
 
             glfwPollEvents();

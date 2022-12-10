@@ -9,8 +9,8 @@ The output was:
 Microsoft (R) Build Engine версии 16.11.2+f32259642 для .NET Framework
 (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
 
-Сборка начата 09.12.2022 21:20:19.
-Проект "C:\Users\Maksim\Desktop\1\build1\build\CMakeFiles\3.22.2\CompilerIdC\CompilerIdC.vcxproj" в узле 1 (целевые объекты по умолчанию).
+Сборка начата 10.12.2022 14:39:04.
+Проект "C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\CMakeFiles\3.22.2\CompilerIdC\CompilerIdC.vcxproj" в узле 1 (целевые объекты по умолчанию).
 PrepareForBuild:
   Создание каталога "Debug\".
   Создание каталога "Debug\CompilerIdC.tlog\".
@@ -21,7 +21,7 @@ ClCompile:
   CMakeCCompilerId.c
 Link:
   C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX64\x64\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdC.lib" /MACHINE:X64 Debug\CMakeCCompilerId.obj
-  CompilerIdC.vcxproj -> C:\Users\Maksim\Desktop\1\build1\build\CMakeFiles\3.22.2\CompilerIdC\CompilerIdC.exe
+  CompilerIdC.vcxproj -> C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\CMakeFiles\3.22.2\CompilerIdC\CompilerIdC.exe
 PostBuildEvent:
   for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
   :VCEnd
@@ -29,20 +29,20 @@ PostBuildEvent:
 FinalizeBuildStatus:
   Файл "Debug\CompilerIdC.tlog\unsuccessfulbuild" удаляется.
   Обращение к "Debug\CompilerIdC.tlog\CompilerIdC.lastbuildstate".
-Сборка проекта "C:\Users\Maksim\Desktop\1\build1\build\CMakeFiles\3.22.2\CompilerIdC\CompilerIdC.vcxproj" завершена (целевые объекты по умолчанию).
+Сборка проекта "C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\CMakeFiles\3.22.2\CompilerIdC\CompilerIdC.vcxproj" завершена (целевые объекты по умолчанию).
 
 Сборка успешно завершена.
     Предупреждений: 0
     Ошибок: 0
 
-Прошло времени 00:00:00.84
+Прошло времени 00:00:00.72
 
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
 
-The C compiler identification is MSVC, found in "C:/Users/Maksim/Desktop/1/build1/build/CMakeFiles/3.22.2/CompilerIdC/CompilerIdC.exe"
+The C compiler identification is MSVC, found in "C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/build/CMakeFiles/3.22.2/CompilerIdC/CompilerIdC.exe"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler:  
@@ -54,8 +54,8 @@ The output was:
 Microsoft (R) Build Engine версии 16.11.2+f32259642 для .NET Framework
 (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
 
-Сборка начата 09.12.2022 21:20:20.
-Проект "C:\Users\Maksim\Desktop\1\build1\build\CMakeFiles\3.22.2\CompilerIdCXX\CompilerIdCXX.vcxproj" в узле 1 (целевые объекты по умолчанию).
+Сборка начата 10.12.2022 14:39:05.
+Проект "C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\CMakeFiles\3.22.2\CompilerIdCXX\CompilerIdCXX.vcxproj" в узле 1 (целевые объекты по умолчанию).
 PrepareForBuild:
   Создание каталога "Debug\".
   Создание каталога "Debug\CompilerIdCXX.tlog\".
@@ -66,7 +66,7 @@ ClCompile:
   CMakeCXXCompilerId.cpp
 Link:
   C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX64\x64\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdCXX.lib" /MACHINE:X64 Debug\CMakeCXXCompilerId.obj
-  CompilerIdCXX.vcxproj -> C:\Users\Maksim\Desktop\1\build1\build\CMakeFiles\3.22.2\CompilerIdCXX\CompilerIdCXX.exe
+  CompilerIdCXX.vcxproj -> C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\CMakeFiles\3.22.2\CompilerIdCXX\CompilerIdCXX.exe
 PostBuildEvent:
   for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
   :VCEnd
@@ -74,46 +74,46 @@ PostBuildEvent:
 FinalizeBuildStatus:
   Файл "Debug\CompilerIdCXX.tlog\unsuccessfulbuild" удаляется.
   Обращение к "Debug\CompilerIdCXX.tlog\CompilerIdCXX.lastbuildstate".
-Сборка проекта "C:\Users\Maksim\Desktop\1\build1\build\CMakeFiles\3.22.2\CompilerIdCXX\CompilerIdCXX.vcxproj" завершена (целевые объекты по умолчанию).
+Сборка проекта "C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\CMakeFiles\3.22.2\CompilerIdCXX\CompilerIdCXX.vcxproj" завершена (целевые объекты по умолчанию).
 
 Сборка успешно завершена.
     Предупреждений: 0
     Ошибок: 0
 
-Прошло времени 00:00:00.52
+Прошло времени 00:00:00.51
 
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
 
-The CXX compiler identification is MSVC, found in "C:/Users/Maksim/Desktop/1/build1/build/CMakeFiles/3.22.2/CompilerIdCXX/CompilerIdCXX.exe"
+The CXX compiler identification is MSVC, found in "C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/build/CMakeFiles/3.22.2/CompilerIdCXX/CompilerIdCXX.exe"
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: C:/Users/Maksim/Desktop/1/build1/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_8376c.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine версии 16.11.2+f32259642 для .NET Framework
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_c869a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine версии 16.11.2+f32259642 для .NET Framework
 (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
 
   Оптимизирующий компилятор Microsoft (R) C/C++ версии 19.29.30147 для x64
   (C) Корпорация Майкрософт (Microsoft Corporation).  Все права защищены.
   CMakeCCompilerABI.c
-  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_8376c.dir\Debug\\" /Fd"cmTC_8376c.dir\Debug\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCCompilerABI.c"
-  cmTC_8376c.vcxproj -> C:\Users\Maksim\Desktop\1\build1\build\CMakeFiles\CMakeTmp\Debug\cmTC_8376c.exe
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c869a.dir\Debug\\" /Fd"cmTC_c869a.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCCompilerABI.c"
+  cmTC_c869a.vcxproj -> C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\CMakeFiles\CMakeTmp\Debug\cmTC_c869a.exe
 
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: C:/Users/Maksim/Desktop/1/build1/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/Maksim/Desktop/2course1semestr/C++/Coursach/GameEngineAndGame/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_02579.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine версии 16.11.2+f32259642 для .NET Framework
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_30ca7.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine версии 16.11.2+f32259642 для .NET Framework
 (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
 
   Оптимизирующий компилятор Microsoft (R) C/C++ версии 19.29.30147 для x64
   (C) Корпорация Майкрософт (Microsoft Corporation).  Все права защищены.
   CMakeCXXCompilerABI.cpp
-  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_02579.dir\Debug\\" /Fd"cmTC_02579.dir\Debug\vc142.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCXXCompilerABI.cpp"
-  cmTC_02579.vcxproj -> C:\Users\Maksim\Desktop\1\build1\build\CMakeFiles\CMakeTmp\Debug\cmTC_02579.exe
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_30ca7.dir\Debug\\" /Fd"cmTC_30ca7.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCXXCompilerABI.cpp"
+  cmTC_30ca7.vcxproj -> C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\CMakeFiles\CMakeTmp\Debug\cmTC_30ca7.exe
 
 
 

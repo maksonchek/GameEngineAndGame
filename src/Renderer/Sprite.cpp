@@ -8,9 +8,9 @@
 
 namespace Renderer {
 
-    Sprite::Sprite(const std::shared_ptr<TextureManager> pTextureManager,
-                    const std::string initTile,
-                      const std::shared_ptr<ShaderManager> pShaderManager,
+    Sprite::Sprite(std::shared_ptr<TextureManager> pTextureManager,
+                     std::string initTile,
+                       std::shared_ptr<ShaderManager> pShaderManager,
                         const glm::vec2& position,
                           const glm::vec2& size,
                             const float rotation) : pTexture(std::move(pTextureManager))
@@ -29,7 +29,7 @@ namespace Renderer {
             0.f, 0.f
         };
 
-        auto tile = pTextureManager->GetTile(std::move(initTile));
+        auto tile = pTexture->GetTile(std::move(initTile));
 
         const GLfloat textureCoords[] = {
 
@@ -37,7 +37,7 @@ namespace Renderer {
             tile.leftBottom.x, tile.rightTop.y,
             tile.rightTop.x, tile.rightTop.y,
 
-            tile.rightTop.x, tile.rightTop.y,
+            tile.rightTop.x, tile.rightTop.y,  
             tile.rightTop.x, tile.leftBottom.y,
             tile.leftBottom.x, tile.leftBottom.y
         };

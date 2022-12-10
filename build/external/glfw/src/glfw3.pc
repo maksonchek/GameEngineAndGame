@@ -1,7 +1,7 @@
-prefix=C:/Program Files (x86)/BattleCity
+prefix=C:/Program Files (x86)/GameEngine
 exec_prefix=${prefix}
-includedir=C:/Program Files (x86)/BattleCity/include
-libdir=C:/Program Files (x86)/BattleCity/lib
+includedir=C:/Program Files (x86)/GameEngine/include
+libdir=C:/Program Files (x86)/GameEngine/lib
 
 Name: GLFW
 Description: A multi-platform library for OpenGL, window and input
