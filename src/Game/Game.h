@@ -2,6 +2,10 @@
 
 #include <array>
 #include <glm/vec2.hpp>
+#include<memory>
+
+class SpaceShip;
+
 class Game
 {
 public:
@@ -27,4 +31,6 @@ private:
 	};
 
 	GameState gameState;
+
+	std::unique_ptr<SpaceShip> pGameObject;
 };

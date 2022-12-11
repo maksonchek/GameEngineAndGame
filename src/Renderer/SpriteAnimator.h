@@ -19,7 +19,7 @@ namespace Renderer {
 
         void InsertState(std::string state, std::vector<std::pair<std::string, uint64_t>> tilesFrameDuration);
 
-        void UpdateFrame(const size_t deltaFrame);
+        void UpdateFrame(const uint64_t deltaFrame);
 
         void SetState(const std::string &newState);
 
