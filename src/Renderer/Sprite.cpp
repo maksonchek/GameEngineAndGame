@@ -23,10 +23,7 @@ namespace Renderer {
             0.f, 0.f,
             0.f, 1.f,
             1.f, 1.f,
-
-            1.f, 1.f,
             1.f, 0.f,
-            0.f, 0.f
         };
 
         auto tile = pTexture->GetTile(std::move(initTile));
@@ -36,29 +33,31 @@ namespace Renderer {
             tile.leftBottom.x, tile.leftBottom.y,
             tile.leftBottom.x, tile.rightTop.y,
             tile.rightTop.x, tile.rightTop.y,
-
-            tile.rightTop.x, tile.rightTop.y,  
             tile.rightTop.x, tile.leftBottom.y,
-            tile.leftBottom.x, tile.leftBottom.y
+        };
+
+        const GLint indexes[] = {
+
+            0, 1, 2,
+            2, 3, 0,
         };
 
         glGenVertexArrays(1, &VertexArrayObject);
         glBindVertexArray(VertexArrayObject);
 
-        glGenBuffers(1, &veretexCoordVBO);
-        glBindBuffer(GL_ARRAY_BUFFER, veretexCoordVBO);
-        glBufferData(GL_ARRAY_BUFFER, sizeof(vertexCoords), &vertexCoords, GL_STATIC_DRAW);
+        vertexBuffer.InitializeBuffer(vertexCoords, 2 * 4 * sizeof(GLfloat));
         glEnableVertexAttribArray(0);
         glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 0, nullptr);
 
-        glGenBuffers(1, &TextureCoordVBO);
-        glBindBuffer(GL_ARRAY_BUFFER, TextureCoordVBO);
-        glBufferData(GL_ARRAY_BUFFER, sizeof(textureCoords), &textureCoords, GL_STATIC_DRAW);
+        textureBuffer.InitializeBuffer(textureCoords, 2 * 4 * sizeof(GLfloat));
         glEnableVertexAttribArray(1);
         glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 0, nullptr);
 
+        indexBuffer.InitializeBuffer(indexes, 6 * sizeof(GLuint));
+
         glBindBuffer(GL_ARRAY_BUFFER, 0);
         glBindVertexArray(0);
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
     }
 
     void Sprite::Render() const
@@ -79,7 +78,7 @@ namespace Renderer {
         glActiveTexture(GL_TEXTURE0);
         pTexture->Bind();
 
-        glDrawArrays(GL_TRIANGLES, 0, 6);
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr);
         glBindVertexArray(0);
     }
 
@@ -100,8 +99,6 @@ namespace Renderer {
 
     Sprite::~Sprite()
     {
-        glDeleteBuffers(1, &veretexCoordVBO);
-        glDeleteBuffers(1, &TextureCoordVBO);
         glDeleteVertexArrays(1, &VertexArrayObject);
     }
 }

@@ -64,15 +64,10 @@ namespace Renderer
 				tile.leftBottom.x, tile.leftBottom.y,
 				tile.leftBottom.x, tile.rightTop.y,
 				tile.rightTop.x, tile.rightTop.y,
-
-				tile.rightTop.x, tile.rightTop.y,
 				tile.rightTop.x, tile.leftBottom.y,
-				tile.leftBottom.x, tile.leftBottom.y
 			};
 
-			glBindBuffer(GL_ARRAY_BUFFER, TextureCoordVBO);
-			glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(textureCoords), &textureCoords);
-			glBindBuffer(GL_ARRAY_BUFFER, 0);
+			textureBuffer.UpdateBuffer(textureCoords, 2 * 4 * sizeof(GLfloat));
 			isNormalCondition = false;
 		}
 		Sprite::Render();

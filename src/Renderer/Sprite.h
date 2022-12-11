@@ -6,6 +6,9 @@
 #include <memory>
 #include <string>
 
+#include "VertexBuffer.h"
+#include "IndexBuffer.h"
+
 namespace Renderer {
 
     class TextureManager;
@@ -38,8 +41,10 @@ namespace Renderer {
     protected:
 
         GLuint VertexArrayObject;
-        GLuint veretexCoordVBO;
-        GLuint TextureCoordVBO;
+
+        VertexBuffer vertexBuffer;
+        VertexBuffer textureBuffer;
+        IndexBuffer indexBuffer;
 
         std::shared_ptr<TextureManager> pTexture;
         std::shared_ptr<ShaderManager> pShaderManager;

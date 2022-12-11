@@ -16,6 +16,13 @@ add_executable(${PROJECT_NAME}
 	src/Renderer/Sprite.cpp
 	src/Renderer/SpriteAnimator.h
 	src/Renderer/SpriteAnimator.cpp
+	src/Renderer/VertexBuffer.h
+	src/Renderer/VertexBuffer.cpp
+	src/Renderer/IndexBuffer.h
+	src/Renderer/IndexBuffer.cpp
+
+
+
 	src/Game/Game.h
 	src/Game/Game.cpp
 	src/Game/SpaceShip.h
