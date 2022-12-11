@@ -16,6 +16,10 @@ add_executable(${PROJECT_NAME}
 	src/Renderer/Sprite.cpp
 	src/Renderer/SpriteAnimator.h
 	src/Renderer/SpriteAnimator.cpp
+	src/Game/Game.h
+	src/Game/Game.cpp
+	src/Game/SpaceShip.h
+	src/Game/SpaceShip.cpp
 )
 
 

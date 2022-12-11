@@ -12,13 +12,31 @@
 #define STBI_ONLY_PNG
 #include "stb_image.h"
 
-ResourceManager::ResourceManager(const std::string& executablePath)
+ ResourceManager::mapShaderManager ResourceManager::shaderManagers;
+
+ ResourceManager::mapTextureManager ResourceManager::textures;
+
+ ResourceManager::mapSprite ResourceManager::sprites;
+
+ ResourceManager::mapSpriteAnimators ResourceManager::animateSprites;
+
+ std::string ResourceManager::path;
+
+void ResourceManager::SetExecutablePath(const std::string& executablePath)
 {
     size_t found = executablePath.find_last_of("/\\");
-    path = executablePath.substr(0, found);
+     path = executablePath.substr(0, found);
 }
 
-std::string ResourceManager::GetTextFromFile(const std::string& relativeFilePath) const
+void ResourceManager::DestructAllRes()
+{
+    shaderManagers.clear();
+    textures.clear();
+    sprites.clear();
+    animateSprites.clear();
+}
+
+std::string ResourceManager::GetTextFromFile(const std::string& relativeFilePath) 
 {
     std::ifstream f;
     f.open(path + "/" + relativeFilePath.c_str(), std::ios::in | std::ios::binary);
@@ -129,7 +147,7 @@ std::shared_ptr<Renderer::SpriteAnimator> ResourceManager::LoadSpriteAnimator(co
         std::cerr << "Can't find the shader: " << shaderName << " for the sprite: " << spriteName << std::endl;
     }
 
-    std::shared_ptr<Renderer::SpriteAnimator> newSprite = animateSprites.emplace(textureName, std::make_shared<Renderer::SpriteAnimator>(pTexture,
+    std::shared_ptr<Renderer::SpriteAnimator> newSprite = animateSprites.emplace(spriteName, std::make_shared<Renderer::SpriteAnimator>(pTexture,
         titleName,
         pShader,
         glm::vec2(0.f, 0.f),

@@ -16,41 +16,45 @@ namespace Renderer
 
 class ResourceManager {
 public:
-    ResourceManager(const std::string& executablePath);
-    ~ResourceManager() = default;
+    ResourceManager() = delete;
+    ~ResourceManager() = delete;
 
-    std::shared_ptr<Renderer::ShaderManager> LoadShaders(const std::string& shaderName, const std::string& vertexPath, const std::string& fragmentPath);
+    static void SetExecutablePath(const std::string& exetutablePath);
 
-    std::shared_ptr<Renderer::ShaderManager> GetShaderManager(const std::string& shaderName);
+    static void DestructAllRes();
+     
+    static std::shared_ptr<Renderer::ShaderManager> LoadShaders(const std::string& shaderName, const std::string& vertexPath, const std::string& fragmentPath);
 
-    std::shared_ptr<Renderer::TextureManager> LoadTexture(const std::string& textureName, const std::string& texturePath);
+    static std::shared_ptr<Renderer::ShaderManager> GetShaderManager(const std::string& shaderName);
 
-    std::shared_ptr<Renderer::TextureManager> GetTextureManager(const std::string& textureName);
+    static std::shared_ptr<Renderer::TextureManager> LoadTexture(const std::string& textureName, const std::string& texturePath);
 
-    std::shared_ptr<Renderer::Sprite> LoadSprite(const std::string &spriteName,
-                                                   const std::string &textureName,
-                                                     const std::string &shaderName,
-                                                       const unsigned int spriteWidth,
-                                                        const unsigned int spriteHeight,
-                                                           const std::string &titleName = "default");
+    static std::shared_ptr<Renderer::TextureManager> GetTextureManager(const std::string& textureName);
 
-    std::shared_ptr<Renderer::Sprite> GetSprite(const std::string& spriteName);
+    static std::shared_ptr<Renderer::Sprite> LoadSprite(const std::string &spriteName,
+                                                          const std::string &textureName,
+                                                             const std::string &shaderName,
+                                                                const unsigned int spriteWidth,
+                                                                  const unsigned int spriteHeight,
+                                                                     const std::string &titleName = "default");
 
-    std::shared_ptr<Renderer::SpriteAnimator> LoadSpriteAnimator(const std::string &spriteName,
-                                                   const std::string &textureName,
-                                                     const std::string &shaderName,
-                                                       const unsigned int spriteWidth,
-                                                         const unsigned int spriteHeight,
-                                                           const std::string &titleName = "default");
+    static std::shared_ptr<Renderer::Sprite> GetSprite(const std::string& spriteName);
 
-    std::shared_ptr<Renderer::SpriteAnimator> GetSpriteAnimator(const std::string& spriteName);
+    static std::shared_ptr<Renderer::SpriteAnimator> LoadSpriteAnimator(const std::string &spriteName,
+                                                                           const std::string &textureName,
+                                                                             const std::string &shaderName,
+                                                                               const unsigned int spriteWidth,
+                                                                                 const unsigned int spriteHeight,
+                                                                                   const std::string &titleName = "default");
+
+    static std::shared_ptr<Renderer::SpriteAnimator> GetSpriteAnimator(const std::string& spriteName);
 
 
-    std::shared_ptr<Renderer::TextureManager> LoatTextureAtlas(const std::string textureName,
-                                                                 const std::string texturePath,
-                                                                   const std::vector<std::string> tilesNames,
-                                                                    const unsigned int tileWidth,
-                                                                      const unsigned int tileHeight);
+    static std::shared_ptr<Renderer::TextureManager> LoatTextureAtlas(const std::string textureName,
+                                                                         const std::string texturePath,
+                                                                           const std::vector<std::string> tilesNames,
+                                                                            const unsigned int tileWidth,
+                                                                              const unsigned int tileHeight);
     
 
 
@@ -60,19 +64,19 @@ public:
     ResourceManager(ResourceManager&&) = delete;
 
 private:
-    std::string GetTextFromFile(const std::string& relativeFilePath) const;
+    static std::string GetTextFromFile(const std::string& relativeFilePath);
 
     typedef std::map<const std::string, std::shared_ptr<Renderer::ShaderManager>> mapShaderManager;
-    mapShaderManager shaderManagers;
+    static mapShaderManager shaderManagers;
 
     typedef std::map<const std::string, std::shared_ptr<Renderer::TextureManager>> mapTextureManager;
-    mapTextureManager textures;
+    static mapTextureManager textures;
 
     typedef std::map<const std::string, std::shared_ptr<Renderer::Sprite>> mapSprite;
-    mapSprite sprites;
+    static mapSprite sprites;
 
     typedef std::map<const std::string, std::shared_ptr<Renderer::SpriteAnimator>> mapSpriteAnimators;
-    mapSpriteAnimators animateSprites;
+    static mapSpriteAnimators animateSprites;
 
-    std::string path;
+    static std::string path;
 };

@@ -19,6 +19,12 @@
     <ClCompile Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\src\Renderer\SpriteAnimator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\src\Game\Game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\src\Game\SpaceShip.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\src\Renderer\ShaderManager.h">
@@ -37,6 +43,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\src\Renderer\SpriteAnimator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\src\Game\Game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\src\Game\SpaceShip.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

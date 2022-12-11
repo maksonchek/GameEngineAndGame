@@ -365,6 +365,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\src\Renderer\Sprite.cpp" />
     <ClInclude Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\src\Renderer\SpriteAnimator.h" />
     <ClCompile Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\src\Renderer\SpriteAnimator.cpp" />
+    <ClInclude Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\src\Game\Game.h" />
+    <ClCompile Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\src\Game\Game.cpp" />
+    <ClInclude Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\src\Game\SpaceShip.h" />
+    <ClCompile Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\src\Game\SpaceShip.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\Users\Maksim\Desktop\2course1semestr\C++\Coursach\GameEngineAndGame\build\ZERO_CHECK.vcxproj">
