@@ -40,24 +40,22 @@ namespace Renderer {
 
             0, 1, 2,
             2, 3, 0,
-        };
-
-        glGenVertexArrays(1, &VertexArrayObject);
-        glBindVertexArray(VertexArrayObject);
+        };  
 
         vertexBuffer.InitializeBuffer(vertexCoords, 2 * 4 * sizeof(GLfloat));
-        glEnableVertexAttribArray(0);
-        glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 0, nullptr);
+        VertexBufferLayout vertexLayoutCoords;
+        vertexLayoutCoords.AddElementLayoutFloat(2, false);
+        vertexArray.AddVertexBuffer(vertexBuffer, vertexLayoutCoords);
 
         textureBuffer.InitializeBuffer(textureCoords, 2 * 4 * sizeof(GLfloat));
-        glEnableVertexAttribArray(1);
-        glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 0, nullptr);
+        VertexBufferLayout textureLayoutCoords;
+        textureLayoutCoords.AddElementLayoutFloat(2, false);
+        vertexArray.AddVertexBuffer(textureBuffer, textureLayoutCoords);
 
         indexBuffer.InitializeBuffer(indexes, 6 * sizeof(GLuint));
 
-        glBindBuffer(GL_ARRAY_BUFFER, 0);
-        glBindVertexArray(0);
-        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+        vertexArray.UnBindBuffer();
+        indexBuffer.UnBindBuffer();
     }
 
     void Sprite::Render() const
@@ -72,14 +70,14 @@ namespace Renderer {
         model = glm::translate(model, glm::vec3(-0.5f * size.x, -0.5f * size.y, 0.f));
         model = glm::scale(model, glm::vec3(size, 1.f));
 
-        glBindVertexArray(VertexArrayObject);
+        vertexArray.BindBuffer();
         pShaderManager->SetMatrix4x4("modelMat", model);
 
         glActiveTexture(GL_TEXTURE0);
         pTexture->Bind();
 
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr);
-        glBindVertexArray(0);
+        vertexArray.UnBindBuffer();
     }
 
     void Sprite::SetPosition(const glm::vec2& position)
@@ -99,6 +97,5 @@ namespace Renderer {
 
     Sprite::~Sprite()
     {
-        glDeleteVertexArrays(1, &VertexArrayObject);
     }
 }

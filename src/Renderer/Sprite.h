@@ -5,6 +5,7 @@
 
 #include <memory>
 #include <string>
+#include "VertexArray.h"
 
 #include "VertexBuffer.h"
 #include "IndexBuffer.h"
@@ -39,9 +40,8 @@ namespace Renderer {
         Sprite& operator=(const Sprite&) = delete;
 
     protected:
-
-        GLuint VertexArrayObject;
-
+        
+        VertexArray vertexArray;
         VertexBuffer vertexBuffer;
         VertexBuffer textureBuffer;
         IndexBuffer indexBuffer;
