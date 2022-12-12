@@ -1,7 +1,7 @@
 #include "SpaceShip.h"
 #include "../Renderer/SpriteAnimator.h"
 
-SpaceShip::SpaceShip(std::shared_ptr<Renderer::SpriteAnimator> pSprite, const float velocity, const glm::vec2& position) :
+SpaceShip::SpaceShip(std::shared_ptr<RenderEngine::SpriteAnimator> pSprite, const float velocity, const glm::vec2& position) :
 					objectOrientation(ObjectOrientation::Top), pSprite(std::move(pSprite)), isMoving(false), velocity(velocity), position(position), moveOffset(glm::vec2(0.f, 1.f))
 {
 	this->pSprite->SetPosition(position);

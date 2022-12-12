@@ -2,11 +2,11 @@
 
 #include "ShaderManager.h"
 #include "TextureManager.h"
-
+#include "Renderer.h"
 #include <glm/mat4x4.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 
-namespace Renderer {
+namespace RenderEngine {
 
     Sprite::Sprite(std::shared_ptr<TextureManager> pTextureManager,
                      std::string initTile,
@@ -52,7 +52,7 @@ namespace Renderer {
         textureLayoutCoords.AddElementLayoutFloat(2, false);
         vertexArray.AddVertexBuffer(textureBuffer, textureLayoutCoords);
 
-        indexBuffer.InitializeBuffer(indexes, 6 * sizeof(GLuint));
+        indexBuffer.InitializeBuffer(indexes, 6);
 
         vertexArray.UnBindBuffer();
         indexBuffer.UnBindBuffer();
@@ -70,14 +70,12 @@ namespace Renderer {
         model = glm::translate(model, glm::vec3(-0.5f * size.x, -0.5f * size.y, 0.f));
         model = glm::scale(model, glm::vec3(size, 1.f));
 
-        vertexArray.BindBuffer();
         pShaderManager->SetMatrix4x4("modelMat", model);
 
         glActiveTexture(GL_TEXTURE0);
         pTexture->Bind();
 
-        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr);
-        vertexArray.UnBindBuffer();
+        Renderer::RenderGraphics(vertexArray, indexBuffer, *pShaderManager);
     }
 
     void Sprite::SetPosition(const glm::vec2& position)

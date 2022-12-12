@@ -2,7 +2,7 @@
 #include <memory>
 #include <glm/vec2.hpp>
 
-namespace Renderer
+namespace RenderEngine
 {
 	class SpriteAnimator;
 }
@@ -11,7 +11,7 @@ class SpaceShip
 {
 public:
 
-	SpaceShip(std::shared_ptr<Renderer::SpriteAnimator> pSprie, const float velocity, const glm::vec2& position);
+	SpaceShip(std::shared_ptr<RenderEngine::SpriteAnimator> pSprie, const float velocity, const glm::vec2& position);
 	
 	void Render() const;
 
@@ -33,7 +33,7 @@ public:
 private:
 	ObjectOrientation objectOrientation;
 
-	std::shared_ptr<Renderer::SpriteAnimator> pSprite;
+	std::shared_ptr<RenderEngine::SpriteAnimator> pSprite;
 
 	bool isMoving;
 

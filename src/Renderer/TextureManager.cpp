@@ -1,6 +1,6 @@
 #include "TextureManager.h"
 
-namespace Renderer {
+namespace RenderEngine {
 
     TextureManager::TextureManager(const GLuint width, GLuint height,
                                      const unsigned char* data,

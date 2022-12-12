@@ -5,7 +5,7 @@
 #include <vector>
 #include "Sprite.h"
 
-namespace Renderer {
+namespace RenderEngine {
 
     class SpriteAnimator : public Sprite{
     public:

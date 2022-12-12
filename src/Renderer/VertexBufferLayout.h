@@ -1,7 +1,7 @@
 #pragma once 
 #include <glad/glad.h>
 #include <vector>
-namespace Renderer 
+namespace RenderEngine 
 {
     struct VertexBufferLayoutElement {
         GLint count;

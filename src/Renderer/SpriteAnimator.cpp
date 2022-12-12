@@ -2,7 +2,7 @@
 #include "TextureManager.h"
 #include <iostream>
 
-namespace Renderer 
+namespace RenderEngine 
 {
 	SpriteAnimator::SpriteAnimator(std::shared_ptr<TextureManager> pTexture, 
 									 std::string initTile, 

@@ -4,7 +4,7 @@
 
 #include <iostream>
 
-namespace Renderer 
+namespace RenderEngine 
 {
     ShaderManager::ShaderManager(const std::string& vertexShader, const std::string& fragmentShader)
     {

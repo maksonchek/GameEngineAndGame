@@ -1,8 +1,7 @@
 #include "IndexBuffer.h"
 
-namespace Renderer {
-    IndexBuffer::IndexBuffer()
-        : id(0)
+namespace RenderEngine {
+    IndexBuffer::IndexBuffer() : id(0), elementsCount(0)
     {
     }
 
@@ -15,6 +14,8 @@ namespace Renderer {
     {
         id = indexBuffer.id;
         indexBuffer.id = 0;
+        elementsCount = indexBuffer.elementsCount;
+        indexBuffer.elementsCount = 0;
         return *this;
     }
 
@@ -22,13 +23,16 @@ namespace Renderer {
     {
         id = indexBuffer.id;
         indexBuffer.id = 0;
+        elementsCount = indexBuffer.elementsCount;
+        indexBuffer.elementsCount = 0;
     }
 
-    void IndexBuffer::InitializeBuffer(const void* data, const unsigned int size)
+    void IndexBuffer::InitializeBuffer(const void* data, const unsigned int elementsCount)
     {
+        this->elementsCount = elementsCount;
         glGenBuffers(1, &id);
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, id);
-        glBufferData(GL_ELEMENT_ARRAY_BUFFER, size, data, GL_STATIC_DRAW);
+        glBufferData(GL_ELEMENT_ARRAY_BUFFER, elementsCount * sizeof(GLuint), data, GL_STATIC_DRAW);
     }
 
     void IndexBuffer::BindBuffer() const

@@ -10,7 +10,7 @@
 #include "VertexBuffer.h"
 #include "IndexBuffer.h"
 
-namespace Renderer {
+namespace RenderEngine {
 
     class TextureManager;
     class ShaderManager;

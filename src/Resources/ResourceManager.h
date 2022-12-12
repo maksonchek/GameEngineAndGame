@@ -5,7 +5,7 @@
 #include <map>
 #include <vector>
 
-namespace Renderer
+namespace RenderEngine
 {
     class ShaderManager;
     class TextureManager;
@@ -23,34 +23,34 @@ public:
 
     static void DestructAllRes();
      
-    static std::shared_ptr<Renderer::ShaderManager> LoadShaders(const std::string& shaderName, const std::string& vertexPath, const std::string& fragmentPath);
+    static std::shared_ptr<RenderEngine::ShaderManager> LoadShaders(const std::string& shaderName, const std::string& vertexPath, const std::string& fragmentPath);
 
-    static std::shared_ptr<Renderer::ShaderManager> GetShaderManager(const std::string& shaderName);
+    static std::shared_ptr<RenderEngine::ShaderManager> GetShaderManager(const std::string& shaderName);
 
-    static std::shared_ptr<Renderer::TextureManager> LoadTexture(const std::string& textureName, const std::string& texturePath);
+    static std::shared_ptr<RenderEngine::TextureManager> LoadTexture(const std::string& textureName, const std::string& texturePath);
 
-    static std::shared_ptr<Renderer::TextureManager> GetTextureManager(const std::string& textureName);
+    static std::shared_ptr<RenderEngine::TextureManager> GetTextureManager(const std::string& textureName);
 
-    static std::shared_ptr<Renderer::Sprite> LoadSprite(const std::string &spriteName,
+    static std::shared_ptr<RenderEngine::Sprite> LoadSprite(const std::string &spriteName,
                                                           const std::string &textureName,
                                                              const std::string &shaderName,
                                                                 const unsigned int spriteWidth,
                                                                   const unsigned int spriteHeight,
                                                                      const std::string &titleName = "default");
 
-    static std::shared_ptr<Renderer::Sprite> GetSprite(const std::string& spriteName);
+    static std::shared_ptr<RenderEngine::Sprite> GetSprite(const std::string& spriteName);
 
-    static std::shared_ptr<Renderer::SpriteAnimator> LoadSpriteAnimator(const std::string &spriteName,
+    static std::shared_ptr<RenderEngine::SpriteAnimator> LoadSpriteAnimator(const std::string &spriteName,
                                                                            const std::string &textureName,
                                                                              const std::string &shaderName,
                                                                                const unsigned int spriteWidth,
                                                                                  const unsigned int spriteHeight,
                                                                                    const std::string &titleName = "default");
 
-    static std::shared_ptr<Renderer::SpriteAnimator> GetSpriteAnimator(const std::string& spriteName);
+    static std::shared_ptr<RenderEngine::SpriteAnimator> GetSpriteAnimator(const std::string& spriteName);
 
 
-    static std::shared_ptr<Renderer::TextureManager> LoatTextureAtlas(const std::string textureName,
+    static std::shared_ptr<RenderEngine::TextureManager> LoatTextureAtlas(const std::string textureName,
                                                                          const std::string texturePath,
                                                                            const std::vector<std::string> tilesNames,
                                                                             const unsigned int tileWidth,
@@ -66,16 +66,16 @@ public:
 private:
     static std::string GetTextFromFile(const std::string& relativeFilePath);
 
-    typedef std::map<const std::string, std::shared_ptr<Renderer::ShaderManager>> mapShaderManager;
+    typedef std::map<const std::string, std::shared_ptr<RenderEngine::ShaderManager>> mapShaderManager;
     static mapShaderManager shaderManagers;
 
-    typedef std::map<const std::string, std::shared_ptr<Renderer::TextureManager>> mapTextureManager;
+    typedef std::map<const std::string, std::shared_ptr<RenderEngine::TextureManager>> mapTextureManager;
     static mapTextureManager textures;
 
-    typedef std::map<const std::string, std::shared_ptr<Renderer::Sprite>> mapSprite;
+    typedef std::map<const std::string, std::shared_ptr<RenderEngine::Sprite>> mapSprite;
     static mapSprite sprites;
 
-    typedef std::map<const std::string, std::shared_ptr<Renderer::SpriteAnimator>> mapSpriteAnimators;
+    typedef std::map<const std::string, std::shared_ptr<RenderEngine::SpriteAnimator>> mapSpriteAnimators;
     static mapSpriteAnimators animateSprites;
 
     static std::string path;

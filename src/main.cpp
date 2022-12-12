@@ -6,6 +6,7 @@
 
 #include "Resources/ResourceManager.h"
 #include "Game/Game.h"
+#include "Renderer/Renderer.h"
 
 glm::ivec2 g_windowSize(640, 480);
 
@@ -15,7 +16,7 @@ void glfwWindowSizeCallback(GLFWwindow* pWindow, int width, int height)
 {
     g_windowSize.x = width;
     g_windowSize.y = height;
-    glViewport(0, 0, width, height);
+    RenderEngine::Renderer::SetViewPort(width, height);
 }
 
 void glfwKeyCallback(GLFWwindow* pWindow, int key, int scancode, int action, int mode)
@@ -59,10 +60,10 @@ int main(int argc, char** argv)
         std::cout << "Can't load GLAD :-(" << std::endl;
     }
 
-    std::cout << "Renderer: " << glGetString(GL_RENDERER) << std::endl;
-    std::cout << "OpenGL version: " << glGetString(GL_VERSION) << std::endl;
+    std::cout << "Renderer: " << RenderEngine::Renderer::GetRendererString() << std::endl;
+    std::cout << "OpenGL version: " << RenderEngine::Renderer::GetVersionString() << std::endl;
 
-    glClearColor(0, 0, 0, 1);
+    RenderEngine::Renderer::ClearColor(0, 0, 0, 1);
 
     {
         ResourceManager::SetExecutablePath(argv[0]);
@@ -79,7 +80,7 @@ int main(int argc, char** argv)
             game.Update(timeDuration);
 
             /* Покадровая отрисовка */
-            glClear(GL_COLOR_BUFFER_BIT);
+            RenderEngine::Renderer::Clear();
 
             game.Render();
             glfwSwapBuffers(pWindow);
