@@ -8,6 +8,9 @@
 #include <fstream>
 #include <iostream>
 
+#include <rapidjson/document.h>
+#include <rapidjson/error/en.h>
+
 #define STB_IMAGE_IMPLEMENTATION
 #define STBI_ONLY_PNG
 #include "stb_image.h"
@@ -231,4 +234,53 @@ std::shared_ptr<RenderEngine::TextureManager> ResourceManager::LoatTextureAtlas(
         }
     }
     return pTexture;
+}
+
+bool ResourceManager::LoadResourcesFromJSON(const std::string& filePath)
+{
+    const std::string JSONString = GetTextFromFile(filePath);
+    if (JSONString.empty())
+    {
+        std::cerr << "File with JSON is empty :-(" << std::endl;
+        return false;
+    }
+
+    rapidjson::Document doc;
+    rapidjson::ParseResult parseResult = doc.Parse(JSONString.c_str());
+    if (!parseResult)
+    {
+        std::cerr << "JSON parse error :-((((((((((((((( " << rapidjson::GetParseError_En(parseResult.Code()) << " In file " << filePath << std::endl;
+        return false;
+    }
+
+   auto shadersIter =  doc.FindMember("shaders");
+
+   if (shadersIter != doc.MemberEnd())
+   {
+       for (const auto &shader : shadersIter->value.GetArray())
+       {
+           const std::string name = shader["name"].GetString();
+           const std::string vertexPath = shader["vertex_path"].GetString();
+           const std::string fragmentPath = shader["fragment_path"].GetString();
+           LoadShaders(name, vertexPath, fragmentPath);
+       }
+   }
+
+   auto textureAtlasIter = doc.FindMember("TextureAtlases");
+
+   if (textureAtlasIter != doc.MemberEnd())
+   {
+       for (const auto& atlas : textureAtlasIter->value.GetArray())
+       {
+           const std::string name = atlas["name"].GetString();
+           const std::string atlasPath = atlas["filePath"].GetString();
+           const unsigned int width = atlas["width"].GetUint();
+           const unsigned int height = atlas["height"].GetUint();
+           const unsigned int tileWidth = atlas["tileWidth"].GetUint();
+           const unsigned int tileHeight = atlas["tileHeight"].GetUint();
+
+           const auto tilesArray = atlas["tiles"].GetArray();
+       }
+   }
+
 }

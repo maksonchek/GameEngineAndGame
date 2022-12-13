@@ -10,6 +10,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <iostream>
 #include <GLFW/glfw3.h>
+
 	Game::Game(const glm::vec2 windowSize) : gameState(GameState::Active), windowSize(windowSize)
 	{
 		keysForClick.fill(false);
@@ -68,19 +69,10 @@
 
 	bool Game::InitGame()
 	{
-        auto pDefaultShaderProgram = ResourceManager::LoadShaders("DefaultShader", "res/shaders/vertex.txt", "res/shaders/fragment.txt");
-        if (!pDefaultShaderProgram)
-        {
-            std::cerr << "Can't load shaders: " << "DefaultShader" << std::endl;
-            return false;
-        }
+        ResourceManager::LoadResourcesFromJSON("res/gameResuorces.json");
 
-        auto pSpriteShaderProgram = ResourceManager::LoadShaders("SpriteShader", "res/shaders/vertexSprite.txt", "res/shaders/fragmentSprite.txt");
-        if (!pSpriteShaderProgram)
-        {
-            std::cerr << "Can't create shader program: " << "SpriteShader" << std::endl;
-            return false;
-        }
+        auto pSpriteShaderProgram = ResourceManager::GetShaderManager("SpriteShader");
+
 
         auto tex = ResourceManager::LoadTexture("DefaultTexture", "res/textures/assets.png");
 
@@ -133,8 +125,6 @@
         pSpriteAnimator->InsertState("spriteState", std::move(spriteState));
         pSpriteAnimator->SetState("spriteState");
 
-        pDefaultShaderProgram->UseShader();
-        pDefaultShaderProgram->SetInt("textures", 0);
 
         glm::mat4 modelMatrix_1 = glm::mat4(1.f);
         modelMatrix_1 = glm::translate(modelMatrix_1, glm::vec3(100.f, 50.f, 0.f));
@@ -144,7 +134,6 @@
 
         glm::mat4 projectionMatrix = glm::ortho(0.f, static_cast<float>(windowSize.x), 0.f, static_cast<float>(windowSize.y), -100.f, 100.f);
 
-        pDefaultShaderProgram->SetMatrix4x4("projectionMat", projectionMatrix);
 
         pSpriteShaderProgram->UseShader();
         pSpriteShaderProgram->SetInt("textures", 0);

@@ -1,0 +1,146 @@
+{
+  "shaders": [
+    {
+      "name": "SpriteShader",
+      "vertex_path": "res/shaders/vertexSprite.txt",
+      "fragment_path": "res/shaders/fragmentSprite.txt"
+    }
+  ],
+
+  "TextureAtlases": [
+    {
+      "name": "mapTextureAtlas",
+      "filePath": "res/textures/assets.png",
+      "width": 128,
+      "height": 128,
+      "tileWidth": 16,
+      "tileHeight": 16,
+      "tiles": [
+        "block",
+        "topBlock",
+        "bottomBlock",
+        "leftBlock",
+        "rightBlock",
+        "topLeftBlock",
+        "topRightBlock",
+        "bottomLeftBlock",
+
+        "bottomRightBlock",
+        "beton",
+        "topBeton",
+        "bottomBeton",
+        "leftBeton",
+        "rightBeton",
+        "topLeftBeton",
+        "topRightBeton",
+
+        "bottomLeftBeton",
+        "bottomRightBeton",
+        "water1",
+        "water2",
+        "water3",
+        "trees",
+        "ice",
+        "wall",
+
+        "eagle",
+        "deadEagle",
+        "nothing",
+        "respawn1",
+        "respawn2",
+        "respawn3",
+        "respawn4"
+      ]
+    },
+
+    {
+      "name": "GameObjectAtlas",
+      "filePath": "res/textures/tankAtlas.png",
+      "width": 256,
+      "height": 256,
+      "tileWidth": 16,
+      "tileHeight": 16,
+      "tiles": [
+        "yellowType1_Top1",
+        "yellowType1_Top2",
+        "yellowType1_Left1",
+        "yellowType1_Left2",
+        "yellowType1_Bottom1",
+        "yellowType1_Bottom2",
+        "yellowType1_Right1",
+        "yellowType1_Right2"
+      ]
+    }
+  ],
+
+  "animatedSprites": [
+    {
+      "name": "GameObjectAnimated",
+      "textureAtlas": "GameObjectAtlas",
+      "shader": "SpriteShader",
+      "initialWidth": 100,
+      "initialHeight": 100,
+      "initialTile": "yellowType1_Top1",
+      "states": [
+        {
+          "stateName": "GameObjectTopState",
+          "frames": [
+            {
+              "tile": "yellowType1_Top1",
+              "duration": 500000000
+            },
+            {
+              "tile": "yellowType1_Top2",
+              "duration": 500000000
+            }
+          ]
+        },
+
+        {
+          "stateName": "GameObjectLeftState",
+          "frames": [
+            {
+              "tile": "yellowType1_Left1",
+              "duration": 500000000
+            },
+            {
+              "tile": "yellowType1_Left2",
+              "duration": 500000000
+            }
+          ]
+        },
+
+        {
+          "stateName": "GameObjectBottomState",
+          "frames": [
+            {
+              "tile": "yellowType1_Bottom1",
+              "duration": 500000000
+            },
+            {
+              "tile": "yellowType1_Bottom2",
+              "duration": 500000000
+            }
+          ]
+        },
+
+        {
+          "stateName": "GameObjectRightState",
+          "frames": [
+            {
+              "tile": "yellowType1_Right1",
+              "duration": 500000000
+            },
+            {
+              "tile": "yellowType1_Right2",
+              "duration": 500000000
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+
+

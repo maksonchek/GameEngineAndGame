@@ -57,6 +57,7 @@ public:
                                                                               const unsigned int tileHeight);
     
 
+    static bool LoadResourcesFromJSON(const std::string& filePath);
 
     ResourceManager(const ResourceManager&) = delete;
     ResourceManager& operator=(const ResourceManager&) = delete;
