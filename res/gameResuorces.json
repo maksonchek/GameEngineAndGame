@@ -9,7 +9,7 @@
 
   "TextureAtlases": [
     {
-      "name": "mapTextureAtlas",
+      "name": "MapTextureAtlas",
       "filePath": "res/textures/assets.png",
       "width": 128,
       "height": 128,
@@ -73,9 +73,9 @@
     }
   ],
 
-  "animatedSprites": [
+  "AnimateSprites": [
     {
-      "name": "GameObjectAnimated",
+      "name": "GameObjectAnimate",
       "textureAtlas": "GameObjectAtlas",
       "shader": "SpriteShader",
       "initialWidth": 100,

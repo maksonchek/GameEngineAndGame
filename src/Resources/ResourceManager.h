@@ -50,7 +50,7 @@ public:
     static std::shared_ptr<RenderEngine::SpriteAnimator> GetSpriteAnimator(const std::string& spriteName);
 
 
-    static std::shared_ptr<RenderEngine::TextureManager> LoatTextureAtlas(const std::string textureName,
+    static std::shared_ptr<RenderEngine::TextureManager> LoadTextureAtlas(const std::string textureName,
                                                                          const std::string texturePath,
                                                                            const std::vector<std::string> tilesNames,
                                                                             const unsigned int tileWidth,

@@ -24,22 +24,22 @@ void SpaceShip::SetOrientation(const ObjectOrientation orientation)
 		switch (objectOrientation)
 		{
 		case SpaceShip::ObjectOrientation::Top:
-			pSprite->SetState("objectTopState");
+			pSprite->SetState("GameObjectTopState");
 			moveOffset.x = 0.f;
 			moveOffset.y = 1.f;
 			break;
 		case SpaceShip::ObjectOrientation::Left:
-			pSprite->SetState("objectLeftState");
+			pSprite->SetState("GameObjectLeftState");
 			moveOffset.x = -1.f;
 			moveOffset.y = 0.f;
 			break;
 		case SpaceShip::ObjectOrientation::Right:
-			pSprite->SetState("objectRightState");
+			pSprite->SetState("GameObjectRightState");
 			moveOffset.x = 1.f;
 			moveOffset.y = 0.f;
 			break;
 		case SpaceShip::ObjectOrientation::Bottom:
-			pSprite->SetState("objectBottomState");
+			pSprite->SetState("GameObjectBottomState");
 			moveOffset.x = 0.f;
 			moveOffset.y = -1.f;
 			break;

@@ -73,64 +73,23 @@
 
         auto pSpriteShaderProgram = ResourceManager::GetShaderManager("SpriteShader");
 
-
-        auto tex = ResourceManager::LoadTexture("DefaultTexture", "res/textures/assets.png");
-
-        std::vector<std::string> tilesNames =
+        if (!pSpriteShaderProgram)
         {
-            "block",
-            "topBlock",
-            "bottomBlock",
-            "leftBlock",
-            "rightBlock",
-            "topLeftBlock",
-            "topRightBlock",
-            "bottomLeftBlock",
+            std::cerr << "Didn't found shaders :-( " << "SpriteShader" << std::endl;
+        }
+        auto pTextureAtlas = ResourceManager::GetTextureManager("MapTextureAtlas");
 
-            "bottomRightBlock",
-            "beton",
-            "topBeton",
-            "bottomBeton",
-            "leftBeton",
-            "rightBeton",
-            "topLeftBeton",
-            "topRightBeton",
+        if (!pTextureAtlas)
+        {
+            std::cerr << "Didn't found texture atlas  :-( " << "MapTextureAtlas" << std::endl;
+        }
 
-            "bottomLeftBeton",
-            "bottomRightBeton",
-            "water1",
-            "water2",
-            "water3",
-            "trees",
-            "ice",
-            "wall",
+        auto pObjectTextureAtlas = ResourceManager::GetTextureManager("GameObjectAtlas");
 
-            "eagle",
-            "deadEagle",
-            "nothing",
-            "respawn1",
-            "respawn2",
-            "respawn3",
-            "respawn4"
-        };
-        auto pTextureAtlas = ResourceManager::LoatTextureAtlas("DefaultTextureAtlas", "res/textures/assets.png", std::move(tilesNames), 16, 16);
-
-        auto pSpriteAnimator = ResourceManager::LoadSpriteAnimator("NewSpriteAnimator", "DefaultTextureAtlas", "SpriteShader", 50, 50, "bottomRightBlock");
-        pSpriteAnimator->SetPosition(glm::vec2(300, 300));
-        std::vector<std::pair<std::string, uint64_t>> spriteState;
-        spriteState.emplace_back(std::make_pair<std::string, uint64_t>("water1", 1000000000));
-        spriteState.emplace_back(std::make_pair<std::string, uint64_t>("water2", 1000000000));
-        spriteState.emplace_back(std::make_pair<std::string, uint64_t>("water3", 1000000000));
-
-        pSpriteAnimator->InsertState("spriteState", std::move(spriteState));
-        pSpriteAnimator->SetState("spriteState");
-
-
-        glm::mat4 modelMatrix_1 = glm::mat4(1.f);
-        modelMatrix_1 = glm::translate(modelMatrix_1, glm::vec3(100.f, 50.f, 0.f));
-
-        glm::mat4 modelMatrix_2 = glm::mat4(1.f);
-        modelMatrix_2 = glm::translate(modelMatrix_2, glm::vec3(590.f, 50.f, 0.f));
+        if (!pObjectTextureAtlas)
+        {
+            std::cerr << "Didn't found texture atlas of gameobject :-( " << "GameObjectAtlas" << std::endl;
+        }
 
         glm::mat4 projectionMatrix = glm::ortho(0.f, static_cast<float>(windowSize.x), 0.f, static_cast<float>(windowSize.y), -100.f, 100.f);
 
@@ -139,44 +98,13 @@
         pSpriteShaderProgram->SetInt("textures", 0);
         pSpriteShaderProgram->SetMatrix4x4("projectionMat", projectionMatrix);
 
-        std::vector<std::string> gameObjectTilesNames =
+
+        auto pGameObjectAniomation = ResourceManager::GetSpriteAnimator("GameObjectAnimate");
+
+        if (!pGameObjectAniomation)
         {
-            "top1",
-            "top2",
-            "left1",
-            "left2",
-            "bottom1",
-            "bottom2",
-            "right1",
-            "right2",
-        };
-
-
-        auto pObjectTextureAtlas = ResourceManager::LoatTextureAtlas("SpaceShipAtlas", "res/textures/tankAtlas.png", std::move(gameObjectTilesNames), 16, 16);
-        auto pGameObjectAniomation = ResourceManager::LoadSpriteAnimator("SpaceShipAnimate", "SpaceShipAtlas", "SpriteShader", 100, 100, "top1");
-
-        std::vector<std::pair<std::string, uint64_t>> gameObjectTopState;
-        gameObjectTopState.emplace_back(std::make_pair<std::string, uint64_t>("top1", 500000000));
-        gameObjectTopState.emplace_back(std::make_pair<std::string, uint64_t>("top2", 500000000));
-
-        std::vector<std::pair<std::string, uint64_t>> gameObjectBottomState;
-        gameObjectBottomState.emplace_back(std::make_pair<std::string, uint64_t>("bottom1", 500000000));
-        gameObjectBottomState.emplace_back(std::make_pair<std::string, uint64_t>("bottom2", 500000000));
-
-        std::vector<std::pair<std::string, uint64_t>> gameObjectRightState;
-        gameObjectRightState.emplace_back(std::make_pair<std::string, uint64_t>("right1", 500000000));
-        gameObjectRightState.emplace_back(std::make_pair<std::string, uint64_t>("right2", 500000000));
-
-        std::vector<std::pair<std::string, uint64_t>> gameObjectLeftState;
-        gameObjectLeftState.emplace_back(std::make_pair<std::string, uint64_t>("left1", 500000000));
-        gameObjectLeftState.emplace_back(std::make_pair<std::string, uint64_t>("left2", 500000000));
-
-        pGameObjectAniomation->InsertState("objectTopState", std::move(gameObjectTopState));
-        pGameObjectAniomation->InsertState("objectLeftState", std::move(gameObjectLeftState));
-        pGameObjectAniomation->InsertState("objectRightState", std::move(gameObjectRightState));
-        pGameObjectAniomation->InsertState("objectBottomState", std::move(gameObjectBottomState));
-
-        pGameObjectAniomation->SetState("objectTopState");
+            std::cerr << "Didn't found textures for game object animation :-( " << "AnimateSprites" << std::endl;
+        }
 
         pGameObject = std::make_unique<SpaceShip>(pGameObjectAniomation, 0.0000001f, glm::vec2(100.f, 100.f));
          

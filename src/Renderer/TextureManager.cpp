@@ -45,7 +45,7 @@ namespace RenderEngine {
         return *this;
     }
 
-    TextureManager::TextureManager(TextureManager&& texture)
+    TextureManager::TextureManager(TextureManager&& texture) 
     {
         id = texture.id;
         texture.id = 0;

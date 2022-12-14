@@ -206,7 +206,7 @@ std::shared_ptr<RenderEngine::TextureManager> ResourceManager::LoadTexture(const
     return newTexture;
 }
 
-std::shared_ptr<RenderEngine::TextureManager> ResourceManager::LoatTextureAtlas(std::string textureName,
+std::shared_ptr<RenderEngine::TextureManager> ResourceManager::LoadTextureAtlas(std::string textureName,
                                                                               std::string texturePath,
                                                                                  std::vector<std::string> tilesNames,
                                                                                     const unsigned int tileWidth,
@@ -280,7 +280,50 @@ bool ResourceManager::LoadResourcesFromJSON(const std::string& filePath)
            const unsigned int tileHeight = atlas["tileHeight"].GetUint();
 
            const auto tilesArray = atlas["tiles"].GetArray();
+           std::vector<std::string> tiles;
+           tiles.reserve(tilesArray.Size());
+           for (const auto& tile : tilesArray)
+           {
+               tiles.emplace_back(tile.GetString());
+           }
+           LoadTextureAtlas(name, atlasPath, std::move(tiles), tileWidth, tileHeight);
        }
    }
 
+   auto textureAnimIter = doc.FindMember("AnimateSprites");
+   if (textureAnimIter != doc.MemberEnd())
+   {
+       for (const auto& anim : textureAnimIter->value.GetArray())
+       {
+           const std::string name = anim["name"].GetString();
+           const std::string textureAtlas = anim["textureAtlas"].GetString();
+           const std::string shader = anim["shader"].GetString();
+           const unsigned int initialWidth = anim["initialWidth"].GetUint();
+           const unsigned int initialHeight = anim["initialHeight"].GetUint();
+           const std::string initialTile = anim["initialTile"].GetString();
+
+           auto pAnimatedSprite = LoadSpriteAnimator(name, textureAtlas, shader, initialWidth, initialHeight, initialTile);
+           if (!pAnimatedSprite)
+           {
+               continue;
+           }
+
+           const auto statesArray = anim["states"].GetArray();
+           for (const auto& state : statesArray)
+           {
+               const std::string stateName = state["stateName"].GetString();
+               std::vector<std::pair<std::string, uint64_t>> frames;
+               const auto framesArray = state["frames"].GetArray();
+               frames.reserve(framesArray.Size());
+               for (const auto& frame : framesArray)
+               {
+                   const std::string tile = frame["tile"].GetString();
+                   const uint64_t duration = frame["duration"].GetUint64();
+                   frames.emplace_back(std::pair<std::string, uint64_t>(tile, duration));
+               }
+               pAnimatedSprite->InsertState(stateName, std::move(frames));
+           }
+       }
+   }
+   return true;
 }
