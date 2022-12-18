@@ -6,9 +6,8 @@ namespace RenderEngine
 {
 	SpriteAnimator::SpriteAnimator(std::shared_ptr<TextureManager> pTexture, 
 									 std::string initTile, 
-		                                std::shared_ptr<ShaderManager> pShaderManager, 
-		                                 const glm::vec2& position, const glm::vec2& size, const float rotation) : 
-											Sprite(std::move(pTexture), std::move(initTile), std::move(pShaderManager), position, size, rotation)
+		                                std::shared_ptr<ShaderManager> pShaderManager) : 
+											Sprite(std::move(pTexture), std::move(initTile), std::move(pShaderManager))
 	{
 		pCurrentAnimateDurations = statesMap.end();
 	}
@@ -53,7 +52,7 @@ namespace RenderEngine
 		}
 	}
 
-	void SpriteAnimator::Render() const
+	void SpriteAnimator::Render(const glm::vec2& position, const glm::vec2& size, const float rotation) const
 	{
 		if (isNormalCondition)
 		{
@@ -70,7 +69,7 @@ namespace RenderEngine
 			textureBuffer.UpdateBuffer(textureCoords, 2 * 4 * sizeof(GLfloat));
 			isNormalCondition = false;
 		}
-		Sprite::Render();
+		Sprite::Render(position, size, rotation);
 	}
 
 }

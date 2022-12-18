@@ -10,14 +10,8 @@ namespace RenderEngine {
 
     Sprite::Sprite(std::shared_ptr<TextureManager> pTextureManager,
                      std::string initTile,
-                       std::shared_ptr<ShaderManager> pShaderManager,
-                        const glm::vec2& position,
-                          const glm::vec2& size,
-                            const float rotation) : pTexture(std::move(pTextureManager))
-                                                     , pShaderManager(std::move(pShaderManager))
-                                                       , position(position)
-                                                         , size(size)
-                                                           , rotation(rotation) {
+                       std::shared_ptr<ShaderManager> pShaderManager) : pTexture(std::move(pTextureManager))
+                                                     , pShaderManager(std::move(pShaderManager)) {
         const GLfloat vertexCoords[] = {
 
             0.f, 0.f,
@@ -58,7 +52,7 @@ namespace RenderEngine {
         indexBuffer.UnBindBuffer();
     }
 
-    void Sprite::Render() const
+    void Sprite::Render(const glm::vec2& position, const glm::vec2& size, const float rotation) const
     {
         pShaderManager->UseShader();
 
@@ -76,21 +70,6 @@ namespace RenderEngine {
         pTexture->Bind();
 
         Renderer::RenderGraphics(vertexArray, indexBuffer, *pShaderManager);
-    }
-
-    void Sprite::SetPosition(const glm::vec2& position)
-    {
-        this->position = position;
-    }
-
-    void Sprite::SetSize(const glm::vec2& size)
-    {
-        this->size = size;
-    }
-
-    void Sprite::SetRotation(const float rotation)
-    {
-        this->rotation = rotation;
     }
 
     Sprite::~Sprite()

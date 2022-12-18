@@ -2,18 +2,20 @@
 #include <memory>
 #include <glm/vec2.hpp>
 
+#include "GameObjectInterface.h"
+
 namespace RenderEngine
 {
 	class SpriteAnimator;
 }
 
-class SpaceShip
+class SpaceShip : public GameObjectInterface
 {
 public:
 
-	SpaceShip(std::shared_ptr<RenderEngine::SpriteAnimator> pSprie, const float velocity, const glm::vec2& position);
+	SpaceShip(std::shared_ptr<RenderEngine::SpriteAnimator> pSprie, const float velocity, const glm::vec2& position, const glm::vec2& size);
 	
-	void Render() const;
+	void Render() const override;
 
 
 	enum class ObjectOrientation
@@ -28,7 +30,7 @@ public:
 
 	void Move(const bool isMoving);
 
-	void UpdateFrame(const uint64_t delta);
+	void UpdateFrame(const uint64_t delta) override;
 
 private:
 	ObjectOrientation objectOrientation;
@@ -38,8 +40,6 @@ private:
 	bool isMoving;
 
 	float velocity;
-
-	glm::vec2 position;
 
 	glm::vec2 moveOffset;
 };

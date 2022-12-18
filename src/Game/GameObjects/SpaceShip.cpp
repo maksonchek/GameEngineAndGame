@@ -1,15 +1,14 @@
 #include "SpaceShip.h"
-#include "../Renderer/SpriteAnimator.h"
+#include "../../Renderer/SpriteAnimator.h"
 
-SpaceShip::SpaceShip(std::shared_ptr<RenderEngine::SpriteAnimator> pSprite, const float velocity, const glm::vec2& position) :
-					objectOrientation(ObjectOrientation::Top), pSprite(std::move(pSprite)), isMoving(false), velocity(velocity), position(position), moveOffset(glm::vec2(0.f, 1.f))
+SpaceShip::SpaceShip(std::shared_ptr<RenderEngine::SpriteAnimator> pSprite, const float velocity, const glm::vec2& position, const glm::vec2& size) : GameObjectInterface(position, size, 0.f),
+					objectOrientation(ObjectOrientation::Top), pSprite(std::move(pSprite)), isMoving(false), velocity(velocity), moveOffset(glm::vec2(0.f, 1.f))
 {
-	this->pSprite->SetPosition(position);
 }
 
 void SpaceShip::Render() const
 {
-	pSprite->Render();
+	pSprite->Render(position, size, rotation);
 }
 
 void SpaceShip::SetOrientation(const ObjectOrientation orientation)
@@ -57,7 +56,6 @@ void SpaceShip::UpdateFrame(const uint64_t delta)
 	if (isMoving)
 	{
 		position += delta * velocity * moveOffset;
-		pSprite->SetPosition(position);
 		pSprite->UpdateFrame(delta);
 	}
 }

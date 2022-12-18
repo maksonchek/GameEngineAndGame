@@ -5,6 +5,7 @@
 #include<memory>
 
 class SpaceShip;
+class Level;
 
 class Game
 {
@@ -16,7 +17,7 @@ public:
 
 	void Update(const uint64_t deltaTime);
 
-	void SetClick(const int key, const int action);
+	void SetClick(const int key, const int action); 
 
 	bool InitGame();
 
@@ -33,4 +34,5 @@ private:
 	GameState gameState;
 
 	std::unique_ptr<SpaceShip> pGameObject;
+	std::unique_ptr<Level> pLevel;
 };

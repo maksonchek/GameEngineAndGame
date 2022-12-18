@@ -1,0 +1,315 @@
+{
+  "shaders": [
+    {
+      "name": "SpriteShader",
+      "vertex_path": "res/shaders/vertexSprite.txt",
+      "fragment_path": "res/shaders/fragmentSprite.txt"
+    }
+  ],
+
+  "TextureAtlases": [
+    {
+      "name": "MapTextureAtlas",
+      "filePath": "res/textures/assets.png",
+      "tileWidth": 16,
+      "tileHeight": 16,
+      "tiles": [
+        "brickWall",
+        "brickWall_top",
+        "brickWall_bottom",
+        "brickWall_left",
+        "brickWall_right",
+        "brickWall_top_left",
+        "brickWall_top_right",
+        "brickWall_bottom_left",
+
+        "brickWall_bottom_right",
+        "betonWall",
+        "betonWall_top",
+        "betonWall_bottom",
+        "betonWall_left",
+        "betonWall_right",
+        "betonWall_top_left",
+        "betonWall_top_right",
+
+        "betonWall_bottom_left",
+        "betonWall_bottom_right",
+        "water1",
+        "water2",
+        "water3",
+        "trees",
+        "ice",
+        "wall",
+
+        "eagle",
+        "eagle_dead",
+        "nothing",
+        "respawn1",
+        "respawn2",
+        "respawn3",
+        "respawn4"
+      ]
+    },
+
+    {
+      "name": "GameObjectAtlas",
+      "filePath": "res/textures/tankAtlas.png",
+      "tileWidth": 16,
+      "tileHeight": 16,
+      "tiles": [
+        "yellowType1_Top1",
+        "yellowType1_Top2",
+        "yellowType1_Left1",
+        "yellowType1_Left2",
+        "yellowType1_Bottom1",
+        "yellowType1_Bottom2",
+        "yellowType1_Right1",
+        "yellowType1_Right2"
+      ]
+    }
+  ],
+
+  "sprites": [
+    {
+      "name": "brickWall",
+      "textureAtlas": "MapTextureAtlas",
+      "shader": "SpriteShader",
+      "tileName": "brickWall"
+    },
+
+    {
+      "name": "brickWall_top",
+      "textureAtlas": "MapTextureAtlas",
+      "shader": "SpriteShader",
+      "tileName": "brickWall_top"
+    },
+
+    {
+      "name": "brickWall_bottom",
+      "textureAtlas": "MapTextureAtlas",
+      "shader": "SpriteShader",
+      "tileName": "brickWall_bottom"
+    },
+
+    {
+      "name": "brickWall_left",
+      "textureAtlas": "MapTextureAtlas",
+      "shader": "SpriteShader",
+
+      "tileName": "brickWall_left"
+    },
+
+    {
+      "name": "brickWall_right",
+      "textureAtlas": "MapTextureAtlas",
+      "shader": "SpriteShader",
+      "tileName": "brickWall_right"
+    },
+
+    {
+      "name": "brickWall_top_left",
+      "textureAtlas": "MapTextureAtlas",
+      "shader": "SpriteShader",
+      "tileName": "brickWall_top_left"
+    },
+
+    {
+      "name": "brickWall_top_right",
+      "textureAtlas": "MapTextureAtlas",
+      "shader": "SpriteShader",
+      "tileName": "brickWall_top_right"
+    },
+
+    {
+      "name": "brickWall_bottom_left",
+      "textureAtlas": "MapTextureAtlas",
+      "shader": "SpriteShader",
+      "tileName": "brickWall_bottom_left"
+    },
+
+    {
+      "name": "brickWall_bottom_right",
+      "textureAtlas": "MapTextureAtlas",
+      "shader": "SpriteShader",
+      "tileName": "brickWall_bottom_right"
+    },
+
+    {
+      "name": "betonWall",
+      "textureAtlas": "MapTextureAtlas",
+      "shader": "SpriteShader",
+      "tileName": "betonWall"
+    },
+
+    {
+      "name": "betonWall_top",
+      "textureAtlas": "MapTextureAtlas",
+      "shader": "SpriteShader",
+      "tileName": "betonWall_top"
+    },
+
+    {
+      "name": "betonWall_bottom",
+      "textureAtlas": "MapTextureAtlas",
+      "shader": "SpriteShader",
+      "tileName": "betonWall_bottom"
+    },
+
+    {
+      "name": "betonWall_left",
+      "textureAtlas": "MapTextureAtlas",
+      "shader": "SpriteShader",
+      "tileName": "betonWall_left"
+    },
+
+    {
+      "name": "betonWall_right",
+      "textureAtlas": "MapTextureAtlas",
+      "shader": "SpriteShader",
+      "tileName": "betonWall_right"
+    },
+
+    {
+      "name": "betonWall_top_left",
+      "textureAtlas": "MapTextureAtlas",
+      "shader": "SpriteShader",
+      "tileName": "betonWall_top_left"
+    },
+
+    {
+      "name": "betonWall_top_right",
+      "textureAtlas": "MapTextureAtlas",
+      "shader": "SpriteShader",
+      "tileName": "betonWall_top_right"
+    },
+
+    {
+      "name": "betonWall_bottom_left",
+      "textureAtlas": "MapTextureAtlas",
+      "shader": "SpriteShader",
+      "tileName": "betonWall_bottom_left"
+    },
+
+    {
+      "name": "betonWall_bottom_right",
+      "textureAtlas": "MapTextureAtlas",
+      "shader": "SpriteShader",
+      "tileName": "betonWall_bottom_right"
+    }
+  ],
+
+  "AnimateSprites": [
+    {
+      "name": "GameObjectAnimate",
+      "textureAtlas": "GameObjectAtlas",
+      "shader": "SpriteShader",
+      "initialTile": "yellowType1_Top1",
+      "states": [
+        {
+          "stateName": "tankTopState",
+          "frames": [
+            {
+              "tile": "yellowType1_Top1",
+              "duration": 500000000
+            },
+            {
+              "tile": "yellowType1_Top2",
+              "duration": 500000000
+            }
+          ]
+        },
+
+        {
+          "stateName": "tankLeftState",
+          "frames": [
+            {
+              "tile": "yellowType1_Left1",
+              "duration": 500000000
+            },
+            {
+              "tile": "yellowType1_Left2",
+              "duration": 500000000
+            }
+          ]
+        },
+
+        {
+          "stateName": "tankBottomState",
+          "frames": [
+            {
+              "tile": "yellowType1_Bottom1",
+              "duration": 500000000
+            },
+            {
+              "tile": "yellowType1_Bottom2",
+              "duration": 500000000
+            }
+          ]
+        },
+
+        {
+          "stateName": "tankRightState",
+          "frames": [
+            {
+              "tile": "yellowType1_Right1",
+              "duration": 500000000
+            },
+            {
+              "tile": "yellowType1_Right2",
+              "duration": 500000000
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "name": "eagleAnimatedSprite",
+      "textureAtlas": "MapTextureAtlas",
+      "shader": "SpriteShader",
+      "initialSubTexture": "eagle",
+      "states": [
+        {
+          "stateName": "eagle",
+          "frames": [
+            {
+              "tile": "eagle_dead",
+              "duration": 0
+            }
+          ]
+        },
+
+        {
+          "tile": "eagle_dead",
+          "frames": [
+            {
+              "tile": "eagle_dead",
+              "duration": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "levels": [
+    {
+      "description": [
+        "DDDDDDDDDDDDD",
+        "D1D1D1D1D1D1D",
+        "D4D4D4D4D4D4D",
+        "D4D4D4D4D4D4D",
+        "D4D4D494D4D4D",
+        "D4D4D3D3D4D4D",
+        "D3D3D1D1D3D3D",
+        "1D11D3D3D11D1",
+        "8D33D1D1D33D8",
+        "D1D1D444D1D1D",
+        "D4D4D4D4D4D4D",
+        "D4D4D3D3D4D4D",
+        "D4D4DH1GD4D4D",
+        "DDDDD0E2DDDDD"
+      ]
+    }
+  ]
+}

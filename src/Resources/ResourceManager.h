@@ -34,18 +34,14 @@ public:
     static std::shared_ptr<RenderEngine::Sprite> LoadSprite(const std::string &spriteName,
                                                           const std::string &textureName,
                                                              const std::string &shaderName,
-                                                                const unsigned int spriteWidth,
-                                                                  const unsigned int spriteHeight,
-                                                                     const std::string &titleName = "default");
+                                                                   const std::string &titleName = "default");
 
     static std::shared_ptr<RenderEngine::Sprite> GetSprite(const std::string& spriteName);
 
     static std::shared_ptr<RenderEngine::SpriteAnimator> LoadSpriteAnimator(const std::string &spriteName,
                                                                            const std::string &textureName,
                                                                              const std::string &shaderName,
-                                                                               const unsigned int spriteWidth,
-                                                                                 const unsigned int spriteHeight,
-                                                                                   const std::string &titleName = "default");
+                                                                                const std::string &titleName = "default");
 
     static std::shared_ptr<RenderEngine::SpriteAnimator> GetSpriteAnimator(const std::string& spriteName);
 
@@ -58,6 +54,11 @@ public:
     
 
     static bool LoadResourcesFromJSON(const std::string& filePath);
+
+    static const std::vector<std::vector<std::string>>& GetLevels() 
+    { 
+        return levels; 
+    }
 
     ResourceManager(const ResourceManager&) = delete;
     ResourceManager& operator=(const ResourceManager&) = delete;
@@ -80,4 +81,6 @@ private:
     static mapSpriteAnimators animateSprites;
 
     static std::string path;
+
+    static std::vector<std::vector<std::string>> levels;
 };

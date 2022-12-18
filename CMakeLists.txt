@@ -5,11 +5,12 @@ project(${PROJECT_NAME})
 
 add_executable(${PROJECT_NAME} 
 	src/main.cpp
-	src/Renderer/ShaderManager.cpp
-	src/Renderer/ShaderManager.h
 	src/Resources/ResourceManager.cpp
 	src/Resources/ResourceManager.h
 	src/Resources/stb_image.h
+
+	src/Renderer/ShaderManager.cpp
+	src/Renderer/ShaderManager.h
 	src/Renderer/TextureManager.cpp
 	src/Renderer/TextureManager.h
 	src/Renderer/Sprite.h
@@ -29,8 +30,14 @@ add_executable(${PROJECT_NAME}
 
 	src/Game/Game.h
 	src/Game/Game.cpp
-	src/Game/SpaceShip.h
-	src/Game/SpaceShip.cpp
+	src/Game/GameObjects/SpaceShip.h
+	src/Game/GameObjects/SpaceShip.cpp
+	src/Game/GameObjects/GameObjectInterface.cpp
+	src/Game/GameObjects/GameObjectInterface.h
+	src/Game/GameObjects/WallGameObject.cpp
+	src/Game/GameObjects/WallGameObject.h
+	src/Game/Level.h
+	src/Game/Level.cpp	
 )
 
 

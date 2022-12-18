@@ -4,12 +4,13 @@
 #include "../Renderer/TextureManager.h"
 #include "../Renderer/Sprite.h"
 #include "../Renderer/SpriteAnimator.h"
-#include "../Game/SpaceShip.h"
+#include "../Game/GameObjects/SpaceShip.h"
 #include <glm/vec2.hpp>
 #include <glm/mat4x4.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <iostream>
 #include <GLFW/glfw3.h>
+#include "Level.h"
 
 	Game::Game(const glm::vec2 windowSize) : gameState(GameState::Active), windowSize(windowSize)
 	{
@@ -23,15 +24,22 @@
 
 	void Game::Render()
 	{
-        //ResourceManager::GetSpriteAnimator("NewSpriteAnimator")->Render();
-        if (pGameObject) {
+        if (pGameObject) 
+        {
             pGameObject->Render();
+        }
+        if (pLevel)
+        {
+            pLevel->Render();
         }
 	}
 
 	void Game::Update(const uint64_t deltaTime)
 	{
-        //ResourceManager::GetSpriteAnimator("NewSpriteAnimator")->UpdateFrame(deltaTime);
+        if (pLevel)
+        {
+            pLevel->Update(deltaTime);
+        }
         if (pGameObject) {
 
             if (keysForClick[GLFW_KEY_W])
@@ -69,7 +77,7 @@
 
 	bool Game::InitGame()
 	{
-        ResourceManager::LoadResourcesFromJSON("res/gameResuorces.json");
+        ResourceManager::LoadResourcesFromJSON("res/gameResources.json");
 
         auto pSpriteShaderProgram = ResourceManager::GetShaderManager("SpriteShader");
 
@@ -106,7 +114,9 @@
             std::cerr << "Didn't found textures for game object animation :-( " << "AnimateSprites" << std::endl;
         }
 
-        pGameObject = std::make_unique<SpaceShip>(pGameObjectAniomation, 0.0000001f, glm::vec2(100.f, 100.f));
+        pGameObject = std::make_unique<SpaceShip>(pGameObjectAniomation, 0.0000001f, glm::vec2(0) ,glm::vec2(16.f, 16.f));
+
+        pLevel = std::make_unique<Level>(ResourceManager::GetLevels()[0]);
          
         return true; 
 	}
