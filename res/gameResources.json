@@ -206,7 +206,7 @@
       "initialTile": "yellowType1_Top1",
       "states": [
         {
-          "stateName": "tankTopState",
+          "stateName": "GameObjectTopState",
           "frames": [
             {
               "tile": "yellowType1_Top1",
@@ -220,7 +220,7 @@
         },
 
         {
-          "stateName": "tankLeftState",
+          "stateName": "GameObjectLeftState",
           "frames": [
             {
               "tile": "yellowType1_Left1",
@@ -234,7 +234,7 @@
         },
 
         {
-          "stateName": "tankBottomState",
+          "stateName": "GameObjectBottomState",
           "frames": [
             {
               "tile": "yellowType1_Bottom1",
@@ -248,7 +248,7 @@
         },
 
         {
-          "stateName": "tankRightState",
+          "stateName": "GameObjectRightState",
           "frames": [
             {
               "tile": "yellowType1_Right1",
@@ -267,7 +267,7 @@
       "name": "eagleAnimatedSprite",
       "textureAtlas": "MapTextureAtlas",
       "shader": "SpriteShader",
-      "initialSubTexture": "eagle",
+      "initialTile": "eagle",
       "states": [
         {
           "stateName": "eagle",
@@ -280,7 +280,7 @@
         },
 
         {
-          "tile": "eagle_dead",
+          "stateName": "eagle_dead",
           "frames": [
             {
               "tile": "eagle_dead",
