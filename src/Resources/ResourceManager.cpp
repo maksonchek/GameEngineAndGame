@@ -208,8 +208,8 @@ std::shared_ptr<RenderEngine::TextureManager> ResourceManager::LoadTextureAtlas(
         unsigned int currentTextureOffsetY = textureHeight;
         for (auto& currentTileName : tilesNames)
         {
-            glm::vec2 leftBottom(static_cast<float>(currentTextureOffsetX) / textureWidth, static_cast<float>(currentTextureOffsetY - tileHeight) / textureHeight);
-            glm::vec2 rightTop(static_cast<float>(currentTextureOffsetX + tileWidth) / textureWidth, static_cast<float>(currentTextureOffsetY) / textureHeight);
+            glm::vec2 leftBottom(static_cast<float>(currentTextureOffsetX + 0.01f) / textureWidth, static_cast<float>(currentTextureOffsetY - tileHeight + 0.01f) / textureHeight);
+            glm::vec2 rightTop(static_cast<float>(currentTextureOffsetX + tileWidth - 0.01f) / textureWidth, static_cast<float>(currentTextureOffsetY - 0.01f) / textureHeight);
 
             pTexture->AddTile(std::move(currentTileName), leftBottom, rightTop);
 

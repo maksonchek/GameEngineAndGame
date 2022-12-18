@@ -8,15 +8,32 @@
 #include "Game/Game.h"
 #include "Renderer/Renderer.h"
 
-glm::ivec2 g_windowSize(13*16, 14*16);
+glm::ivec2 mainWindowSize(13*16, 14*16);
 
-std::unique_ptr<Game> game = std::make_unique<Game>(g_windowSize);
+std::unique_ptr<Game> game = std::make_unique<Game>(mainWindowSize);
 
 void glfwWindowSizeCallback(GLFWwindow* pWindow, int width, int height)
 {
-    g_windowSize.x = width;
-    g_windowSize.y = height;
-    RenderEngine::Renderer::SetViewPort(width, height);
+    mainWindowSize.x = width;
+    mainWindowSize.y = height;
+    const float level_aspect_ratio = 13.f / 14.f;
+    unsigned int viewPortWidth = mainWindowSize.x;
+    unsigned int viewPortHeight = mainWindowSize.y;
+    unsigned int viewPortLeftOffset = 0;
+    unsigned int viewPortBottomOffset = 0;
+
+    if (static_cast<float>(mainWindowSize.x) / mainWindowSize.y > level_aspect_ratio)
+    {
+        viewPortWidth = static_cast<unsigned int>(mainWindowSize.y * level_aspect_ratio);
+        viewPortLeftOffset = (mainWindowSize.x - viewPortWidth) / 2;
+    }
+    else
+    {
+        viewPortHeight = static_cast<unsigned int>(mainWindowSize.x / level_aspect_ratio);
+        viewPortBottomOffset = (mainWindowSize.y - viewPortHeight) / 2;
+    }
+
+    RenderEngine::Renderer::SetViewPort(viewPortWidth, viewPortHeight, viewPortLeftOffset, viewPortBottomOffset);
 }
 
 void glfwKeyCallback(GLFWwindow* pWindow, int key, int scancode, int action, int mode)
@@ -42,7 +59,7 @@ int main(int argc, char** argv)
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
     /* Создаём окошко для вывода картинок */
-    GLFWwindow* pWindow = glfwCreateWindow(g_windowSize.x, g_windowSize.y, "Хе-хеы", nullptr, nullptr);
+    GLFWwindow* pWindow = glfwCreateWindow(mainWindowSize.x, mainWindowSize.y, "Хе-хеы", nullptr, nullptr);
     if (!pWindow)
     {
         std::cout << "glfw didn't create window! :-(" << std::endl;
