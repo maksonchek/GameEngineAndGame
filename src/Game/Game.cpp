@@ -107,14 +107,8 @@
         pSpriteShaderProgram->SetMatrix4x4("projectionMat", projectionMatrix);
 
 
-        auto pGameObjectAniomation = ResourceManager::GetSpriteAnimator("GameObjectAnimate");
-
-        if (!pGameObjectAniomation)
-        {
-            std::cerr << "Didn't found textures for game object animation :-( " << "AnimateSprites" << std::endl;
-        }
-
-        pGameObject = std::make_unique<SpaceShip>(pGameObjectAniomation, 0.0000001f, glm::vec2(0) ,glm::vec2(16.f, 16.f));
+        pGameObject = std::make_unique<SpaceShip>(ResourceManager::GetSprite("tankSprite_top"), ResourceManager::GetSprite("tankSprite_bottom"), ResourceManager::GetSprite("tankSprite_left"), 
+                                                                    ResourceManager::GetSprite("tankSprite_right"), 0.0000001f, glm::vec2(0), glm::vec2(16.f, 16.f));
 
         pLevel = std::make_unique<Level>(ResourceManager::GetLevels()[0]);
          

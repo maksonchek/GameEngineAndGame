@@ -3,17 +3,20 @@
 #include <glm/vec2.hpp>
 
 #include "GameObjectInterface.h"
+#include "../../Renderer/SpriteAnimator.h"
 
 namespace RenderEngine
 {
-	class SpriteAnimator;
+	class Sprite;
 }
 
 class SpaceShip : public GameObjectInterface
 {
 public:
 
-	SpaceShip(std::shared_ptr<RenderEngine::SpriteAnimator> pSprie, const float velocity, const glm::vec2& position, const glm::vec2& size);
+	SpaceShip(std::shared_ptr<RenderEngine::Sprite> pSprite_top, std::shared_ptr<RenderEngine::Sprite> pSprite_bottom, std::shared_ptr<RenderEngine::Sprite> pSprite_left, 
+				std::shared_ptr<RenderEngine::Sprite> pSprite_right,
+				  const float velocity, const glm::vec2& position, const glm::vec2& size);
 	
 	void Render() const override;
 
@@ -35,7 +38,14 @@ public:
 private:
 	ObjectOrientation objectOrientation;
 
-	std::shared_ptr<RenderEngine::SpriteAnimator> pSprite;
+	std::shared_ptr<RenderEngine::Sprite> pSprite_top;
+	std::shared_ptr<RenderEngine::Sprite> pSprite_bottom;
+	std::shared_ptr<RenderEngine::Sprite> pSprite_left;
+	std::shared_ptr<RenderEngine::Sprite> pSprite_right;
+	RenderEngine::SpriteAnimator spriteAnimator_top;
+	RenderEngine::SpriteAnimator spriteAnimator_bottom;
+	RenderEngine::SpriteAnimator spriteAnimator_left;
+	RenderEngine::SpriteAnimator spriteAnimator_right;
 
 	bool isMoving;
 

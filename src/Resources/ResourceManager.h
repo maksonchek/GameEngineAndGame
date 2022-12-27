@@ -10,7 +10,6 @@ namespace RenderEngine
     class ShaderManager;
     class TextureManager;
     class Sprite;
-    class SpriteAnimator;
 }
 
 
@@ -37,13 +36,6 @@ public:
                                                                    const std::string &titleName = "default");
 
     static std::shared_ptr<RenderEngine::Sprite> GetSprite(const std::string& spriteName);
-
-    static std::shared_ptr<RenderEngine::SpriteAnimator> LoadSpriteAnimator(const std::string &spriteName,
-                                                                           const std::string &textureName,
-                                                                             const std::string &shaderName,
-                                                                                const std::string &titleName = "default");
-
-    static std::shared_ptr<RenderEngine::SpriteAnimator> GetSpriteAnimator(const std::string& spriteName);
 
 
     static std::shared_ptr<RenderEngine::TextureManager> LoadTextureAtlas(const std::string textureName,
@@ -76,9 +68,6 @@ private:
 
     typedef std::map<const std::string, std::shared_ptr<RenderEngine::Sprite>> mapSprite;
     static mapSprite sprites;
-
-    typedef std::map<const std::string, std::shared_ptr<RenderEngine::SpriteAnimator>> mapSpriteAnimators;
-    static mapSpriteAnimators animateSprites;
 
     static std::string path;
 

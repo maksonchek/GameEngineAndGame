@@ -2,7 +2,6 @@
 #include "../Renderer/ShaderManager.h"
 #include "../Renderer/TextureManager.h"
 #include "../Renderer/Sprite.h"
-#include "../Renderer/SpriteAnimator.h"
 
 #include <sstream>
 #include <fstream>
@@ -21,8 +20,6 @@
 
  ResourceManager::mapSprite ResourceManager::sprites;
 
- ResourceManager::mapSpriteAnimators ResourceManager::animateSprites;
-
  std::string ResourceManager::path;
 
  std::vector<std::vector<std::string>> ResourceManager::levels;
@@ -38,7 +35,6 @@ void ResourceManager::DestructAllRes()
     shaderManagers.clear();
     textures.clear();
     sprites.clear();
-    animateSprites.clear();
 }
 
 std::string ResourceManager::GetTextFromFile(const std::string& relativeFilePath) 
@@ -125,37 +121,6 @@ std::shared_ptr<RenderEngine::Sprite> ResourceManager::GetSprite(const std::stri
 {
     mapSprite::const_iterator iter = sprites.find(spriteName);
     if (iter != sprites.end())
-    {
-        return iter->second;
-    }
-    std::cerr << "Can't find the sprite: " << spriteName << std::endl;
-    return nullptr;
-}
-
-std::shared_ptr<RenderEngine::SpriteAnimator> ResourceManager::LoadSpriteAnimator(const std::string& spriteName,
-                                                                                    const std::string& textureName, const std::string& shaderName,  const std::string& titleName)
-{
-    auto pTexture = GetTextureManager(textureName);
-    if (!pTexture)
-    {
-        std::cerr << "Can't find the texture: " << textureName << " for the sprite: " << spriteName << std::endl;
-    }
-
-    auto pShader = GetShaderManager(shaderName);
-    if (!pShader)
-    {
-        std::cerr << "Can't find the shader: " << shaderName << " for the sprite: " << spriteName << std::endl;
-    }
-
-    std::shared_ptr<RenderEngine::SpriteAnimator> newSprite = animateSprites.emplace(spriteName, std::make_shared<RenderEngine::SpriteAnimator>(pTexture, titleName, pShader)).first->second;
-
-    return newSprite;
-}
-
-std::shared_ptr<RenderEngine::SpriteAnimator> ResourceManager::GetSpriteAnimator(const std::string& spriteName)
-{
-    mapSpriteAnimators::const_iterator iter = animateSprites.find(spriteName);
-    if (iter != animateSprites.end())
     {
         return iter->second;
     }
@@ -283,46 +248,28 @@ bool ResourceManager::LoadResourcesFromJSON(const std::string& filePath)
            const std::string name = currentSprite["name"].GetString();
            const std::string textureAtlas = currentSprite["textureAtlas"].GetString();
            const std::string shader = currentSprite["shader"].GetString();
-           const std::string tile = currentSprite["tileName"].GetString();
+           const std::string tile = currentSprite["initialTile"].GetString();
 
            auto pSprite = LoadSprite(name, textureAtlas, shader, tile);
            if (!pSprite)
            {
                continue;
            }
-       }
-   }
-
-   auto textureAnimIter = doc.FindMember("AnimateSprites");
-   if (textureAnimIter != doc.MemberEnd())
-   {
-       for (const auto& anim : textureAnimIter->value.GetArray())
-       {
-           const std::string name = anim["name"].GetString();
-           const std::string textureAtlas = anim["textureAtlas"].GetString();
-           const std::string shader = anim["shader"].GetString();
-           const std::string initialTile = anim["initialTile"].GetString();
-
-           auto pAnimatedSprite = LoadSpriteAnimator(name, textureAtlas, shader, initialTile);
-           if (!pAnimatedSprite)
+           auto framesIter = currentSprite.FindMember("frames");
+           if (framesIter != currentSprite.MemberEnd())
            {
-               continue;
-           }
-
-           const auto statesArray = anim["states"].GetArray();
-           for (const auto& state : statesArray)
-           {
-               const std::string stateName = state["stateName"].GetString();
-               std::vector<std::pair<std::string, uint64_t>> frames;
-               const auto framesArray = state["frames"].GetArray();
-               frames.reserve(framesArray.Size());
+               const auto framesArray = framesIter->value.GetArray();
+               std::vector<RenderEngine::Sprite::FrameParams> framesParams;
+               framesParams.reserve(framesArray.Size());
                for (const auto& frame : framesArray)
                {
                    const std::string tile = frame["tile"].GetString();
                    const uint64_t duration = frame["duration"].GetUint64();
-                   frames.emplace_back(std::pair<std::string, uint64_t>(tile, duration));
+                   const auto pTextureAtlas = GetTextureManager(textureAtlas);
+                   const auto pTile = pTextureAtlas->GetTile(tile);
+                   framesParams.emplace_back(pTile.leftBottom, pTile.rightTop, duration);
                }
-               pAnimatedSprite->InsertState(stateName, std::move(frames));
+               pSprite->InsertFrames(std::move(framesParams));
            }
        }
        float a = 30 % 1;
