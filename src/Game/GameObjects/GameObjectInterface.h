@@ -10,7 +10,7 @@ public:
     virtual ~GameObjectInterface();
 
 protected:
-    glm::vec2 position;
-    glm::vec2 size;
-    float rotation;
+    glm::vec2 GOIposition;
+    glm::vec2 GOIsize;
+    float GOIrotation;
 };

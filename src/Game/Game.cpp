@@ -85,20 +85,7 @@
         {
             std::cerr << "Didn't found shaders :-( " << "SpriteShader" << std::endl;
         }
-        auto pTextureAtlas = ResourceManager::GetTextureManager("MapTextureAtlas");
-
-        if (!pTextureAtlas)
-        {
-            std::cerr << "Didn't found texture atlas  :-( " << "MapTextureAtlas" << std::endl;
-        }
-
-        auto pObjectTextureAtlas = ResourceManager::GetTextureManager("GameObjectAtlas");
-
-        if (!pObjectTextureAtlas)
-        {
-            std::cerr << "Didn't found texture atlas of gameobject :-( " << "GameObjectAtlas" << std::endl;
-        }
-
+       
         glm::mat4 projectionMatrix = glm::ortho(0.f, static_cast<float>(windowSize.x), 0.f, static_cast<float>(windowSize.y), -100.f, 100.f);
 
 
@@ -107,8 +94,7 @@
         pSpriteShaderProgram->SetMatrix4x4("projectionMat", projectionMatrix);
 
 
-        pGameObject = std::make_unique<SpaceShip>(ResourceManager::GetSprite("tankSprite_top"), ResourceManager::GetSprite("tankSprite_bottom"), ResourceManager::GetSprite("tankSprite_left"), 
-                                                                    ResourceManager::GetSprite("tankSprite_right"), 0.0000001f, glm::vec2(0), glm::vec2(16.f, 16.f));
+        pGameObject = std::make_unique<SpaceShip>(0.0000001f, glm::vec2(0), glm::vec2(16.f, 16.f));
 
         pLevel = std::make_unique<Level>(ResourceManager::GetLevels()[0]);
          

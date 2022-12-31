@@ -13,23 +13,23 @@ std::shared_ptr<GameObjectInterface> CreateGameObjectFromMarkup(const char marku
     switch (markup)
     {
     case '0':
-        return std::make_shared<WallGameObject>(ResourceManager::GetSprite("brickWall_right"), position, size, rotation);
+        return std::make_shared<WallGameObject>(WallGameObject::WallGOType::Right, position, size, rotation);
     case '1':
-        return std::make_shared<WallGameObject>(ResourceManager::GetSprite("brickWall_bottom"), position, size, rotation);
+        return std::make_shared<WallGameObject>(WallGameObject::WallGOType::Bottom, position, size, rotation);
     case '2':
-        return std::make_shared<WallGameObject>(ResourceManager::GetSprite("brickWall_left"), position, size, rotation);
+        return std::make_shared<WallGameObject>(WallGameObject::WallGOType::Left, position, size, rotation);
     case '3':
-        return std::make_shared<WallGameObject>(ResourceManager::GetSprite("brickWall_top"), position, size, rotation);
+        return std::make_shared<WallGameObject>(WallGameObject::WallGOType::Top, position, size, rotation);
     case '4':
-        return std::make_shared<WallGameObject>(ResourceManager::GetSprite("brickWall"), position, size, rotation);
+        return std::make_shared<WallGameObject>(WallGameObject::WallGOType::All, position, size, rotation);
     case 'G':
-        return std::make_shared<WallGameObject>(ResourceManager::GetSprite("brickWall_bottom_left"), position, size, rotation);
+        return std::make_shared<WallGameObject>(WallGameObject::WallGOType::BottomLeft, position, size, rotation);
     case 'H':
-        return std::make_shared<WallGameObject>(ResourceManager::GetSprite("brickWall_bottom_right"), position, size, rotation);
+        return std::make_shared<WallGameObject>(WallGameObject::WallGOType::BottomRight, position, size, rotation);
     case 'I':
-        return std::make_shared<WallGameObject>(ResourceManager::GetSprite("brickWall_top_left"), position, size, rotation);
+        return std::make_shared<WallGameObject>(WallGameObject::WallGOType::TopLeft, position, size, rotation);
     case 'J':
-        return std::make_shared<WallGameObject>(ResourceManager::GetSprite("brickWall_top_right"), position, size, rotation);
+        return std::make_shared<WallGameObject>(WallGameObject::WallGOType::TopRight, position, size, rotation);
     case 'D':
         return nullptr;
     default:
