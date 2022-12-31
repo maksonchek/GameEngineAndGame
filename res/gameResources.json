@@ -201,63 +201,63 @@
 
     {
       "name": "betonWall",
-      "textureAtlas": "MapTextureAtlas",
+      "textureAtlas": "MiniMapTextureAtlas",
       "shader": "SpriteShader",
       "initialTile": "betonWall"
     },
 
     {
       "name": "betonWall_top",
-      "textureAtlas": "MapTextureAtlas",
+      "textureAtlas": "MiniMapTextureAtlas",
       "shader": "SpriteShader",
       "initialTile": "betonWall_top"
     },
 
     {
       "name": "betonWall_bottom",
-      "textureAtlas": "MapTextureAtlas",
+      "textureAtlas": "MiniMapTextureAtlas",
       "shader": "SpriteShader",
       "initialTile": "betonWall_bottom"
     },
 
     {
       "name": "betonWall_left",
-      "textureAtlas": "MapTextureAtlas",
+      "textureAtlas": "MiniMapTextureAtlas",
       "shader": "SpriteShader",
       "initialTile": "betonWall_left"
     },
 
     {
       "name": "betonWall_right",
-      "textureAtlas": "MapTextureAtlas",
+      "textureAtlas": "MiniMapTextureAtlas",
       "shader": "SpriteShader",
       "initialTile": "betonWall_right"
     },
 
     {
       "name": "betonWall_top_left",
-      "textureAtlas": "MapTextureAtlas",
+      "textureAtlas": "MiniMapTextureAtlas",
       "shader": "SpriteShader",
       "initialTile": "betonWall_top_left"
     },
 
     {
       "name": "betonWall_top_right",
-      "textureAtlas": "MapTextureAtlas",
+      "textureAtlas": "MiniMapTextureAtlas",
       "shader": "SpriteShader",
       "initialTile": "betonWall_top_right"
     },
 
     {
       "name": "betonWall_bottom_left",
-      "textureAtlas": "MapTextureAtlas",
+      "textureAtlas": "MiniMapTextureAtlas",
       "shader": "SpriteShader",
       "initialTile": "betonWall_bottom_left"
     },
 
     {
       "name": "betonWall_bottom_right",
-      "textureAtlas": "MapTextureAtlas",
+      "textureAtlas": "MiniMapTextureAtlas",
       "shader": "SpriteShader",
       "initialTile": "betonWall_bottom_right"
     },
@@ -280,14 +280,14 @@
       "name": "tankSprite_top",
       "textureAtlas": "GameObjectAtlas",
       "shader": "SpriteShader",
-      "initialTile": "yellowType1_top1",
+      "initialTile": "yellowType1_Top1",
       "frames": [
         {
-          "tile": "yellowType1_top1",
+          "tile": "yellowType1_Top1",
           "duration": 500000000
         },
         {
-          "tile": "yellowType1_top2",
+          "tile": "yellowType1_Top2",
           "duration": 500000000
         }
       ]
@@ -297,14 +297,14 @@
       "name": "tankSprite_bottom",
       "textureAtlas": "GameObjectAtlas",
       "shader": "SpriteShader",
-      "initialTile": "yellowType1_bottom1",
+      "initialTile": "yellowType1_Bottom1",
       "frames": [
         {
-          "tile": "yellowType1_bottom1",
+          "tile": "yellowType1_Bottom1",
           "duration": 500000000
         },
         {
-          "tile": "yellowType1_bottom2",
+          "tile": "yellowType1_Bottom2",
           "duration": 500000000
         }
       ]
@@ -314,14 +314,14 @@
       "name": "tankSprite_left",
       "textureAtlas": "GameObjectAtlas",
       "shader": "SpriteShader",
-      "initialTile": "yellowType1_left1",
+      "initialTile": "yellowType1_Left1",
       "frames": [
         {
-          "tile": "yellowType1_left1",
+          "tile": "yellowType1_Left1",
           "duration": 500000000
         },
         {
-          "tile": "yellowType1_left2",
+          "tile": "yellowType1_Left2",
           "duration": 500000000
         }
       ]
@@ -331,14 +331,14 @@
       "name": "tankSprite_right",
       "textureAtlas": "GameObjectAtlas",
       "shader": "SpriteShader",
-      "initialTile": "yellowType1_right1",
+      "initialTile": "yellowType1_Right1",
       "frames": [
         {
-          "tile": "yellowType1_right1",
+          "tile": "yellowType1_Right1",
           "duration": 500000000
         },
         {
-          "tile": "yellowType1_right2",
+          "tile": "yellowType1_Right2",
           "duration": 500000000
         }
       ]

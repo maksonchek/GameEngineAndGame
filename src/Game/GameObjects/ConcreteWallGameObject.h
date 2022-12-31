@@ -8,7 +8,7 @@ namespace RenderEngine {
     class Sprite;
 }
 
-class WallGameObject : public GameObjectInterface {
+class ConcreteWallGameObject : public GameObjectInterface {
 public:
     enum class WallGOType {
         All,
@@ -23,21 +23,7 @@ public:
     };
 
     enum class WallGOState {
-        All = 0,
-        TopLeft,
-        TopRight,
-        Top,
-        BottomLeft,
-        Left,
-        TopRight_BottomLeft,
-        Top_BottomLeft,
-        BottomRight,
-        TopLeft_BottomRight,
-        Right,
-        Top_BottomRight,
-        Bottom,
-        TopLeft_Bottom,
-        TopRight_Bottom,
+        Enabled = 0,
         Destroyed
     };
 
@@ -48,13 +34,14 @@ public:
         BottomRight
     };
 
-    WallGameObject(const WallGOType type, const glm::vec2& position, const glm::vec2& size, const float rotation);
+    ConcreteWallGameObject(const WallGOType type, const glm::vec2& position, const glm::vec2& size, const float rotation);
     virtual void Render() const override;
     virtual void UpdateFrame(const uint64_t delta) override;
 
 private:
     void RenderWallGo(const WallGOPosition position) const;
-    std::array<glm::vec2, 4> offsets;
+
     std::array<WallGOState, 4> currentWallGOState;
-    std::array<std::shared_ptr<RenderEngine::Sprite>, 15> pSprites;
+    std::shared_ptr<RenderEngine::Sprite> sprite;
+    std::array<glm::vec2, 4> offsets;
 };

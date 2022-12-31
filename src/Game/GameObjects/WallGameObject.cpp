@@ -3,7 +3,11 @@
 #include "../../Resources/ResourceManager.h"
 
 WallGameObject::WallGameObject(const WallGOType type, const glm::vec2& position, const glm::vec2& size, const float rotation)
-    : GameObjectInterface(position, size, rotation), currentWallGOState{ WallGOState::Destroyed, WallGOState::Destroyed, WallGOState::Destroyed, WallGOState::Destroyed }
+    : GameObjectInterface(position, size, rotation), currentWallGOState{ WallGOState::Destroyed, WallGOState::Destroyed, WallGOState::Destroyed, WallGOState::Destroyed }, 
+                       offsets{ glm::vec2(0, GOIsize.y / 2.f),
+                                   glm::vec2(GOIsize.x / 2.f, GOIsize.y / 2.f),
+                                   glm::vec2(0, 0),
+                                   glm::vec2(GOIsize.x / 2.f, 0) }
 {
     pSprites[static_cast<size_t>(WallGOState::All)] = ResourceManager::GetSprite("brickWall_All");
     pSprites[static_cast<size_t>(WallGOState::TopLeft)] = ResourceManager::GetSprite("brickWall_TopLeft");
@@ -58,11 +62,6 @@ WallGameObject::WallGameObject(const WallGOType type, const glm::vec2& position,
 }
 void WallGameObject::RenderWallGo(const WallGOPosition position) const
 {
-    static const std::array<glm::vec2, 4> offsets = { glm::vec2(0, GOIsize.y / 2.f),
-                                                      glm::vec2(GOIsize.x / 2.f, GOIsize.y / 2.f),
-                                                      glm::vec2(0, 0),
-                                                      glm::vec2(GOIsize.x / 2.f, 0) };
-
     const WallGOState state = currentWallGOState[static_cast<size_t>(position)];
     if (state != WallGOState::Destroyed)
     {

@@ -5,6 +5,7 @@ project(${PROJECT_NAME})
 
 add_executable(${PROJECT_NAME} 
 	src/main.cpp
+
 	src/Resources/ResourceManager.cpp
 	src/Resources/ResourceManager.h
 	src/Resources/stb_image.h
@@ -37,7 +38,9 @@ add_executable(${PROJECT_NAME}
 	src/Game/GameObjects/WallGameObject.cpp
 	src/Game/GameObjects/WallGameObject.h
 	src/Game/Level.h
-	src/Game/Level.cpp	
+	src/Game/Level.cpp
+	src/Game/GameObjects/ConcreteWallGameObject.cpp
+	src/Game/GameObjects/ConcreteWallGameObject.h	
 )
 
 

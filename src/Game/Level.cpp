@@ -3,6 +3,7 @@
 #include "../Resources/ResourceManager.h"
 #include "GameObjects/GameObjectInterface.h"
 #include "GameObjects/WallGameObject.h"
+#include "GameObjects/ConcreteWallGameObject.h"
 
 #include <iostream>
 
@@ -22,6 +23,16 @@ std::shared_ptr<GameObjectInterface> CreateGameObjectFromMarkup(const char marku
         return std::make_shared<WallGameObject>(WallGameObject::WallGOType::Top, position, size, rotation);
     case '4':
         return std::make_shared<WallGameObject>(WallGameObject::WallGOType::All, position, size, rotation);
+    case '5':
+        return std::make_shared<ConcreteWallGameObject>(ConcreteWallGameObject::WallGOType::Right, position, size, rotation);
+    case '6':
+        return std::make_shared<ConcreteWallGameObject>(ConcreteWallGameObject::WallGOType::Bottom, position, size, rotation);
+    case '7':
+        return std::make_shared<ConcreteWallGameObject>(ConcreteWallGameObject::WallGOType::Left, position, size, rotation);
+    case '8':
+        return std::make_shared<ConcreteWallGameObject>(ConcreteWallGameObject::WallGOType::Top, position, size, rotation);
+    case '9':
+        return std::make_shared<ConcreteWallGameObject>(ConcreteWallGameObject::WallGOType::All, position, size, rotation);
     case 'G':
         return std::make_shared<WallGameObject>(WallGameObject::WallGOType::BottomLeft, position, size, rotation);
     case 'H':
