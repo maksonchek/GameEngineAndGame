@@ -6,4 +6,8 @@ uniform sampler2D textures;
 
 void main() {
    frag_color = texture(textures, texturePoints);
+   if(frag_color.rgb == vec3(0.))
+   {
+	discard;
+   }
 };

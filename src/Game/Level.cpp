@@ -4,6 +4,10 @@
 #include "GameObjects/GameObjectInterface.h"
 #include "GameObjects/WallGameObject.h"
 #include "GameObjects/ConcreteWallGameObject.h"
+#include "GameObjects/Trees.h"
+#include "GameObjects/Ice.h"
+#include "GameObjects/Water.h"
+#include "GameObjects/Eagle.h"
 
 #include <iostream>
 
@@ -14,33 +18,41 @@ std::shared_ptr<GameObjectInterface> CreateGameObjectFromMarkup(const char marku
     switch (markup)
     {
     case '0':
-        return std::make_shared<WallGameObject>(WallGameObject::WallGOType::Right, position, size, rotation);
+        return std::make_shared<WallGameObject>(WallGameObject::WallGOType::Right, position, size, rotation, 0.f);
     case '1':
-        return std::make_shared<WallGameObject>(WallGameObject::WallGOType::Bottom, position, size, rotation);
+        return std::make_shared<WallGameObject>(WallGameObject::WallGOType::Bottom, position, size, rotation, 0.f);
     case '2':
-        return std::make_shared<WallGameObject>(WallGameObject::WallGOType::Left, position, size, rotation);
+        return std::make_shared<WallGameObject>(WallGameObject::WallGOType::Left, position, size, rotation, 0.f);
     case '3':
-        return std::make_shared<WallGameObject>(WallGameObject::WallGOType::Top, position, size, rotation);
+        return std::make_shared<WallGameObject>(WallGameObject::WallGOType::Top, position, size, rotation, 0.f);
     case '4':
-        return std::make_shared<WallGameObject>(WallGameObject::WallGOType::All, position, size, rotation);
+        return std::make_shared<WallGameObject>(WallGameObject::WallGOType::All, position, size, rotation, 0.f);
     case '5':
-        return std::make_shared<ConcreteWallGameObject>(ConcreteWallGameObject::WallGOType::Right, position, size, rotation);
+        return std::make_shared<ConcreteWallGameObject>(ConcreteWallGameObject::WallGOType::Right, position, size, rotation, 0.f);
     case '6':
-        return std::make_shared<ConcreteWallGameObject>(ConcreteWallGameObject::WallGOType::Bottom, position, size, rotation);
+        return std::make_shared<ConcreteWallGameObject>(ConcreteWallGameObject::WallGOType::Bottom, position, size, rotation, 0.f);
     case '7':
-        return std::make_shared<ConcreteWallGameObject>(ConcreteWallGameObject::WallGOType::Left, position, size, rotation);
+        return std::make_shared<ConcreteWallGameObject>(ConcreteWallGameObject::WallGOType::Left, position, size, rotation, 0.f);
     case '8':
-        return std::make_shared<ConcreteWallGameObject>(ConcreteWallGameObject::WallGOType::Top, position, size, rotation);
+        return std::make_shared<ConcreteWallGameObject>(ConcreteWallGameObject::WallGOType::Top, position, size, rotation, 0.f);
     case '9':
-        return std::make_shared<ConcreteWallGameObject>(ConcreteWallGameObject::WallGOType::All, position, size, rotation);
+        return std::make_shared<ConcreteWallGameObject>(ConcreteWallGameObject::WallGOType::All, position, size, rotation, 0.f);
+    case 'A':
+        return std::make_shared<Water>(position, size, rotation, 0.f);
+    case 'B':
+        return std::make_shared<Trees>(position, size, rotation, 1.f);
+    case 'C':
+        return std::make_shared<Ice>(position, size, rotation, -1.f);
+    case 'E':
+        return std::make_shared<Eagle>(position, size, rotation, 0.f);
     case 'G':
-        return std::make_shared<WallGameObject>(WallGameObject::WallGOType::BottomLeft, position, size, rotation);
+        return std::make_shared<WallGameObject>(WallGameObject::WallGOType::BottomLeft, position, size, rotation, 0.f);
     case 'H':
-        return std::make_shared<WallGameObject>(WallGameObject::WallGOType::BottomRight, position, size, rotation);
+        return std::make_shared<WallGameObject>(WallGameObject::WallGOType::BottomRight, position, size, rotation, 0.f);
     case 'I':
-        return std::make_shared<WallGameObject>(WallGameObject::WallGOType::TopLeft, position, size, rotation);
+        return std::make_shared<WallGameObject>(WallGameObject::WallGOType::TopLeft, position, size, rotation, 0.f);
     case 'J':
-        return std::make_shared<WallGameObject>(WallGameObject::WallGOType::TopRight, position, size, rotation);
+        return std::make_shared<WallGameObject>(WallGameObject::WallGOType::TopRight, position, size, rotation, 0.f);
     case 'D':
         return nullptr;
     default:

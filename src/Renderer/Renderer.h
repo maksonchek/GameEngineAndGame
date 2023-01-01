@@ -14,6 +14,8 @@ namespace RenderEngine
 
 		static void ClearColor(float red, float green, float blue, float alpha);
 
+		static void SetLayer(const bool enabled);
+
 		static void Clear();
 
 		static void SetViewPort(unsigned int width, unsigned int height, unsigned int leftOffset = 0, unsigned int bottomOffset = 0);

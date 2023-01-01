@@ -36,7 +36,7 @@
         "water3",
 
         "betonWall",
-        "wall",
+        "trees",
         "ice",
         "wall",
         "bullet",
@@ -49,40 +49,41 @@
       "tileWidth": 16,
       "tileHeight": 16,
       "tiles": [
-        "brickWall",
-        "brickWall_top",
-        "brickWall_bottom",
-        "brickWall_left",
-        "brickWall_right",
-        "brickWall_top_left",
-        "brickWall_top_right",
-        "brickWall_bottom_left",
-
-        "brickWall_bottom_right",
-        "betonWall",
-        "betonWall_top",
-        "betonWall_bottom",
-        "betonWall_left",
-        "betonWall_right",
-        "betonWall_top_left",
-        "betonWall_top_right",
-
-        "betonWall_bottom_left",
-        "betonWall_bottom_right",
-        "water1",
-        "water2",
-        "water3",
-        "trees",
-        "ice",
-        "wall",
-
         "eagle",
         "eagle_dead",
-        "nothing",
         "respawn1",
         "respawn2",
         "respawn3",
-        "respawn4"
+        "respawn4",
+        "shield1",
+        "shield2",
+
+        "bigExplosion1_top_left",
+        "bigExplosion1_top_right",
+        "bigExplosion2_top_left",
+        "bigExplosion2_top_right",
+        "explosion1",
+        "explosion2",
+        "explosion3",
+        "reserved1",
+
+        "bigExplosion1_bottom_left",
+        "bigExplosion1_bottom_right",
+        "bigExplosion2_bottom_left",
+        "bigExplosion2_bottom_right",
+        "reserved2",
+        "reserved3",
+        "reserved4",
+        "reserved5",
+
+        "bonus_helmet",
+        "bonus_clock",
+        "bonus_shovel",
+        "bonus_star",
+        "bonus_grenade",
+        "bonus_tank",
+        "bonus_gun",
+        "reserved6"
       ]
     },
 
@@ -198,6 +199,26 @@
       "initialTile": "brickWall_TopRight_Bottom"
     },
 
+    {
+      "name": "water",
+      "textureAtlas": "MiniMapTextureAtlas",
+      "shader": "SpriteShader",
+      "initialTile": "water1",
+      "frames": [
+        {
+          "tile": "water1",
+          "duration": 500000000
+        },
+        {
+          "tile": "water2",
+          "duration": 500000000
+        },
+        {
+          "tile": "water3",
+          "duration": 500000000
+        }
+      ]
+    },
 
     {
       "name": "betonWall",
@@ -207,59 +228,180 @@
     },
 
     {
-      "name": "betonWall_top",
+      "name": "trees",
       "textureAtlas": "MiniMapTextureAtlas",
       "shader": "SpriteShader",
-      "initialTile": "betonWall_top"
+      "initialTile": "trees"
     },
 
     {
-      "name": "betonWall_bottom",
+      "name": "ice",
       "textureAtlas": "MiniMapTextureAtlas",
       "shader": "SpriteShader",
-      "initialTile": "betonWall_bottom"
+      "initialTile": "ice"
     },
 
     {
-      "name": "betonWall_left",
+      "name": "wall",
       "textureAtlas": "MiniMapTextureAtlas",
       "shader": "SpriteShader",
-      "initialTile": "betonWall_left"
+      "initialTile": "wall"
     },
 
     {
-      "name": "betonWall_right",
+      "name": "bullet",
       "textureAtlas": "MiniMapTextureAtlas",
       "shader": "SpriteShader",
-      "initialTile": "betonWall_right"
+      "initialTile": "bullet"
     },
 
     {
-      "name": "betonWall_top_left",
-      "textureAtlas": "MiniMapTextureAtlas",
+      "name": "eagle",
+      "textureAtlas": "MapTextureAtlas",
       "shader": "SpriteShader",
-      "initialTile": "betonWall_top_left"
+      "initialTile": "eagle"
     },
 
     {
-      "name": "betonWall_top_right",
-      "textureAtlas": "MiniMapTextureAtlas",
+      "name": "eagle_dead",
+      "textureAtlas": "MapTextureAtlas",
       "shader": "SpriteShader",
-      "initialTile": "betonWall_top_right"
+      "initialTile": "eagle_dead"
+    },
+
+    { 
+      "name": "respawn",
+      "textureAtlas": "MapTextureAtlas",
+      "shader": "SpriteShader",
+      "initialTile": "respawn1",
+      "frames": [
+        {
+          "tile": "respawn1",
+          "duration": 500000000
+        },
+        {
+          "tile": "respawn2",
+          "duration": 500000000
+        },
+        {
+          "tile": "respawn3",
+          "duration": 500000000
+        },
+        {
+          "tile": "respawn4",
+          "duration": 500000000
+        }
+      ]
+    },
+    {
+      "name": "shield",
+      "textureAtlas": "MapTextureAtlas",
+      "shader": "SpriteShader",
+      "initialTile": "shield1",
+      "frames": [
+        {
+          "tile": "shield1",
+          "duration": 500000000
+        },
+        {
+          "tile": "shield1",
+          "duration": 500000000
+        }
+      ]
+    },
+    {
+      "name": "explosion",
+      "textureAtlas": "MapTextureAtlas",
+      "shader": "SpriteShader",
+      "initialTile": "explosion1",
+      "frames": [
+        {
+          "tile": "explosion1",
+          "duration": 500000000
+        },
+        {
+          "tile": "explosion2",
+          "duration": 500000000
+        }
+      ]
+    },
+    {
+      "name": "bigExplosion_top_left",
+      "textureAtlas": "MapTextureAtlas",
+      "shader": "SpriteShader",
+      "initialTile": "bigExplosion1_top_left",
+      "frames": [
+        {
+          "tile": "bigExplosion1_top_left",
+          "duration": 500000000
+        },
+        {
+          "tile": "bigExplosion2_top_left",
+          "duration": 500000000
+        }
+      ]
+    },
+    {
+      "name": "bigExplosion_top_right",
+      "textureAtlas": "MapTextureAtlas",
+      "shader": "SpriteShader",
+      "initialTile": "bigExplosion1_top_right",
+      "frames": [
+        {
+          "tile": "bigExplosion1_top_right",
+          "duration": 500000000
+        },
+        {
+          "tile": "bigExplosion2_top_right",
+          "duration": 500000000
+        }
+      ]
+    },
+    {
+      "name": "bigExplosion_bottom_left",
+      "textureAtlas": "MapTextureAtlas",
+      "shader": "SpriteShader",
+      "initialTile": "bigExplosion1_bottom_left",
+      "frames": [
+        {
+          "tile": "bigExplosion1_bottom_left",
+          "duration": 500000000
+        },
+        {
+          "tile": "bigExplosion2_bottom_left",
+          "duration": 500000000
+        }
+      ]
+    },
+    {
+      "name": "bigExplosion_bottom_right",
+      "textureAtlas": "MapTextureAtlas",
+      "shader": "SpriteShader",
+      "initialTile": "bigExplosion1_bottom_right",
+      "frames": [
+        {
+          "tile": "bigExplosion1_bottom_right",
+          "duration": 500000000
+        },
+        {
+          "tile": "bigExplosion2_bottom_right",
+          "duration": 500000000
+        }
+      ]
     },
 
     {
-      "name": "betonWall_bottom_left",
-      "textureAtlas": "MiniMapTextureAtlas",
+      "name": "bonus_helmet",
+      "textureAtlas": "MapTextureAtlas",
       "shader": "SpriteShader",
-      "initialTile": "betonWall_bottom_left"
+      "initialTile": "bonus_helmet"
     },
 
     {
-      "name": "betonWall_bottom_right",
-      "textureAtlas": "MiniMapTextureAtlas",
+      "name": "bonus_clock",
+      "textureAtlas": "MapTextureAtlas",
       "shader": "SpriteShader",
-      "initialTile": "betonWall_bottom_right"
+      "initialTile": "bonus_clock"
     },
 
     {
@@ -270,12 +412,29 @@
     },
 
     {
-      "name": "eagleSprite",
+      "name": "bonus_star",
       "textureAtlas": "MapTextureAtlas",
       "shader": "SpriteShader",
-      "initialTile": "eagle_dead"
+      "initialTile": "bonus_star"
     },
-
+    {
+      "name": "bonus_grenade",
+      "textureAtlas": "MapTextureAtlas",
+      "shader": "SpriteShader",
+      "initialTile": "bonus_grenade"
+    },
+    {
+      "name": "bonus_tank",
+      "textureAtlas": "MapTextureAtlas",
+      "shader": "SpriteShader",
+      "initialTile": "bonus_tank"
+    },
+    {
+      "name": "bonus_gun",
+      "textureAtlas": "MapTextureAtlas",
+      "shader": "SpriteShader",
+      "initialTile": "bonus_gun"
+    },
     {
       "name": "tankSprite_top",
       "textureAtlas": "GameObjectAtlas",
@@ -361,6 +520,24 @@
         "D4D4D4D4D4D4D",
         "D4D4D3D3D4D4D",
         "D4D4DH1GD4D4D",
+        "DDDDD0E2DDDDD"
+      ]
+    },
+    {
+      "description": [
+        "DDDDDDDDDDDDD",
+        "D00D11D22D33D",
+        "D0DD1DD2DD3DD",
+        "DDDDDDDDDDDDD",
+        "D44D55D66D77D",
+        "D4DD5DD6DD7DD",
+        "DDDDDDDDDDDDD",
+        "D88D99DAADBBD",
+        "D8DD9DDADDBDD",
+        "DDDDDDDDDDDDD",
+        "DCCDGGDHHDIID",
+        "DCDDGDDHDDDDD",
+        "DDDDDH1GDDJJD",
         "DDDDD0E2DDDDD"
       ]
     }

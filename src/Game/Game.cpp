@@ -21,7 +21,7 @@
 	{
 
 	}
-
+      
 	void Game::Render()
 	{
         if (pGameObject) 
@@ -94,9 +94,9 @@
         pSpriteShaderProgram->SetMatrix4x4("projectionMat", projectionMatrix);
 
 
-        pGameObject = std::make_unique<SpaceShip>(0.0000001f, glm::vec2(0), glm::vec2(16.f, 16.f));
+        pGameObject = std::make_unique<SpaceShip>(0.0000001f, glm::vec2(0), glm::vec2(16.f, 16.f), 0.f);
 
-        pLevel = std::make_unique<Level>(ResourceManager::GetLevels()[0]);
+        pLevel = std::make_unique<Level>(ResourceManager::GetLevels()[1]);
          
         return true; 
 	}

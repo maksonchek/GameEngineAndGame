@@ -15,6 +15,8 @@ namespace RenderEngine {
 
         void SetInt(const std::string& name, const GLint value);
 
+        void ShaderManager::SetFloat(const std::string& name, const GLfloat value);
+
         void SetMatrix4x4(const std::string& name, const glm::mat4& matrix);
 
         bool IsCompiled() const 

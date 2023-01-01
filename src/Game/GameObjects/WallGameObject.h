@@ -48,7 +48,7 @@ public:
         BottomRight
     };
 
-    WallGameObject(const WallGOType type, const glm::vec2& position, const glm::vec2& size, const float rotation);
+    WallGameObject(const WallGOType type, const glm::vec2& position, const glm::vec2& size, const float rotation, const float layer);
     virtual void Render() const override;
     virtual void UpdateFrame(const uint64_t delta) override;
 

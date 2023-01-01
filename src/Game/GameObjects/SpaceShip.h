@@ -14,12 +14,12 @@ class SpaceShip : public GameObjectInterface
 {
 public:
 
-	SpaceShip(const float velocity, const glm::vec2& position, const glm::vec2& size);
+	SpaceShip(const float velocity, const glm::vec2& position, const glm::vec2& size, const float layer);
 	
 	void Render() const override;
 
 
-	enum class ObjectOrientation
+	enum class ObjectOrientation : uint8_t
 	{
 		Top,
 		Right,

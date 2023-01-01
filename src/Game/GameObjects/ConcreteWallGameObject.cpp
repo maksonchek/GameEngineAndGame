@@ -2,8 +2,8 @@
 #include "../../Renderer/Sprite.h"
 #include "../../Resources/ResourceManager.h"
 
-ConcreteWallGameObject::ConcreteWallGameObject(const WallGOType type, const glm::vec2& position, const glm::vec2& size, const float rotation)
-    : GameObjectInterface(position, size, rotation), currentWallGOState{ WallGOState::Destroyed, WallGOState::Destroyed, WallGOState::Destroyed, WallGOState::Destroyed }, 
+ConcreteWallGameObject::ConcreteWallGameObject(const WallGOType type, const glm::vec2& position, const glm::vec2& size, const float rotation, const float layer)
+    : GameObjectInterface(position, size, rotation, layer), currentWallGOState{ WallGOState::Destroyed, WallGOState::Destroyed, WallGOState::Destroyed, WallGOState::Destroyed }, 
             sprite(ResourceManager::GetSprite("betonWall")),                        
                                     offsets{ glm::vec2(0, GOIsize.y / 2.f),
                                    glm::vec2(GOIsize.x / 2.f, GOIsize.y / 2.f),
@@ -51,7 +51,7 @@ void ConcreteWallGameObject::RenderWallGo(const WallGOPosition position) const
     const WallGOState state = currentWallGOState[static_cast<size_t>(position)];
     if (state != WallGOState::Destroyed)
     {
-        sprite->Render(GOIposition + offsets[static_cast<size_t>(position)], GOIsize / 2.f, GOIrotation);
+        sprite->Render(GOIposition + offsets[static_cast<size_t>(position)], GOIsize / 2.f, GOIrotation, GOIlayer);
     }
 }
 void ConcreteWallGameObject::Render() const

@@ -4,8 +4,8 @@
 
 SpaceShip::SpaceShip(const float velocity,
 						const glm::vec2& position,
-							const glm::vec2& size) 
-												: GameObjectInterface(position, size, 0.f)
+							const glm::vec2& size, const float layer)
+												: GameObjectInterface(position, size, 0.f, layer)
 												, objectOrientation(ObjectOrientation::Top)
 											    , pSprite_top(ResourceManager::GetSprite("tankSprite_top"))
 												, pSprite_bottom(ResourceManager::GetSprite("tankSprite_bottom"))
@@ -26,16 +26,16 @@ void SpaceShip::Render() const
 	switch (objectOrientation)
 	{
 	case SpaceShip::ObjectOrientation::Top:
-		pSprite_top->Render(GOIposition, GOIsize, GOIrotation, spriteAnimator_top.GetCurrentFrame());
+		pSprite_top->Render(GOIposition, GOIsize, GOIrotation, GOIlayer, spriteAnimator_top.GetCurrentFrame());
 		break;
 	case SpaceShip::ObjectOrientation::Bottom:
-		pSprite_bottom->Render(GOIposition, GOIsize, GOIrotation, spriteAnimator_bottom.GetCurrentFrame());
+		pSprite_bottom->Render(GOIposition, GOIsize, GOIrotation, GOIlayer, spriteAnimator_bottom.GetCurrentFrame());
 		break;
 	case SpaceShip::ObjectOrientation::Left:
-		pSprite_left->Render(GOIposition, GOIsize, GOIrotation, spriteAnimator_left.GetCurrentFrame());
+		pSprite_left->Render(GOIposition, GOIsize, GOIrotation, GOIlayer, spriteAnimator_left.GetCurrentFrame());
 		break;
 	case SpaceShip::ObjectOrientation::Right:
-		pSprite_right->Render(GOIposition, GOIsize, GOIrotation, spriteAnimator_right.GetCurrentFrame());
+		pSprite_right->Render(GOIposition, GOIsize, GOIrotation, GOIlayer, spriteAnimator_right.GetCurrentFrame());
 		break;
 	}
 }
