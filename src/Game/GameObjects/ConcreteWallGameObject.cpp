@@ -62,6 +62,6 @@ void ConcreteWallGameObject::Render() const
     RenderWallGo(WallGOPosition::BottomRight);
 }
 
-void ConcreteWallGameObject::UpdateFrame(const uint64_t delta)
+void ConcreteWallGameObject::UpdateFrame(const double delta)
 {
 }

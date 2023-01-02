@@ -14,7 +14,7 @@ void Eagle::Render() const
     sprite[static_cast<size_t>(currentState)]->Render(GOIposition, GOIsize, GOIrotation, GOIlayer);
 }
 
-void Eagle::UpdateFrame(const uint64_t delta)
+void Eagle::UpdateFrame(const double delta)
 {
 
 }

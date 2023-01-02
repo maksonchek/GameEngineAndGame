@@ -13,13 +13,13 @@ namespace RenderEngine {
         { 
             return currentFrame; 
         }
-        void Update(const uint64_t deltaTime);
+        void Update(const double deltaTime);
 
     private:
         std::shared_ptr<Sprite> pSprite;
         size_t currentFrame;
-        uint64_t currentFrameDuration;
-        uint64_t currentAnimationTime;
+        double currentFrameDuration;
+        double currentAnimationTime;
     };
 
 }

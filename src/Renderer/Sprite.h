@@ -19,14 +19,14 @@ namespace RenderEngine {
     public:
 
         struct FrameParams {
-            FrameParams(const glm::vec2 leftBottom, const glm::vec2 rightTop, const uint64_t duration)
+            FrameParams(const glm::vec2 leftBottom, const glm::vec2 rightTop, const double duration)
                 : leftBottom(leftBottom)
                 , rightTop(rightTop)
                 , duration(duration)
             {}
             glm::vec2 leftBottom;
             glm::vec2 rightTop;
-            uint64_t duration;
+            double duration;
         };
 
         Sprite(std::shared_ptr<TextureManager> pTexture,
@@ -39,7 +39,7 @@ namespace RenderEngine {
         void Render(const glm::vec2& position, const glm::vec2& size, const float rotation, const float layer = 0, const size_t frameId = 0) const;
 
         void InsertFrames(std::vector<FrameParams> framesParams);
-        uint64_t GetFrameDuration(const size_t frameId) const;
+        double GetFrameDuration(const size_t frameId) const;
         size_t GetFramesCount() const;
         ~Sprite();
 

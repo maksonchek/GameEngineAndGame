@@ -76,6 +76,6 @@ void WallGameObject::Render() const
     RenderWallGo(WallGOPosition::BottomRight);
 }
 
-void WallGameObject::UpdateFrame(const uint64_t delta)
+void WallGameObject::UpdateFrame(const double delta)
 {
 }

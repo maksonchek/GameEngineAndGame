@@ -72,11 +72,11 @@ Level::Level(const std::vector<std::string>& levelMarkup)
     height = levelMarkup.size();
 
 
-   // playerRespawn1 = { BLOCK_SIZE * (width / 2 - 1), BLOCK_SIZE / 2 };
-    //playerRespawn2 = { BLOCK_SIZE * (width / 2 + 3), BLOCK_SIZE / 2 };
-    //enemyRespawn1 = { BLOCK_SIZE, BLOCK_SIZE * height - BLOCK_SIZE / 2 };
-    //enemyRespawn2 = { BLOCK_SIZE * (width / 2 + 1), BLOCK_SIZE * height - BLOCK_SIZE / 2 };
-    //enemyRespawn3 = { BLOCK_SIZE * width, BLOCK_SIZE * height - BLOCK_SIZE / 2 };
+    playerRespawn1 = { BLOCK_SIZE * (width / 2 - 1), BLOCK_SIZE / 2 };
+    playerRespawn2 = { BLOCK_SIZE * (width / 2 + 3), BLOCK_SIZE / 2 };
+    enemyRespawn1 = { BLOCK_SIZE, BLOCK_SIZE * height - BLOCK_SIZE / 2 };
+    enemyRespawn2 = { BLOCK_SIZE * (width / 2 + 1), BLOCK_SIZE * height - BLOCK_SIZE / 2 };
+    enemyRespawn3 = { BLOCK_SIZE * width, BLOCK_SIZE * height - BLOCK_SIZE / 2 };
 
     levelObjects.reserve(width * height+4);
     unsigned int currentBottomOffset = static_cast<unsigned int>(BLOCK_SIZE * (height - 1) + BLOCK_SIZE / 2.f);
@@ -134,7 +134,7 @@ void Level::Render() const
     }
 }
 
-void Level::Update(const uint64_t delta)
+void Level::Update(const double delta)
 {
     for (const auto& currentLevelObject : levelObjects)
     {

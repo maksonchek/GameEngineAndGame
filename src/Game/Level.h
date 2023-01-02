@@ -12,7 +12,7 @@ public:
     static constexpr unsigned int BLOCK_SIZE = 16;
     Level(const std::vector<std::string>& levelMarkup);
     void Render() const;
-    void Update(const uint64_t delta);
+    void Update(const double delta);
     size_t GetLevelWidth() const;
     size_t GetLevelHeight() const;
 

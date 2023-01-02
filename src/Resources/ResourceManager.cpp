@@ -264,7 +264,7 @@ bool ResourceManager::LoadResourcesFromJSON(const std::string& filePath)
                for (const auto& frame : framesArray)
                {
                    const std::string tile = frame["tile"].GetString();
-                   const uint64_t duration = frame["duration"].GetUint64();
+                   const double duration = frame["duration"].GetDouble();
                    const auto pTextureAtlas = GetTextureManager(textureAtlas);
                    const auto pTile = pTextureAtlas->GetTile(tile);
                    framesParams.emplace_back(pTile.leftBottom, pTile.rightTop, duration);

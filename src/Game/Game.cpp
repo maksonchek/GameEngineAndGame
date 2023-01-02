@@ -34,7 +34,7 @@
         }
 	}
 
-	void Game::Update(const uint64_t deltaTime)
+	void Game::Update(const double deltaTime)
 	{
         if (pLevel)
         {
@@ -98,7 +98,7 @@
         pSpriteShaderProgram->SetMatrix4x4("projectionMat", projectionMatrix);
 
 
-        pGameObject = std::make_unique<SpaceShip>(0.0000001f, pLevel->GetPlayerRespawn_1(), glm::vec2(Level::BLOCK_SIZE, Level::BLOCK_SIZE), 0.f);
+        pGameObject = std::make_unique<SpaceShip>(0.05, pLevel->GetPlayerRespawn_1(), glm::vec2(Level::BLOCK_SIZE, Level::BLOCK_SIZE), 0.f);
 
          
         return true; 

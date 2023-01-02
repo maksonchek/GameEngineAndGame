@@ -9,6 +9,7 @@
 #include "Renderer/Renderer.h"
 
 glm::ivec2 mainWindowSize(13*16, 14*16);
+constexpr int scaling = 3;
 
 std::unique_ptr<Game> game = std::make_unique<Game>(mainWindowSize);
 
@@ -86,14 +87,14 @@ int main(int argc, char** argv)
     {
         ResourceManager::SetExecutablePath(argv[0]);
         game->InitGame();
-        glfwSetWindowSize(pWindow, static_cast<int>(game->GetCurrentLevelWidth()), static_cast<int>(game->GetCurrentLevelHeight()));
+        glfwSetWindowSize(pWindow, static_cast<int>(scaling *game->GetCurrentLevelWidth()), static_cast<int>(scaling*game->GetCurrentLevelHeight()));
         auto lastTime = std::chrono::high_resolution_clock::now();
         //int i = 0;
         /* Игровой цикл */
         while (!glfwWindowShouldClose(pWindow))
         {
             auto currentTime = std::chrono::high_resolution_clock::now();
-            uint64_t timeDuration = std::chrono::duration_cast<std::chrono::nanoseconds>(currentTime - lastTime).count();
+            double timeDuration = std::chrono::duration<double, std::milli>(currentTime - lastTime).count();
             lastTime = currentTime;
             game->Update(timeDuration);
 

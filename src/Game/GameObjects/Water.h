@@ -22,7 +22,8 @@ public:
 
     Water(const glm::vec2& position, const glm::vec2& size, const float rotation, const float layer);
     virtual void Render() const override;
-    void UpdateFrame(const uint64_t delta) override;
+
+    void UpdateFrame(const double delta) override;
 
 private:
     void RenderBlock(const BlockPosition blockLocation) const;

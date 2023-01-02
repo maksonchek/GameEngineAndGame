@@ -11,7 +11,7 @@ namespace RenderEngine {
     {
     }
 
-    void SpriteAnimator::Update(const uint64_t deltaTime)
+    void SpriteAnimator::Update(const double deltaTime)
     {
         currentAnimationTime += deltaTime;
         while (currentAnimationTime >= currentFrameDuration)

@@ -93,7 +93,7 @@ namespace RenderEngine {
         framesParams = std::move(frameParams);
     }
 
-    uint64_t Sprite::GetFrameDuration(const size_t frameId) const
+    double Sprite::GetFrameDuration(const size_t frameId) const
     {
         return framesParams[frameId].duration;
     }

@@ -4,6 +4,7 @@
 
 #include "GameObjectInterface.h"
 #include "../../Renderer/SpriteAnimator.h"
+#include "../../EngineSystem/Timer.h"
 
 namespace RenderEngine
 {
@@ -14,7 +15,7 @@ class SpaceShip : public GameObjectInterface
 {
 public:
 
-	SpaceShip(const float velocity, const glm::vec2& position, const glm::vec2& size, const float layer);
+	SpaceShip(const double velocity, const glm::vec2& position, const glm::vec2& size, const float layer);
 	
 	void Render() const override;
 
@@ -31,7 +32,7 @@ public:
 
 	void Move(const bool isMoving);
 
-	void UpdateFrame(const uint64_t delta) override;
+	void UpdateFrame(const double delta) override;
 
 private:
 	ObjectOrientation objectOrientation;
@@ -45,9 +46,20 @@ private:
 	RenderEngine::SpriteAnimator spriteAnimator_left;
 	RenderEngine::SpriteAnimator spriteAnimator_right;
 
+	std::shared_ptr<RenderEngine::Sprite> pSprite_respawn;
+	RenderEngine::SpriteAnimator spriteAnimator_respawn;
+
+	std::shared_ptr<RenderEngine::Sprite> pSprite_shield;
+	RenderEngine::SpriteAnimator spriteAnimator_shield;
+
+	Timer respawnTimer;
+	Timer shieldTimer;
+
 	bool isMoving;
 
-	float velocity;
+	double velocity;
 
 	glm::vec2 moveOffset;
+	bool isSpawning;
+	bool hasShield;
 };

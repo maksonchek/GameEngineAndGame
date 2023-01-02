@@ -15,7 +15,7 @@ public:
 
 	void Render();
 
-	void Update(const uint64_t deltaTime);
+	void Update(const double deltaTime);
 
 	void SetClick(const int key, const int action); 
 
