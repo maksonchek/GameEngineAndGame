@@ -18,7 +18,7 @@ void Water::RenderBlock(const BlockPosition blockLocation) const
 {
     sprite->Render(GOIposition + blockOffsets[static_cast<size_t>(blockLocation)], GOIsize / 2.f, GOIrotation, GOIlayer, spriteAnimator.GetCurrentFrame());
 }
-
+ 
 void Water::Render() const
 {
     RenderBlock(BlockPosition::TopLeft);

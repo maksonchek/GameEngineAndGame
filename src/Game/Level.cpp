@@ -8,6 +8,7 @@
 #include "GameObjects/Ice.h"
 #include "GameObjects/Water.h"
 #include "GameObjects/Eagle.h"
+#include "GameObjects/Border.h"
 
 #include <iostream>
 
@@ -72,11 +73,11 @@ Level::Level(const std::vector<std::string>& levelMarkup)
     width = levelMarkup[0].length();
     height = levelMarkup.size();
 
-    levelObjects.reserve(width * height);
-    unsigned int currentBottomOffset = static_cast<unsigned int>(BLOCK_SIZE * (height - 1));
+    levelObjects.reserve(width * height+4);
+    unsigned int currentBottomOffset = static_cast<unsigned int>(BLOCK_SIZE * (height - 1) + BLOCK_SIZE / 2.f);
     for (const std::string& currentRow : levelMarkup)
     {
-        unsigned int currentLeftOffset = 0;
+        unsigned int currentLeftOffset = BLOCK_SIZE;
         for (const char currentElement : currentRow)
         {
             levelObjects.emplace_back(CreateGameObjectFromMarkup(currentElement, glm::vec2(currentLeftOffset, currentBottomOffset), glm::vec2(BLOCK_SIZE, BLOCK_SIZE), 0.f));
@@ -84,6 +85,17 @@ Level::Level(const std::vector<std::string>& levelMarkup)
         }
         currentBottomOffset -= BLOCK_SIZE;
     }
+    // нижн€€ граница
+    levelObjects.emplace_back(std::make_shared<Border>(glm::vec2(BLOCK_SIZE, 0.f), glm::vec2(height * BLOCK_SIZE, BLOCK_SIZE / 2.f), 0.f, 0.f));
+
+    // верхн€€ граница
+    levelObjects.emplace_back(std::make_shared<Border>(glm::vec2(BLOCK_SIZE, height * BLOCK_SIZE + BLOCK_SIZE / 2.f), glm::vec2(width * BLOCK_SIZE, BLOCK_SIZE / 2.f), 0.f, 0.f));
+
+    // лева€ граница
+    levelObjects.emplace_back(std::make_shared<Border>(glm::vec2(0.f, 0.f), glm::vec2(BLOCK_SIZE, (height + 1) * BLOCK_SIZE), 0.f, 0.f));
+
+    // права€ граница
+    levelObjects.emplace_back(std::make_shared<Border>(glm::vec2((width + 1) * BLOCK_SIZE, 0.f), glm::vec2(BLOCK_SIZE * 2.f, (height + 1) * BLOCK_SIZE), 0.f, 0.f));
 }
 
 void Level::Render() const
@@ -106,4 +118,14 @@ void Level::Update(const uint64_t delta)
             currentLevelObject->UpdateFrame(delta);
         }
     }
+}
+
+size_t Level::GetLevelWidth() const
+{
+    return (width + 3) * BLOCK_SIZE;
+}
+
+size_t Level::GetLevelHeight() const
+{
+    return (height + 1) * BLOCK_SIZE;
 }

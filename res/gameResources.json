@@ -38,7 +38,7 @@
         "betonWall",
         "trees",
         "ice",
-        "wall",
+        "borderWall",
         "bullet",
         "nothing"
       ]
@@ -242,10 +242,10 @@
     },
 
     {
-      "name": "wall",
+      "name": "borderWall",
       "textureAtlas": "MiniMapTextureAtlas",
       "shader": "SpriteShader",
-      "initialTile": "wall"
+      "initialTile": "borderWall"
     },
 
     {
@@ -405,7 +405,7 @@
     },
 
     {
-      "name": "eagleSprite",
+      "name": "eagle",
       "textureAtlas": "MapTextureAtlas",
       "shader": "SpriteShader",
       "initialTile": "eagle"

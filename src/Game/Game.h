@@ -21,6 +21,9 @@ public:
 
 	bool InitGame();
 
+	size_t GetCurrentLevelWidth() const;
+	size_t GetCurrentLevelHeight() const;
+
 private:
 	std::array<bool, 349> keysForClick;
 	glm::vec2 windowSize;
