@@ -12,8 +12,6 @@
 
 #include <iostream>
 
-const unsigned int BLOCK_SIZE = 16;
-
 std::shared_ptr<GameObjectInterface> CreateGameObjectFromMarkup(const char markup, const glm::vec2& position, const glm::vec2& size, const float rotation)
 {
     switch (markup)
@@ -73,6 +71,13 @@ Level::Level(const std::vector<std::string>& levelMarkup)
     width = levelMarkup[0].length();
     height = levelMarkup.size();
 
+
+   // playerRespawn1 = { BLOCK_SIZE * (width / 2 - 1), BLOCK_SIZE / 2 };
+    //playerRespawn2 = { BLOCK_SIZE * (width / 2 + 3), BLOCK_SIZE / 2 };
+    //enemyRespawn1 = { BLOCK_SIZE, BLOCK_SIZE * height - BLOCK_SIZE / 2 };
+    //enemyRespawn2 = { BLOCK_SIZE * (width / 2 + 1), BLOCK_SIZE * height - BLOCK_SIZE / 2 };
+    //enemyRespawn3 = { BLOCK_SIZE * width, BLOCK_SIZE * height - BLOCK_SIZE / 2 };
+
     levelObjects.reserve(width * height+4);
     unsigned int currentBottomOffset = static_cast<unsigned int>(BLOCK_SIZE * (height - 1) + BLOCK_SIZE / 2.f);
     for (const std::string& currentRow : levelMarkup)
@@ -80,7 +85,27 @@ Level::Level(const std::vector<std::string>& levelMarkup)
         unsigned int currentLeftOffset = BLOCK_SIZE;
         for (const char currentElement : currentRow)
         {
-            levelObjects.emplace_back(CreateGameObjectFromMarkup(currentElement, glm::vec2(currentLeftOffset, currentBottomOffset), glm::vec2(BLOCK_SIZE, BLOCK_SIZE), 0.f));
+            switch (currentElement)
+            {
+            case 'K':
+                playerRespawn1 = { currentLeftOffset, currentBottomOffset };
+                break;
+            case 'L':
+                playerRespawn2 = { currentLeftOffset, currentBottomOffset };
+                break;
+            case 'M':
+                enemyRespawn1 = { currentLeftOffset, currentBottomOffset };
+                break;
+            case 'N':
+                enemyRespawn2 = { currentLeftOffset, currentBottomOffset };
+                break;
+            case 'O':
+                enemyRespawn3 = { currentLeftOffset, currentBottomOffset };
+                break;
+            default:
+                levelObjects.emplace_back(CreateGameObjectFromMarkup(currentElement, glm::vec2(currentLeftOffset, currentBottomOffset), glm::vec2(BLOCK_SIZE, BLOCK_SIZE), 0.f));
+                break;
+            }
             currentLeftOffset += BLOCK_SIZE;
         }
         currentBottomOffset -= BLOCK_SIZE;

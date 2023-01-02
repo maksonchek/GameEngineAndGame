@@ -86,7 +86,7 @@
             std::cerr << "Didn't found shaders :-( " << "SpriteShader" << std::endl;
         }
 
-        pLevel = std::make_unique<Level>(ResourceManager::GetLevels()[1]);
+        pLevel = std::make_unique<Level>(ResourceManager::GetLevels()[0]);
         windowSize.x = static_cast<int>(pLevel->GetLevelWidth());
         windowSize.y = static_cast<int>(pLevel->GetLevelHeight());
        
@@ -98,7 +98,7 @@
         pSpriteShaderProgram->SetMatrix4x4("projectionMat", projectionMatrix);
 
 
-        pGameObject = std::make_unique<SpaceShip>(0.0000001f, glm::vec2(0), glm::vec2(16.f, 16.f), 0.f);
+        pGameObject = std::make_unique<SpaceShip>(0.0000001f, pLevel->GetPlayerRespawn_1(), glm::vec2(Level::BLOCK_SIZE, Level::BLOCK_SIZE), 0.f);
 
          
         return true; 
