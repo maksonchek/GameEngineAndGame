@@ -11,6 +11,7 @@
 #include <iostream>
 #include <GLFW/glfw3.h>
 #include "Level.h"
+#include "../PhysicsEngine/PhysicsEngine.h"
 
 	Game::Game(const glm::vec2 windowSize) : gameState(GameState::Active), windowSize(windowSize)
 	{
@@ -45,26 +46,26 @@
             if (keysForClick[GLFW_KEY_W])
             {
                 pGameObject->SetOrientation(SpaceShip::ObjectOrientation::Top);
-                pGameObject->Move(true);
+                pGameObject->SetVelocity(pGameObject->GetMaxVelocity());
             }
             else if (keysForClick[GLFW_KEY_A])
             {
                 pGameObject->SetOrientation(SpaceShip::ObjectOrientation::Left);
-                pGameObject->Move(true);
+                pGameObject->SetVelocity(pGameObject->GetMaxVelocity());
             }
             else if (keysForClick[GLFW_KEY_S])
             {
                 pGameObject->SetOrientation(SpaceShip::ObjectOrientation::Bottom);
-                pGameObject->Move(true);
+                pGameObject->SetVelocity(pGameObject->GetMaxVelocity());
             }
             else if (keysForClick[GLFW_KEY_D])
             {
                 pGameObject->SetOrientation(SpaceShip::ObjectOrientation::Right);
-                pGameObject->Move(true);
+                pGameObject->SetVelocity(pGameObject->GetMaxVelocity());
             }
             else
             {
-                pGameObject->Move(false);
+                pGameObject->SetVelocity(0);
             }
             pGameObject->UpdateFrame(deltaTime);
         }
@@ -86,10 +87,11 @@
             std::cerr << "Didn't found shaders :-( " << "SpriteShader" << std::endl;
         }
 
-        pLevel = std::make_unique<Level>(ResourceManager::GetLevels()[0]);
+        pLevel = std::make_shared<Level>(ResourceManager::GetLevels()[1]);
         windowSize.x = static_cast<int>(pLevel->GetLevelWidth());
         windowSize.y = static_cast<int>(pLevel->GetLevelHeight());
-       
+        PhysicsEngineManager::PhysicsEngine::SetCurrentLevel(pLevel);
+
         glm::mat4 projectionMatrix = glm::ortho(0.f, static_cast<float>(windowSize.x), 0.f, static_cast<float>(windowSize.y), -100.f, 100.f);
 
 
@@ -98,8 +100,8 @@
         pSpriteShaderProgram->SetMatrix4x4("projectionMat", projectionMatrix);
 
 
-        pGameObject = std::make_unique<SpaceShip>(0.05, pLevel->GetPlayerRespawn_1(), glm::vec2(Level::BLOCK_SIZE, Level::BLOCK_SIZE), 0.f);
-
+        pGameObject = std::make_shared<SpaceShip>(0.05, pLevel->GetPlayerRespawn_1(), glm::vec2(Level::BLOCK_SIZE, Level::BLOCK_SIZE), 0.f);
+        PhysicsEngineManager::PhysicsEngine::AddDynamicGameObject(pGameObject);
          
         return true; 
 	}

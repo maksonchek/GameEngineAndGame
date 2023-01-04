@@ -7,6 +7,7 @@
 #include "Resources/ResourceManager.h"
 #include "Game/Game.h"
 #include "Renderer/Renderer.h"
+#include "PhysicsEngine/PhysicsEngine.h"
 
 glm::ivec2 mainWindowSize(13*16, 14*16);
 constexpr int scaling = 3;
@@ -86,6 +87,7 @@ int main(int argc, char** argv)
 
     {
         ResourceManager::SetExecutablePath(argv[0]);
+        PhysicsEngineManager::PhysicsEngine::InitPhysics();
         game->InitGame();
         glfwSetWindowSize(pWindow, static_cast<int>(scaling *game->GetCurrentLevelWidth()), static_cast<int>(scaling*game->GetCurrentLevelHeight()));
         auto lastTime = std::chrono::high_resolution_clock::now();
@@ -97,7 +99,7 @@ int main(int argc, char** argv)
             double timeDuration = std::chrono::duration<double, std::milli>(currentTime - lastTime).count();
             lastTime = currentTime;
             game->Update(timeDuration);
-
+            PhysicsEngineManager::PhysicsEngine::Update(timeDuration);
             /* Покадровая отрисовка */
             RenderEngine::Renderer::Clear();
 
@@ -109,7 +111,7 @@ int main(int argc, char** argv)
         game = nullptr;
         ResourceManager::DestructAllRes();
     }
-
+    PhysicsEngineManager::PhysicsEngine::DeleteAll();
     glfwTerminate();
     return 0;
 }

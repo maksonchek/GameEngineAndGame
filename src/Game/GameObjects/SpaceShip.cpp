@@ -2,7 +2,7 @@
 #include "../../Resources/ResourceManager.h"
 #include "../../Renderer/Sprite.h"
 
-SpaceShip::SpaceShip(const double velocity,
+SpaceShip::SpaceShip(const double maxVelocity,
 						const glm::vec2& position,
 							const glm::vec2& size, const float layer)
 												: GameObjectInterface(position, size, 0.f, layer)
@@ -19,9 +19,7 @@ SpaceShip::SpaceShip(const double velocity,
 												, spriteAnimator_respawn(pSprite_respawn)
 												, pSprite_shield(ResourceManager::GetSprite("shield"))
 												, spriteAnimator_shield(pSprite_shield)
-																	, isMoving(false)
-																	, velocity(velocity)
-																	, moveOffset(glm::vec2(0.f, 1.f))
+																	, maxVelocity(maxVelocity)
 																	, isSpawning(true)
 																	, hasShield(false)
 {
@@ -39,6 +37,7 @@ SpaceShip::SpaceShip(const double velocity,
 			hasShield = false;
 		}
 	);
+	boxColliders.emplace_back(glm::vec2(0), GOIsize);
 }
 
 void SpaceShip::Render() const
@@ -67,7 +66,7 @@ void SpaceShip::Render() const
 
 		if (hasShield)
 		{
-			pSprite_shield->Render(GOIposition, GOIsize, GOIrotation, GOIlayer, spriteAnimator_shield.GetCurrentFrame());
+			pSprite_shield->Render(GOIposition, GOIsize, GOIrotation, GOIlayer+0.1f, spriteAnimator_shield.GetCurrentFrame());
 		}
 	}
 }
@@ -84,28 +83,23 @@ void SpaceShip::SetOrientation(const ObjectOrientation orientation)
 		switch (objectOrientation)
 		{
 		case SpaceShip::ObjectOrientation::Top:
-			moveOffset.x = 0.f;
-			moveOffset.y = 1.f;
+			GOIdirection.x = 0.f;
+			GOIdirection.y = 1.f;
 			break;
 		case SpaceShip::ObjectOrientation::Left:
-			moveOffset.x = -1.f;
-			moveOffset.y = 0.f;
+			GOIdirection.x = -1.f;
+			GOIdirection.y = 0.f;
 			break;
 		case SpaceShip::ObjectOrientation::Right:
-			moveOffset.x = 1.f;
-			moveOffset.y = 0.f;
+			GOIdirection.x = 1.f;
+			GOIdirection.y = 0.f;
 			break;
 		case SpaceShip::ObjectOrientation::Bottom:
-			moveOffset.x = 0.f;
-			moveOffset.y = -1.f;
+			GOIdirection.x = 0.f;
+			GOIdirection.y = -1.f;
 			break;
 		}
 	}
-}
-
-void SpaceShip::Move(const bool isMoving)
-{
-	this->isMoving = isMoving;
 }
 
 void SpaceShip::UpdateFrame(const double deltaTime)
@@ -122,10 +116,8 @@ void SpaceShip::UpdateFrame(const double deltaTime)
 			spriteAnimator_shield.Update(deltaTime);
 			shieldTimer.Update(deltaTime);
 		}
-		if (isMoving)
+		if (GOIvelocity>0)
 		{
-			GOIposition.x += static_cast<float>(deltaTime * velocity * moveOffset.x);
-			GOIposition.y += static_cast<float>(deltaTime * velocity * moveOffset.y);
 			switch (objectOrientation)
 			{
 			case SpaceShip::ObjectOrientation::Top:
@@ -142,5 +134,19 @@ void SpaceShip::UpdateFrame(const double deltaTime)
 				break;
 			}
 		}
+	}
+}
+
+double SpaceShip::GetMaxVelocity() const
+{
+	return maxVelocity;
+}
+
+void SpaceShip::SetVelocity(const double velocity)
+{
+
+	if (!isSpawning)
+	{
+		GOIvelocity = velocity;
 	}
 }

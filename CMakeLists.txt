@@ -53,7 +53,10 @@ add_executable(${PROJECT_NAME}
 	src/Game/GameObjects/Border.h
 
 	src/EngineSystem/Timer.cpp
-	src/EngineSystem/Timer.h		
+	src/EngineSystem/Timer.h
+
+	src/PhysicsEngine/PhysicsEngine.cpp
+	src/PhysicsEngine/PhysicsEngine.h			
 )
 
 

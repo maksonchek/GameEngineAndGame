@@ -7,6 +7,7 @@ Eagle::Eagle(const glm::vec2& position, const glm::vec2& size, const float rotat
     : GameObjectInterface(position, size, rotation, layer) , sprite{ ResourceManager::GetSprite("eagle"),
                 ResourceManager::GetSprite("eagle_dead") } , currentState(EagleState::Alive)
 {
+    boxColliders.emplace_back(glm::vec2(0), GOIsize);
 }
 
 void Eagle::Render() const

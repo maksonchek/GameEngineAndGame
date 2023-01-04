@@ -15,34 +15,43 @@ ConcreteWallGameObject::ConcreteWallGameObject(const WallGOType type, const glm:
     {
     case WallGOType::All:
         currentWallGOState.fill(WallGOState::Enabled);
+        boxColliders.emplace_back(glm::vec2(0), GOIsize);
         break;
     case WallGOType::Top:
         currentWallGOState[static_cast<size_t>(WallGOPosition::TopLeft)] = WallGOState::Enabled;
         currentWallGOState[static_cast<size_t>(WallGOPosition::TopRight)] = WallGOState::Enabled;
+        boxColliders.emplace_back(glm::vec2(0, GOIsize.y/2), GOIsize);
         break;
     case WallGOType::Bottom:
         currentWallGOState[static_cast<size_t>(WallGOPosition::BottomLeft)] = WallGOState::Enabled;
         currentWallGOState[static_cast<size_t>(WallGOPosition::BottomRight)] = WallGOState::Enabled;
+        boxColliders.emplace_back(glm::vec2(0), glm::vec2(GOIsize.x, GOIsize.y / 2));
         break;
     case WallGOType::Left:
         currentWallGOState[static_cast<size_t>(WallGOPosition::TopLeft)] = WallGOState::Enabled;
         currentWallGOState[static_cast<size_t>(WallGOPosition::BottomLeft)] = WallGOState::Enabled;
+        boxColliders.emplace_back(glm::vec2(0), glm::vec2(GOIsize.x / 2, GOIsize.y));
         break;
     case WallGOType::Right:
         currentWallGOState[static_cast<size_t>(WallGOPosition::TopRight)] = WallGOState::Enabled;
         currentWallGOState[static_cast<size_t>(WallGOPosition::BottomRight)] = WallGOState::Enabled;
+        boxColliders.emplace_back(glm::vec2(GOIsize.x / 2, 0), GOIsize);
         break;
     case WallGOType::TopLeft:
         currentWallGOState[static_cast<size_t>(WallGOPosition::TopLeft)] = WallGOState::Enabled;
+        boxColliders.emplace_back(glm::vec2(0, GOIsize.y / 2), glm::vec2(GOIsize.x / 2, GOIsize.y));
         break;
     case WallGOType::TopRight:
         currentWallGOState[static_cast<size_t>(WallGOPosition::TopRight)] = WallGOState::Enabled;
+        boxColliders.emplace_back(glm::vec2(GOIsize.x / 2, GOIsize.y / 2), GOIsize);
         break;
     case WallGOType::BottomLeft:
         currentWallGOState[static_cast<size_t>(WallGOPosition::BottomLeft)] = WallGOState::Enabled;
+        boxColliders.emplace_back(glm::vec2(0), glm::vec2(GOIsize.x / 2, GOIsize.y / 2));
         break;
     case WallGOType::BottomRight:
         currentWallGOState[static_cast<size_t>(WallGOPosition::BottomRight)] = WallGOState::Enabled;
+        boxColliders.emplace_back(glm::vec2(GOIsize.x / 2, 0), glm::vec2(GOIsize.x, GOIsize.y / 2));
         break;
     }
 }

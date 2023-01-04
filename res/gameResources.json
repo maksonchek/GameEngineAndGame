@@ -45,7 +45,7 @@
     },
     {
       "name": "MapTextureAtlas",
-      "filePath": "res/textures/assets.png",
+      "filePath": "res/textures/eventAssets.png",
       "tileWidth": 16,
       "tileHeight": 16,
       "tiles": [

@@ -36,6 +36,6 @@ private:
 
 	GameState gameState;
 
-	std::unique_ptr<SpaceShip> pGameObject;
-	std::unique_ptr<Level> pLevel;
+	std::shared_ptr<SpaceShip> pGameObject;
+	std::shared_ptr<Level> pLevel;
 };

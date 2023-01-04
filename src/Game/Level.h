@@ -42,9 +42,13 @@ public:
         return enemyRespawn3; 
     }
 
+    std::vector<std::shared_ptr<GameObjectInterface>> GetLevelObjects(const glm::vec2& bottomLeft, const glm::vec2& topRight) const;
+
 private:
     size_t width = 0;
     size_t height = 0;
+    unsigned int widthPixels = 0;
+    unsigned int heightPixels = 0;
     glm::ivec2 playerRespawn1;
     glm::ivec2 playerRespawn2;
     glm::ivec2 enemyRespawn1;

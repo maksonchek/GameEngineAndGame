@@ -15,7 +15,7 @@ class SpaceShip : public GameObjectInterface
 {
 public:
 
-	SpaceShip(const double velocity, const glm::vec2& position, const glm::vec2& size, const float layer);
+	SpaceShip(const double maxVelocity, const glm::vec2& position, const glm::vec2& size, const float layer);
 	
 	void Render() const override;
 
@@ -30,9 +30,11 @@ public:
 
 	void SetOrientation(const ObjectOrientation orientation);
 
-	void Move(const bool isMoving);
-
 	void UpdateFrame(const double delta) override;
+
+	double GetMaxVelocity() const;
+
+	void SetVelocity(const double velocity) override;
 
 private:
 	ObjectOrientation objectOrientation;
@@ -55,11 +57,7 @@ private:
 	Timer respawnTimer;
 	Timer shieldTimer;
 
-	bool isMoving;
-
-	double velocity;
-
-	glm::vec2 moveOffset;
+	double maxVelocity;
 	bool isSpawning;
 	bool hasShield;
 };
