@@ -3,7 +3,7 @@
 #include "../../Resources/ResourceManager.h"
 
 ConcreteWallGameObject::ConcreteWallGameObject(const WallGOType type, const glm::vec2& position, const glm::vec2& size, const float rotation, const float layer)
-    : GameObjectInterface(position, size, rotation, layer), currentWallGOState{ WallGOState::Destroyed, WallGOState::Destroyed, WallGOState::Destroyed, WallGOState::Destroyed }, 
+    : GameObjectInterface(GameObjectInterface::ObjectType::Constant_Satic_Object, position, size, rotation, layer), currentWallGOState{ WallGOState::Destroyed, WallGOState::Destroyed, WallGOState::Destroyed, WallGOState::Destroyed },
             sprite(ResourceManager::GetSprite("betonWall")),                        
                                     offsets{ glm::vec2(0, GOIsize.y / 2.f),
                                    glm::vec2(GOIsize.x / 2.f, GOIsize.y / 2.f),

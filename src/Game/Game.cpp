@@ -4,7 +4,8 @@
 #include "../Renderer/TextureManager.h"
 #include "../Renderer/Sprite.h"
 #include "../Renderer/SpriteAnimator.h"
-#include "../Game/GameObjects/SpaceShip.h"
+#include "../Game/GameObjects/TankGameObject.h"
+#include "../Game/GameObjects/Bullet.h"
 #include <glm/vec2.hpp>
 #include <glm/mat4x4.hpp>
 #include <glm/gtc/matrix_transform.hpp>
@@ -45,27 +46,31 @@
 
             if (keysForClick[GLFW_KEY_W])
             {
-                pGameObject->SetOrientation(SpaceShip::ObjectOrientation::Top);
+                pGameObject->SetOrientation(TankGameObject::ObjectOrientation::Top);
                 pGameObject->SetVelocity(pGameObject->GetMaxVelocity());
             }
             else if (keysForClick[GLFW_KEY_A])
             {
-                pGameObject->SetOrientation(SpaceShip::ObjectOrientation::Left);
+                pGameObject->SetOrientation(TankGameObject::ObjectOrientation::Left);
                 pGameObject->SetVelocity(pGameObject->GetMaxVelocity());
             }
             else if (keysForClick[GLFW_KEY_S])
             {
-                pGameObject->SetOrientation(SpaceShip::ObjectOrientation::Bottom);
+                pGameObject->SetOrientation(TankGameObject::ObjectOrientation::Bottom);
                 pGameObject->SetVelocity(pGameObject->GetMaxVelocity());
             }
             else if (keysForClick[GLFW_KEY_D])
             {
-                pGameObject->SetOrientation(SpaceShip::ObjectOrientation::Right);
+                pGameObject->SetOrientation(TankGameObject::ObjectOrientation::Right);
                 pGameObject->SetVelocity(pGameObject->GetMaxVelocity());
             }
             else
             {
                 pGameObject->SetVelocity(0);
+            }
+            if (pGameObject && keysForClick[GLFW_KEY_SPACE])
+            {
+                pGameObject->Fire();
             }
             pGameObject->UpdateFrame(deltaTime);
         }
@@ -100,7 +105,7 @@
         pSpriteShaderProgram->SetMatrix4x4("projectionMat", projectionMatrix);
 
 
-        pGameObject = std::make_shared<SpaceShip>(0.05, pLevel->GetPlayerRespawn_1(), glm::vec2(Level::BLOCK_SIZE, Level::BLOCK_SIZE), 0.f);
+        pGameObject = std::make_shared<TankGameObject>(0.05, pLevel->GetPlayerRespawn_1(), glm::vec2(Level::BLOCK_SIZE, Level::BLOCK_SIZE), 0.f);
         PhysicsEngineManager::PhysicsEngine::AddDynamicGameObject(pGameObject);
          
         return true; 

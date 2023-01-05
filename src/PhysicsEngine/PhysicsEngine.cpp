@@ -31,25 +31,26 @@ namespace PhysicsEngineManager {
                  
                 if (currentCollider1_bottomLeft_world.x >= currentCollider2_topRight_world.x)
                 {
-                    return false;
+                    continue;
                 }
                 if (currentCollider1_topRight_world.x <= currentCollider2_bottomLeft_world.x)
                 {
-                    return false;
+                    continue;
                 }
 
                 if (currentCollider1_bottomLeft_world.y >= currentCollider2_topRight_world.y)
                 {
-                    return false;
+                    continue;
                 }
                 if (currentCollider1_topRight_world.y <= currentCollider2_bottomLeft_world.y)
                 {
-                    return false;
+                    continue;
                 }
+                return true;
             }
         }
 
-        return true;
+        return false;
     }
 
     void PhysicsEngine::InitPhysics()
@@ -78,11 +79,12 @@ namespace PhysicsEngineManager {
                 for (const auto& currentObjectToCheck : objectsToCheck)
                 {
                     const auto& collidersToCheck = currentObjectToCheck->GetColliders();
-                    if (!collidersToCheck.empty())
+                    if (currentObjectToCheck->IsCollides(currentObject->GetObjectType()) && !collidersToCheck.empty())
                     {
                         if (HasInteraction(colliders, newPosition, collidersToCheck, currentObjectToCheck->GetCurrentPosition()))
                         {
                             hasCollision = true;
+                            currentObjectToCheck->OnCollision();
                             break;
                         }
                     }
@@ -102,6 +104,7 @@ namespace PhysicsEngineManager {
                     {
                         currentObject->GetCurrentPosition() = glm::vec2(currentObject->GetCurrentPosition().x, static_cast<unsigned int>(currentObject->GetCurrentPosition().y / 8.f + 0.5f) * 8.f);
                     }
+                    currentObject->OnCollision();
                 }
             }
         }

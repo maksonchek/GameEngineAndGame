@@ -4,7 +4,7 @@
 #include "../../Renderer/Sprite.h"
 
 Water::Water(const glm::vec2& position, const glm::vec2& size, const float rotation, const float layer)
-    : GameObjectInterface(position, size, rotation, layer)
+    : GameObjectInterface(GameObjectInterface::ObjectType::Constant_Satic_Object, position, size, rotation, layer)
     , sprite(ResourceManager::GetSprite("water"))
     , spriteAnimator(sprite)
     , blockOffsets{ glm::vec2(0, GOIsize.y / 2.f),
@@ -12,6 +12,7 @@ Water::Water(const glm::vec2& position, const glm::vec2& size, const float rotat
                        glm::vec2(0, 0),
                        glm::vec2(GOIsize.x / 2.f, 0) }
 {
+    boxColliders.emplace_back(glm::vec2(0), GOIsize);
 }
 
 void Water::RenderBlock(const BlockPosition blockLocation) const
@@ -30,4 +31,9 @@ void Water::Render() const
 void Water::UpdateFrame(const double delta)
 {
     spriteAnimator.Update(delta);
+}
+
+bool Water::IsCollides(const ObjectType objectType)
+{
+    return objectType != GameObjectInterface::ObjectType::Temporary_Dynamic_Object;
 }

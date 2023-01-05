@@ -4,7 +4,7 @@
 #include <glm/vec2.hpp>
 #include<memory>
 
-class SpaceShip;
+class TankGameObject;
 class Level;
 
 class Game
@@ -36,6 +36,6 @@ private:
 
 	GameState gameState;
 
-	std::shared_ptr<SpaceShip> pGameObject;
+	std::shared_ptr<TankGameObject> pGameObject;
 	std::shared_ptr<Level> pLevel;
 };

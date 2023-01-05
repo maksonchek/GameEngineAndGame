@@ -10,12 +10,13 @@ namespace RenderEngine
 {
 	class Sprite;
 }
+class Bullet;
 
-class SpaceShip : public GameObjectInterface
+class TankGameObject : public GameObjectInterface
 {
 public:
 
-	SpaceShip(const double maxVelocity, const glm::vec2& position, const glm::vec2& size, const float layer);
+	TankGameObject(const double maxVelocity, const glm::vec2& position, const glm::vec2& size, const float layer);
 	
 	void Render() const override;
 
@@ -36,9 +37,12 @@ public:
 
 	void SetVelocity(const double velocity) override;
 
+	void Fire();
+
 private:
 	ObjectOrientation objectOrientation;
 
+	std::shared_ptr<Bullet> pCurrentBullet;
 	std::shared_ptr<RenderEngine::Sprite> pSprite_top;
 	std::shared_ptr<RenderEngine::Sprite> pSprite_bottom;
 	std::shared_ptr<RenderEngine::Sprite> pSprite_left;

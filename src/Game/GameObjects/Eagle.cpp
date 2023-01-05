@@ -4,7 +4,7 @@
 #include "../../Renderer/Sprite.h"
 
 Eagle::Eagle(const glm::vec2& position, const glm::vec2& size, const float rotation, const float layer)
-    : GameObjectInterface(position, size, rotation, layer) , sprite{ ResourceManager::GetSprite("eagle"),
+    : GameObjectInterface(GameObjectInterface::ObjectType::Constant_Satic_Object, position, size, rotation, layer) , sprite{ ResourceManager::GetSprite("eagle"),
                 ResourceManager::GetSprite("eagle_dead") } , currentState(EagleState::Alive)
 {
     boxColliders.emplace_back(glm::vec2(0), GOIsize);

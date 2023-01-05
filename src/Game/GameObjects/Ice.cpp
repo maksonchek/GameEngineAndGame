@@ -4,7 +4,7 @@
 #include "../../Renderer/Sprite.h"
 
 Ice::Ice(const glm::vec2& position, const glm::vec2& size, const float rotation, const float layer)
-    : GameObjectInterface(position, size, rotation, layer)
+    : GameObjectInterface(GameObjectInterface::ObjectType::Constant_Satic_Object, position, size, rotation, layer)
     , sprite(ResourceManager::GetSprite("ice"))
     , blockOffsets{ glm::vec2(0, GOIsize.y / 2.f),
                        glm::vec2(GOIsize.x / 2.f, GOIsize.y / 2.f),

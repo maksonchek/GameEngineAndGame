@@ -1,16 +1,19 @@
-#include "SpaceShip.h"
+#include "TankGameObject.h"
 #include "../../Resources/ResourceManager.h"
 #include "../../Renderer/Sprite.h"
+//#include "../../PhysicsEngine/PhysicsEngine.h"
+#include "Bullet.h"
 
-SpaceShip::SpaceShip(const double maxVelocity,
+TankGameObject::TankGameObject(const double maxVelocity,
 						const glm::vec2& position,
 							const glm::vec2& size, const float layer)
-												: GameObjectInterface(position, size, 0.f, layer)
+												: GameObjectInterface(GameObjectInterface::ObjectType::Constant_Dynamic_Object, position, size, 0.f, layer)
 												, objectOrientation(ObjectOrientation::Top)
 											    , pSprite_top(ResourceManager::GetSprite("tankSprite_top"))
 												, pSprite_bottom(ResourceManager::GetSprite("tankSprite_bottom"))
 												, pSprite_left(ResourceManager::GetSprite("tankSprite_left"))
 												, pSprite_right(ResourceManager::GetSprite("tankSprite_right"))
+	                                            , pCurrentBullet(std::make_shared<Bullet>(0.1, GOIposition + GOIsize / 4.f, GOIsize / 2.f, layer))
 											    , spriteAnimator_top(pSprite_top)
 												, spriteAnimator_bottom(pSprite_bottom)
 												, spriteAnimator_left(pSprite_left)
@@ -28,9 +31,10 @@ SpaceShip::SpaceShip(const double maxVelocity,
 	respawnTimer.Start(1500);
 
 	boxColliders.emplace_back(glm::vec2(0), GOIsize);
+	PhysicsEngineManager::PhysicsEngine::AddDynamicGameObject(pCurrentBullet);
 }
 
-void SpaceShip::Render() const
+void TankGameObject::Render() const
 {
 	if (isSpawning)
 	{
@@ -40,23 +44,27 @@ void SpaceShip::Render() const
 	{
 		switch (objectOrientation)
 		{
-		case SpaceShip::ObjectOrientation::Top:
+		case TankGameObject::ObjectOrientation::Top:
 			pSprite_top->Render(GOIposition, GOIsize, GOIrotation, GOIlayer, spriteAnimator_top.GetCurrentFrame());
 			break;
-		case SpaceShip::ObjectOrientation::Bottom:
+		case TankGameObject::ObjectOrientation::Bottom:
 			pSprite_bottom->Render(GOIposition, GOIsize, GOIrotation, GOIlayer, spriteAnimator_bottom.GetCurrentFrame());
 			break;
-		case SpaceShip::ObjectOrientation::Left:
+		case TankGameObject::ObjectOrientation::Left:
 			pSprite_left->Render(GOIposition, GOIsize, GOIrotation, GOIlayer, spriteAnimator_left.GetCurrentFrame());
 			break;
-		case SpaceShip::ObjectOrientation::Right:
+		case TankGameObject::ObjectOrientation::Right:
 			pSprite_right->Render(GOIposition, GOIsize, GOIrotation, GOIlayer, spriteAnimator_right.GetCurrentFrame());
 			break;
 		}
 	}
+	if (pCurrentBullet->IsActive())
+	{
+		pCurrentBullet->Render();
+	}
 }
 
-void SpaceShip::SetOrientation(const ObjectOrientation orientation)
+void TankGameObject::SetOrientation(const ObjectOrientation orientation)
 {
 	if (objectOrientation == orientation)
 	{
@@ -67,19 +75,19 @@ void SpaceShip::SetOrientation(const ObjectOrientation orientation)
 		objectOrientation = orientation;
 		switch (objectOrientation)
 		{
-		case SpaceShip::ObjectOrientation::Top:
+		case TankGameObject::ObjectOrientation::Top:
 			GOIdirection.x = 0.f;
 			GOIdirection.y = 1.f;
 			break;
-		case SpaceShip::ObjectOrientation::Left:
+		case TankGameObject::ObjectOrientation::Left:
 			GOIdirection.x = -1.f;
 			GOIdirection.y = 0.f;
 			break;
-		case SpaceShip::ObjectOrientation::Right:
+		case TankGameObject::ObjectOrientation::Right:
 			GOIdirection.x = 1.f;
 			GOIdirection.y = 0.f;
 			break;
-		case SpaceShip::ObjectOrientation::Bottom:
+		case TankGameObject::ObjectOrientation::Bottom:
 			GOIdirection.x = 0.f;
 			GOIdirection.y = -1.f;
 			break;
@@ -87,7 +95,7 @@ void SpaceShip::SetOrientation(const ObjectOrientation orientation)
 	}
 }
 
-void SpaceShip::UpdateFrame(const double deltaTime)
+void TankGameObject::UpdateFrame(const double deltaTime)
 {
 	if (isSpawning)
 	{
@@ -100,16 +108,16 @@ void SpaceShip::UpdateFrame(const double deltaTime)
 		{
 			switch (objectOrientation)
 			{
-			case SpaceShip::ObjectOrientation::Top:
+			case TankGameObject::ObjectOrientation::Top:
 				spriteAnimator_top.Update(deltaTime);
 				break;
-			case SpaceShip::ObjectOrientation::Bottom:
+			case TankGameObject::ObjectOrientation::Bottom:
 				spriteAnimator_bottom.Update(deltaTime);
 				break;
-			case SpaceShip::ObjectOrientation::Left:
+			case TankGameObject::ObjectOrientation::Left:
 				spriteAnimator_left.Update(deltaTime);
 				break;
-			case SpaceShip::ObjectOrientation::Right:
+			case TankGameObject::ObjectOrientation::Right:
 				spriteAnimator_right.Update(deltaTime);
 				break;
 			}
@@ -117,16 +125,24 @@ void SpaceShip::UpdateFrame(const double deltaTime)
 	}
 }
 
-double SpaceShip::GetMaxVelocity() const
+double TankGameObject::GetMaxVelocity() const
 {
 	return maxVelocity;
 }
 
-void SpaceShip::SetVelocity(const double velocity)
+void TankGameObject::SetVelocity(const double velocity)
 {
 
 	if (!isSpawning)
 	{
 		GOIvelocity = velocity;
+	}
+}
+
+void TankGameObject::Fire()
+{
+	if (!pCurrentBullet->IsActive())
+	{
+		pCurrentBullet->Fire(GOIposition + GOIsize / 4.f + GOIsize * GOIdirection / 4.f, GOIdirection);
 	}
 }

@@ -17,6 +17,7 @@
         "brickWall_All",
         "brickWall_TopLeft",
         "brickWall_TopRight",
+
         "brickWall_Top",
         "brickWall_BottomLeft",
         "brickWall_Left",
@@ -39,7 +40,10 @@
         "trees",
         "ice",
         "borderWall",
-        "bullet",
+        "bullet_Top",
+        "bullet_Bottom",
+        "bullet_Left",
+        "bullet_Right",
         "nothing"
       ]
     },
@@ -513,10 +517,29 @@
     },
 
     {
-      "name": "bullet",
+      "name": "bullet_Top",
       "textureAtlas": "MiniMapTextureAtlas",
       "shader": "SpriteShader",
-      "initialTile": "bullet"
+      "initialTile": "bullet_Top"
+    },
+
+    {
+      "name": "bullet_Bottom",
+      "textureAtlas": "MiniMapTextureAtlas",
+      "shader": "SpriteShader",
+      "initialTile": "bullet_Bottom"
+    },
+    {
+      "name": "bullet_Left",
+      "textureAtlas": "MiniMapTextureAtlas",
+      "shader": "SpriteShader",
+      "initialTile": "bullet_Left"
+    },
+    {
+      "name": "bullet_Right",
+      "textureAtlas": "MiniMapTextureAtlas",
+      "shader": "SpriteShader",
+      "initialTile": "bullet_Right"
     },
 
     {
@@ -533,7 +556,7 @@
       "initialTile": "eagle_dead"
     },
 
-    { 
+    {
       "name": "respawn",
       "textureAtlas": "MapTextureAtlas",
       "shader": "SpriteShader",
@@ -792,7 +815,7 @@
         "D4D4D4D4D4D4D",
         "D4D4D3D3D4D4D",
         "D4D4DH1GD4D4D",
-        "DDDDK0D2LDDDD"
+        "DDDDK09s2LDDDD"
       ]
     },
     {
@@ -807,10 +830,10 @@
         "D88D99DBBDBBD",
         "D8DD9DDBDDBDD",
         "DDDDDDDDDDDDD",
-        "DCCDGGDHHDIID",
-        "DCDDGDDHDDDDD",
+        "DAADGGDHHDIID",
+        "DADDGDDHDDDDD",
         "DDDDDH1GDDJJD",
-        "DDDDD0D2DDDDD"
+        "DDDDD092DDDDD"
       ]
     }
   ]

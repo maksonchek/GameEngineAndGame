@@ -25,6 +25,8 @@ public:
 
     void UpdateFrame(const double delta) override;
 
+    virtual bool IsCollides(const ObjectType objectType) override;
+
 private:
     void RenderBlock(const BlockPosition blockLocation) const;
 
