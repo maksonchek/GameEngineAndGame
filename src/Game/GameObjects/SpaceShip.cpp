@@ -17,26 +17,16 @@ SpaceShip::SpaceShip(const double maxVelocity,
 											    , spriteAnimator_right(pSprite_right)
 												, pSprite_respawn(ResourceManager::GetSprite("respawn"))
 												, spriteAnimator_respawn(pSprite_respawn)
-												, pSprite_shield(ResourceManager::GetSprite("shield"))
-												, spriteAnimator_shield(pSprite_shield)
 																	, maxVelocity(maxVelocity)
 																	, isSpawning(true)
-																	, hasShield(false)
 {
 	respawnTimer.SetCallback([&]()
 		{
 			isSpawning = false;
-			hasShield = true;
-			shieldTimer.Start(2000);
 		}
 	);
 	respawnTimer.Start(1500);
 
-	shieldTimer.SetCallback([&]()
-		{
-			hasShield = false;
-		}
-	);
 	boxColliders.emplace_back(glm::vec2(0), GOIsize);
 }
 
@@ -62,11 +52,6 @@ void SpaceShip::Render() const
 		case SpaceShip::ObjectOrientation::Right:
 			pSprite_right->Render(GOIposition, GOIsize, GOIrotation, GOIlayer, spriteAnimator_right.GetCurrentFrame());
 			break;
-		}
-
-		if (hasShield)
-		{
-			pSprite_shield->Render(GOIposition, GOIsize, GOIrotation, GOIlayer+0.1f, spriteAnimator_shield.GetCurrentFrame());
 		}
 	}
 }
@@ -111,11 +96,6 @@ void SpaceShip::UpdateFrame(const double deltaTime)
 	}
 	else
 	{
-		if (hasShield)
-		{
-			spriteAnimator_shield.Update(deltaTime);
-			shieldTimer.Update(deltaTime);
-		}
 		if (GOIvelocity>0)
 		{
 			switch (objectOrientation)

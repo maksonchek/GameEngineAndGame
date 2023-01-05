@@ -51,13 +51,7 @@ private:
 	std::shared_ptr<RenderEngine::Sprite> pSprite_respawn;
 	RenderEngine::SpriteAnimator spriteAnimator_respawn;
 
-	std::shared_ptr<RenderEngine::Sprite> pSprite_shield;
-	RenderEngine::SpriteAnimator spriteAnimator_shield;
-
 	Timer respawnTimer;
-	Timer shieldTimer;
-
 	double maxVelocity;
 	bool isSpawning;
-	bool hasShield;
 };
