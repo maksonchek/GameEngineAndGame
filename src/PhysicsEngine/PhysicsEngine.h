@@ -2,6 +2,7 @@
 #include <unordered_set>
 #include <memory>
 #include <glm/vec2.hpp>
+#include <vector>
 
 class GameObjectInterface;
 class Level;

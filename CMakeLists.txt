@@ -39,6 +39,8 @@ add_executable(${PROJECT_NAME}
 	src/Game/GameObjects/WallGameObject.h
 	src/Game/Level.h
 	src/Game/Level.cpp
+	src/Game/LevelInterface.h
+	src/Game/LevelInterface.cpp
 	src/Game/GameObjects/ConcreteWallGameObject.cpp
 	src/Game/GameObjects/ConcreteWallGameObject.h
 	src/Game/GameObjects/Trees.cpp
