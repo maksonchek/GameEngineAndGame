@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>2D Game Engine: Класс RenderEngine::TextureManager</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="Лого.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">2D Game Engine<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">Движок для создания 2D игр с открытым исходным кодом. Он даже здесь есть и имеет описание и пример простой игры, показывающей возможности движка. Весь проект: https://github.com/maksonchek/GameEngineAndGame</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>RenderEngine</b></li><li class="navelem"><a class="el" href="class_render_engine_1_1_texture_manager.html">TextureManager</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="class_render_engine_1_1_texture_manager-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс RenderEngine::TextureManager</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_render_engine_1_1_texture_manager_1_1_tile.html">Tile</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ab184afb9e701e8b841b8cfb4188a5f3d"><td class="memItemLeft" align="right" valign="top"><a id="ab184afb9e701e8b841b8cfb4188a5f3d" name="ab184afb9e701e8b841b8cfb4188a5f3d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>AddTile</b> (std::string name, const glm::vec2 &amp;leftBottom, const glm::vec2 &amp;rightTop)</td></tr>
+<tr class="separator:ab184afb9e701e8b841b8cfb4188a5f3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a106910940db4ab74a6d9e3ea2b6207bf"><td class="memItemLeft" align="right" valign="top"><a id="a106910940db4ab74a6d9e3ea2b6207bf" name="a106910940db4ab74a6d9e3ea2b6207bf"></a>
+const <a class="el" href="struct_render_engine_1_1_texture_manager_1_1_tile.html">Tile</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetTile</b> (const std::string &amp;name) const</td></tr>
+<tr class="separator:a106910940db4ab74a6d9e3ea2b6207bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ab2a16fbe2a2875023260de281bfe6a"><td class="memItemLeft" align="right" valign="top"><a id="a2ab2a16fbe2a2875023260de281bfe6a" name="a2ab2a16fbe2a2875023260de281bfe6a"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>GetWidth</b> () const</td></tr>
+<tr class="separator:a2ab2a16fbe2a2875023260de281bfe6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafee69e636afb05283006c2654970f54"><td class="memItemLeft" align="right" valign="top"><a id="aafee69e636afb05283006c2654970f54" name="aafee69e636afb05283006c2654970f54"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>GetHeight</b> () const</td></tr>
+<tr class="separator:aafee69e636afb05283006c2654970f54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac173accc8772dc4f8b7d9776217527d"><td class="memItemLeft" align="right" valign="top"><a id="aac173accc8772dc4f8b7d9776217527d" name="aac173accc8772dc4f8b7d9776217527d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Bind</b> () const</td></tr>
+<tr class="separator:aac173accc8772dc4f8b7d9776217527d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c60e6c90e663a381c9407e5426a5fcc"><td class="memItemLeft" align="right" valign="top"><a id="a4c60e6c90e663a381c9407e5426a5fcc" name="a4c60e6c90e663a381c9407e5426a5fcc"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TextureManager</b> (const GLuint width, GLuint height, const unsigned char *textFromFile, const unsigned int channels=4, const GLenum filter=GL_LINEAR, const GLenum wrapMode=GL_CLAMP_TO_EDGE)</td></tr>
+<tr class="separator:a4c60e6c90e663a381c9407e5426a5fcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1946fdcd37b5a4b610f6be3b485803a"><td class="memItemLeft" align="right" valign="top"><a id="ad1946fdcd37b5a4b610f6be3b485803a" name="ad1946fdcd37b5a4b610f6be3b485803a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TextureManager</b> (const <a class="el" href="class_render_engine_1_1_texture_manager.html">TextureManager</a> &amp;)=delete</td></tr>
+<tr class="separator:ad1946fdcd37b5a4b610f6be3b485803a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6cbc1ece700f088b5a6c4a078a4c8e8"><td class="memItemLeft" align="right" valign="top"><a id="ad6cbc1ece700f088b5a6c4a078a4c8e8" name="ad6cbc1ece700f088b5a6c4a078a4c8e8"></a>
+<a class="el" href="class_render_engine_1_1_texture_manager.html">TextureManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="class_render_engine_1_1_texture_manager.html">TextureManager</a> &amp;)=delete</td></tr>
+<tr class="separator:ad6cbc1ece700f088b5a6c4a078a4c8e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe1a61bb498ecb41e5723f22f9943619"><td class="memItemLeft" align="right" valign="top"><a id="abe1a61bb498ecb41e5723f22f9943619" name="abe1a61bb498ecb41e5723f22f9943619"></a>
+<a class="el" href="class_render_engine_1_1_texture_manager.html">TextureManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="class_render_engine_1_1_texture_manager.html">TextureManager</a> &amp;&amp;texture)</td></tr>
+<tr class="separator:abe1a61bb498ecb41e5723f22f9943619"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab21bb75e88a92ca703cb6739ac56843a"><td class="memItemLeft" align="right" valign="top"><a id="ab21bb75e88a92ca703cb6739ac56843a" name="ab21bb75e88a92ca703cb6739ac56843a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TextureManager</b> (<a class="el" href="class_render_engine_1_1_texture_manager.html">TextureManager</a> &amp;&amp;texture)</td></tr>
+<tr class="separator:ab21bb75e88a92ca703cb6739ac56843a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>GameEngineAndGame/src/Renderer/<a class="el" href="_texture_manager_8h_source.html">TextureManager.h</a></li>
+<li>GameEngineAndGame/src/Renderer/TextureManager.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

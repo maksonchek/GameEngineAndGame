@@ -9,6 +9,7 @@
 #include "Renderer/Renderer.h"
 #include "PhysicsEngine/PhysicsEngine.h"
 
+
 glm::ivec2 mainWindowSize(13*16, 14*16);
 constexpr int scaling = 3;
 

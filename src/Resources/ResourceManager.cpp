@@ -85,9 +85,7 @@ std::shared_ptr<RenderEngine::ShaderManager> ResourceManager::LoadShaders(const 
         return newShader;
     }
 
-    std::cerr << "Can't load shader program:\n"
-        << "Vertex program: " << vertexPath << "\n"
-        << "Fragment program: " << fragmentPath << std::endl;
+    std::cerr << "Can't load shader program:" << std::endl << "Vertex program: " << vertexPath << std::endl  << "Fragment program: " << fragmentPath << std::endl;
 
     return nullptr;
 }

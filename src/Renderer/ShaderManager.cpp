@@ -9,40 +9,40 @@ namespace RenderEngine
     ShaderManager::ShaderManager(const std::string& vertexShader, const std::string& fragmentShader)
     {
         GLuint vertexShaderId;
-        if (!CreateShader(vertexShader, GL_VERTEX_SHADER, vertexShaderId))
+        if (!CreateShader(vertexShader, GL_VERTEX_SHADER, vertexShaderId)) 
         {
             std::cerr << "VERTEX SHADER compile-time error" << std::endl;
             return;
         }
 
         GLuint fragmentShaderId;
-        if (!CreateShader(fragmentShader, GL_FRAGMENT_SHADER, fragmentShaderId))
+        if (!CreateShader(fragmentShader, GL_FRAGMENT_SHADER, fragmentShaderId)) 
         {
             std::cerr << "FRAGMENT SHADER compile-time error" << std::endl;
             glDeleteShader(vertexShaderId);
             return;
         }
 
-        id = glCreateProgram();
-        glAttachShader(id, vertexShaderId);
-        glAttachShader(id, fragmentShaderId);
+        id = glCreateProgram(); 
+        glAttachShader(id, vertexShaderId); 
+        glAttachShader(id, fragmentShaderId); 
         glLinkProgram(id);
 
         GLint success;
-        glGetProgramiv(id, GL_LINK_STATUS, &success);
-        if (!success)
+        glGetProgramiv(id, GL_LINK_STATUS, &success);  
+        if (!success) 
         {
             GLchar infoLog[1024];
             glGetShaderInfoLog(id, 1024, nullptr, infoLog);
-            std::cerr << "ERROR::SHADER: Link-time error:\n" << infoLog << std::endl;
+            std::cerr << "Link error: " << infoLog << std::endl;
         }
-        else
+        else 
         {
-            isCompiled = true;
+            isCompiled = true; 
         }
 
-        glDeleteShader(vertexShaderId);
-        glDeleteShader(fragmentShaderId);
+        glDeleteShader(vertexShaderId);  
+        glDeleteShader(fragmentShaderId); 
     }
 
 

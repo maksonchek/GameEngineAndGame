@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>2D Game Engine: Класс GameObjectInterface</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="Лого.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">2D Game Engine<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">Движок для создания 2D игр с открытым исходным кодом. Он даже здесь есть и имеет описание и пример простой игры, показывающей возможности движка. Весь проект: https://github.com/maksonchek/GameEngineAndGame</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pro-attribs">Защищенные данные</a> &#124;
+<a href="class_game_object_interface-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс GameObjectInterface<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+Граф наследования:GameObjectInterface:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_game_object_interface.png" usemap="#GameObjectInterface_map" alt=""/>
+  <map id="GameObjectInterface_map" name="GameObjectInterface_map">
+<area href="class_border.html" alt="Border" shape="rect" coords="167,56,324,80"/>
+<area href="class_bullet.html" alt="Bullet" shape="rect" coords="167,112,324,136"/>
+<area href="class_concrete_wall_game_object.html" alt="ConcreteWallGameObject" shape="rect" coords="167,168,324,192"/>
+<area href="class_eagle.html" alt="Eagle" shape="rect" coords="167,224,324,248"/>
+<area href="class_ice.html" alt="Ice" shape="rect" coords="167,280,324,304"/>
+<area href="class_tank_game_object.html" alt="TankGameObject" shape="rect" coords="167,336,324,360"/>
+<area href="class_trees.html" alt="Trees" shape="rect" coords="167,392,324,416"/>
+<area href="class_wall_game_object.html" alt="WallGameObject" shape="rect" coords="167,448,324,472"/>
+<area href="class_water.html" alt="Water" shape="rect" coords="167,504,324,528"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a700898b87bb4751443e7846d838ec105"><td class="memItemLeft" align="right" valign="top"><a id="a700898b87bb4751443e7846d838ec105" name="a700898b87bb4751443e7846d838ec105"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><b>ObjectType</b> { <b>Constant_Satic_Object</b>
+, <b>Constant_Dynamic_Object</b>
+, <b>Temporary_Satic_Object</b>
+, <b>Temporary_Dynamic_Object</b>
+ }</td></tr>
+<tr class="separator:a700898b87bb4751443e7846d838ec105"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:aefc58a51fa82ee0f63e2d86e52cd4b27"><td class="memItemLeft" align="right" valign="top"><a id="aefc58a51fa82ee0f63e2d86e52cd4b27" name="aefc58a51fa82ee0f63e2d86e52cd4b27"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>GameObjectInterface</b> (const ObjectType objectType, const glm::vec2 &amp;position, const glm::vec2 &amp;size, const float rotation, const float layer)</td></tr>
+<tr class="separator:aefc58a51fa82ee0f63e2d86e52cd4b27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86695e8069b484923437e242f4f919ec"><td class="memItemLeft" align="right" valign="top"><a id="a86695e8069b484923437e242f4f919ec" name="a86695e8069b484923437e242f4f919ec"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Render</b> () const =0</td></tr>
+<tr class="separator:a86695e8069b484923437e242f4f919ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb76a0cd14a7fb5beac38a3f9a9f285d"><td class="memItemLeft" align="right" valign="top"><a id="abb76a0cd14a7fb5beac38a3f9a9f285d" name="abb76a0cd14a7fb5beac38a3f9a9f285d"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateFrame</b> (const double delta)</td></tr>
+<tr class="separator:abb76a0cd14a7fb5beac38a3f9a9f285d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38b428f88514c666300e5b1bc279c5ca"><td class="memItemLeft" align="right" valign="top"><a id="a38b428f88514c666300e5b1bc279c5ca" name="a38b428f88514c666300e5b1bc279c5ca"></a>
+virtual glm::vec2 &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetCurrentPosition</b> ()</td></tr>
+<tr class="separator:a38b428f88514c666300e5b1bc279c5ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28dac6ecbdc76a3d74e62974bb3610c4"><td class="memItemLeft" align="right" valign="top"><a id="a28dac6ecbdc76a3d74e62974bb3610c4" name="a28dac6ecbdc76a3d74e62974bb3610c4"></a>
+virtual glm::vec2 &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetCurrentDirection</b> ()</td></tr>
+<tr class="separator:a28dac6ecbdc76a3d74e62974bb3610c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e39c6ed7d393fdba3f06f55abac65e2"><td class="memItemLeft" align="right" valign="top"><a id="a2e39c6ed7d393fdba3f06f55abac65e2" name="a2e39c6ed7d393fdba3f06f55abac65e2"></a>
+virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>GetCurrentVelocity</b> ()</td></tr>
+<tr class="separator:a2e39c6ed7d393fdba3f06f55abac65e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f9ba46e03f6228a1bea82446e69642b"><td class="memItemLeft" align="right" valign="top"><a id="a9f9ba46e03f6228a1bea82446e69642b" name="a9f9ba46e03f6228a1bea82446e69642b"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SetVelocity</b> (const double velocity)</td></tr>
+<tr class="separator:a9f9ba46e03f6228a1bea82446e69642b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80527a9297cb818cbb03851aeb21a647"><td class="memItemLeft" align="right" valign="top"><a id="a80527a9297cb818cbb03851aeb21a647" name="a80527a9297cb818cbb03851aeb21a647"></a>
+const std::vector&lt; <a class="el" href="struct_physics_engine_manager_1_1_box_collider.html">PhysicsEngineManager::BoxCollider</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetColliders</b> () const</td></tr>
+<tr class="separator:a80527a9297cb818cbb03851aeb21a647"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dabba2c9600b4c1009dcad5efb859be"><td class="memItemLeft" align="right" valign="top"><a id="a9dabba2c9600b4c1009dcad5efb859be" name="a9dabba2c9600b4c1009dcad5efb859be"></a>
+const glm::vec2 &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetSize</b> () const</td></tr>
+<tr class="separator:a9dabba2c9600b4c1009dcad5efb859be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3ae7140896e61a5e48fa256d4254d68"><td class="memItemLeft" align="right" valign="top"><a id="ac3ae7140896e61a5e48fa256d4254d68" name="ac3ae7140896e61a5e48fa256d4254d68"></a>
+ObjectType&#160;</td><td class="memItemRight" valign="bottom"><b>GetObjectType</b> () const</td></tr>
+<tr class="separator:ac3ae7140896e61a5e48fa256d4254d68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3113200293f82737d673158d64d6d4fa"><td class="memItemLeft" align="right" valign="top"><a id="a3113200293f82737d673158d64d6d4fa" name="a3113200293f82737d673158d64d6d4fa"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsCollides</b> (const ObjectType objectType)</td></tr>
+<tr class="separator:a3113200293f82737d673158d64d6d4fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad27ac106b350af45a39df94e1ee8ac96"><td class="memItemLeft" align="right" valign="top"><a id="ad27ac106b350af45a39df94e1ee8ac96" name="ad27ac106b350af45a39df94e1ee8ac96"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnCollision</b> ()</td></tr>
+<tr class="separator:ad27ac106b350af45a39df94e1ee8ac96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Защищенные данные</h2></td></tr>
+<tr class="memitem:a80483c0fafbb152fab1de67a8aee3b51"><td class="memItemLeft" align="right" valign="top"><a id="a80483c0fafbb152fab1de67a8aee3b51" name="a80483c0fafbb152fab1de67a8aee3b51"></a>
+glm::vec2&#160;</td><td class="memItemRight" valign="bottom"><b>GOIposition</b></td></tr>
+<tr class="separator:a80483c0fafbb152fab1de67a8aee3b51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e8f4c9a4f1334b5b7e8985cf6c58033"><td class="memItemLeft" align="right" valign="top"><a id="a5e8f4c9a4f1334b5b7e8985cf6c58033" name="a5e8f4c9a4f1334b5b7e8985cf6c58033"></a>
+glm::vec2&#160;</td><td class="memItemRight" valign="bottom"><b>GOIsize</b></td></tr>
+<tr class="separator:a5e8f4c9a4f1334b5b7e8985cf6c58033"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d0287f5036018177b3f020db4661630"><td class="memItemLeft" align="right" valign="top"><a id="a5d0287f5036018177b3f020db4661630" name="a5d0287f5036018177b3f020db4661630"></a>
+glm::vec2&#160;</td><td class="memItemRight" valign="bottom"><b>GOIdirection</b></td></tr>
+<tr class="separator:a5d0287f5036018177b3f020db4661630"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54eeac7749cfc72dee1a74c86ccaad72"><td class="memItemLeft" align="right" valign="top"><a id="a54eeac7749cfc72dee1a74c86ccaad72" name="a54eeac7749cfc72dee1a74c86ccaad72"></a>
+ObjectType&#160;</td><td class="memItemRight" valign="bottom"><b>GOIobjectType</b></td></tr>
+<tr class="separator:a54eeac7749cfc72dee1a74c86ccaad72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77f95a1508f028cf31b8014b608fba20"><td class="memItemLeft" align="right" valign="top"><a id="a77f95a1508f028cf31b8014b608fba20" name="a77f95a1508f028cf31b8014b608fba20"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>GOIvelocity</b></td></tr>
+<tr class="separator:a77f95a1508f028cf31b8014b608fba20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a845a8581e0da96666e3e2517f93506e2"><td class="memItemLeft" align="right" valign="top"><a id="a845a8581e0da96666e3e2517f93506e2" name="a845a8581e0da96666e3e2517f93506e2"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>GOIrotation</b></td></tr>
+<tr class="separator:a845a8581e0da96666e3e2517f93506e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39702127368a9cab00f1f18930855f99"><td class="memItemLeft" align="right" valign="top"><a id="a39702127368a9cab00f1f18930855f99" name="a39702127368a9cab00f1f18930855f99"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>GOIlayer</b></td></tr>
+<tr class="separator:a39702127368a9cab00f1f18930855f99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f85f9cd43d4a10f6000177a19ceebca"><td class="memItemLeft" align="right" valign="top"><a id="a5f85f9cd43d4a10f6000177a19ceebca" name="a5f85f9cd43d4a10f6000177a19ceebca"></a>
+std::vector&lt; <a class="el" href="struct_physics_engine_manager_1_1_box_collider.html">PhysicsEngineManager::BoxCollider</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>boxColliders</b></td></tr>
+<tr class="separator:a5f85f9cd43d4a10f6000177a19ceebca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>GameEngineAndGame/src/Game/GameObjects/<a class="el" href="_game_object_interface_8h_source.html">GameObjectInterface.h</a></li>
+<li>GameEngineAndGame/src/Game/GameObjects/GameObjectInterface.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

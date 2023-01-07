@@ -1,0 +1,523 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>2D Game Engine: Класс RenderEngine::ShaderManager</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="Лого.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">2D Game Engine<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">Движок для создания 2D игр с открытым исходным кодом. Он даже здесь есть и имеет описание и пример простой игры, показывающей возможности движка. Весь проект: https://github.com/maksonchek/GameEngineAndGame</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>RenderEngine</b></li><li class="navelem"><a class="el" href="class_render_engine_1_1_shader_manager.html">ShaderManager</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="class_render_engine_1_1_shader_manager-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс RenderEngine::ShaderManager</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс, обеспечивающий создание шейдеров, их использоваие и уничтожение. Входит в пространство имён графической компоненты движка "RenderEngine". glad обеспечивает создание переменных таких типов, которые являются "понятными" для OpenGl. mat4x4 позволяет работать с трансформационными матрицами для передвижения отрисованных обЪектов  
+ <a href="class_render_engine_1_1_shader_manager.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_shader_manager_8h_source.html">ShaderManager.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ae2a5dad3025e1c2a6d92d4aaaef1e451"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_engine_1_1_shader_manager.html#ae2a5dad3025e1c2a6d92d4aaaef1e451">ShaderManager</a> (const std::string &amp;vertexShader, const std::string &amp;fragmentShader)</td></tr>
+<tr class="separator:ae2a5dad3025e1c2a6d92d4aaaef1e451"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae039293b0eec7790a31d03b59d8d7338"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_engine_1_1_shader_manager.html#ae039293b0eec7790a31d03b59d8d7338">~ShaderManager</a> ()</td></tr>
+<tr class="separator:ae039293b0eec7790a31d03b59d8d7338"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add3acaa577779f10424e90160400805e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_engine_1_1_shader_manager.html#add3acaa577779f10424e90160400805e">UseShader</a> () const</td></tr>
+<tr class="separator:add3acaa577779f10424e90160400805e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a293b55bd2558d1558bb61031778df88c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_engine_1_1_shader_manager.html#a293b55bd2558d1558bb61031778df88c">SetInt</a> (const std::string &amp;name, const GLint value)</td></tr>
+<tr class="separator:a293b55bd2558d1558bb61031778df88c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfeaa0cd3c4b4f2af3e8d1e09c10a5f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_engine_1_1_shader_manager.html#acfeaa0cd3c4b4f2af3e8d1e09c10a5f4">SetFloat</a> (const std::string &amp;name, const GLfloat value)</td></tr>
+<tr class="separator:acfeaa0cd3c4b4f2af3e8d1e09c10a5f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fb86f68833593e7db5cf41433dc741a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_engine_1_1_shader_manager.html#a6fb86f68833593e7db5cf41433dc741a">SetMatrix4x4</a> (const std::string &amp;name, const glm::mat4 &amp;matrix)</td></tr>
+<tr class="separator:a6fb86f68833593e7db5cf41433dc741a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a184a515c63f305b64e6d73a906787596"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_engine_1_1_shader_manager.html#a184a515c63f305b64e6d73a906787596">IsCompiled</a> () const</td></tr>
+<tr class="separator:a184a515c63f305b64e6d73a906787596"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1ff740c03cda322703240967280227f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_engine_1_1_shader_manager.html#ad1ff740c03cda322703240967280227f">ShaderManager</a> ()=delete</td></tr>
+<tr class="separator:ad1ff740c03cda322703240967280227f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf9769fb091fa0b7730050752249c7ca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_engine_1_1_shader_manager.html#aaf9769fb091fa0b7730050752249c7ca">ShaderManager</a> (const <a class="el" href="class_render_engine_1_1_shader_manager.html">ShaderManager</a> &amp;)=delete</td></tr>
+<tr class="separator:aaf9769fb091fa0b7730050752249c7ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45a28401835f03a5bbe74e9a5ad545a7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_render_engine_1_1_shader_manager.html">ShaderManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_engine_1_1_shader_manager.html#a45a28401835f03a5bbe74e9a5ad545a7">operator=</a> (const <a class="el" href="class_render_engine_1_1_shader_manager.html">ShaderManager</a> &amp;)=delete</td></tr>
+<tr class="separator:a45a28401835f03a5bbe74e9a5ad545a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a039a3eb0dfbd856583856b8dc5c8ab78"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_render_engine_1_1_shader_manager.html">ShaderManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_engine_1_1_shader_manager.html#a039a3eb0dfbd856583856b8dc5c8ab78">operator=</a> (<a class="el" href="class_render_engine_1_1_shader_manager.html">ShaderManager</a> &amp;&amp;shaderManager) noexcept</td></tr>
+<tr class="separator:a039a3eb0dfbd856583856b8dc5c8ab78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d2d58b0778dd6c648ccda103a9fede0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_engine_1_1_shader_manager.html#a9d2d58b0778dd6c648ccda103a9fede0">ShaderManager</a> (<a class="el" href="class_render_engine_1_1_shader_manager.html">ShaderManager</a> &amp;&amp;shaderManager) noexcept</td></tr>
+<tr class="separator:a9d2d58b0778dd6c648ccda103a9fede0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс, обеспечивающий создание шейдеров, их использоваие и уничтожение. Входит в пространство имён графической компоненты движка "RenderEngine". glad обеспечивает создание переменных таких типов, которые являются "понятными" для OpenGl. mat4x4 позволяет работать с трансформационными матрицами для передвижения отрисованных обЪектов </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="ae2a5dad3025e1c2a6d92d4aaaef1e451" name="ae2a5dad3025e1c2a6d92d4aaaef1e451"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2a5dad3025e1c2a6d92d4aaaef1e451">&#9670;&#160;</a></span>ShaderManager() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RenderEngine::ShaderManager::ShaderManager </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>vertexShader</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>fragmentShader</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Конструктор класса. Создаёт вершинные и фрагментные шейдеры и связывает их в одну шейдерную программу, готовую для использования. Псоле чего удаляет ненужные больше вершинные и фрагментные шейдеры. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vertexShader,fragmentShader</td><td>- ссылки на адреса файлов, содержащих интерфейсы шейдеров, написанные на GLSL Реализация метода: <div class="fragment"><div class="line">GLuint vertexShaderId;  <span class="comment">// Создаём id вершинного шейдера типа инт, понятного glsl - шейдерному языку, похожему на C</span></div>
+<div class="line"><span class="keywordflow">if</span> (!CreateShader(vertexShader, GL_VERTEX_SHADER, vertexShaderId))  <span class="comment">// Если метод создания вершинного шейдера выдал ошибку, т.е вернул фолс, сообщаем пользователю, что его вершинный шейдер не создался. Как правило, такая ошибка может возникнуть из-за не поладок в шейдерной программе</span></div>
+<div class="line">{</div>
+<div class="line">    std::cerr &lt;&lt; <span class="stringliteral">&quot;VERTEX SHADER compile-time error&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">    <span class="keywordflow">return</span>;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">GLuint fragmentShaderId; <span class="comment">// Аналогично, как и с вершинным шейдером проделываем ту же операцию создания идентификатора для фрагментного шейдера</span></div>
+<div class="line"><span class="keywordflow">if</span> (!CreateShader(fragmentShader, GL_FRAGMENT_SHADER, fragmentShaderId)) <span class="comment">// Аналогично, как и с вершинным шейдером проделываем ту же операцию проверки успешности создания  фрагментного шейдера</span></div>
+<div class="line">{</div>
+<div class="line">    std::cerr &lt;&lt; <span class="stringliteral">&quot;FRAGMENT SHADER compile-time error&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">    glDeleteShader(vertexShaderId);</div>
+<div class="line">    <span class="keywordflow">return</span>;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">id</span> = glCreateProgram(); <span class="comment">// Создаем шейдерную программу и получаем её идентификатор. Если не понятно, шо за вертексные и фрагментные шейдеры и какие-то шейдерные программы, лучше почитать здесь https://habr.com/ru/post/311808/ ибо я тут не собираюсь писать войну и мир про мир графики, я тут движок реализую между прочим.</span></div>
+<div class="line">glAttachShader(<span class="keywordtype">id</span>, vertexShaderId); <span class="comment">// Присоединяем вертексный шейдер к шейдерной программе с идентификатором id</span></div>
+<div class="line">glAttachShader(<span class="keywordtype">id</span>, fragmentShaderId); <span class="comment">// Присоединяем фрагментный шейдер к шейдерной программе с идентификатором id</span></div>
+<div class="line">glLinkProgram(<span class="keywordtype">id</span>); </div>
+<div class="line"> </div>
+<div class="line">GLint success; <span class="comment">// По хорошему надо проверить, всё ли нормально сработало, этим и займёмся. Создаём переменную, по которой мы потом поймём, сработало ои всё как надо или нет</span></div>
+<div class="line">glGetProgramiv(<span class="keywordtype">id</span>, GL_LINK_STATUS, &amp;success); <span class="comment">// Узнаём, слинковалась ли шейдерная программа с идентификатором id, результат передаем в уже созданную переменную &quot;успех&quot; </span></div>
+<div class="line"><span class="keywordflow">if</span> (!success) <span class="comment">// Если удача сегодня не на нашей стороне, получаем сообщение с ошибкой линковки</span></div>
+<div class="line">{</div>
+<div class="line">    GLchar infoLog[1024];</div>
+<div class="line">    glGetShaderInfoLog(<span class="keywordtype">id</span>, 1024, <span class="keyword">nullptr</span>, infoLog);</div>
+<div class="line">    std::cerr &lt;&lt; <span class="stringliteral">&quot;Link error: &quot;</span> &lt;&lt; infoLog &lt;&lt; std::endl;</div>
+<div class="line">}</div>
+<div class="line"><span class="keywordflow">else</span> <span class="comment">// Если же всё ок, то меняем isCompiled с false на true, знание о созданном шейдере нам ещё ой как понядобится. Но это будет не скоро. Или скоро. Смотря, какой задокументированный класс ты откроешь.</span></div>
+<div class="line">{</div>
+<div class="line">    isCompiled = <span class="keyword">true</span>; <span class="comment">// Да, я знаю, мой способ документирования неправильный, тут много слов не по делу. Зато он не скучный, хоть и непонятный. С другой стороны, не думаю, что это будут читать, ибо есть движки получше этого. </span></div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">glDeleteShader(vertexShaderId);  <span class="comment">// Кстати, наши вершинные шейдеры уже выполнили свою миссию - слинковались с шейдерной программой, чтобы породить на свет ещё один шейдер. Да, он молодец, но теперь он бесполезен и только занимает память. Удаляем его.</span></div>
+<div class="line">glDeleteShader(fragmentShaderId); <span class="comment">// Фрагментного шейдера это тоже касается. Удаляем. ..... Эхх, мы только что лишили маленькую шейдерную программу родителей. </span></div>
+</div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae039293b0eec7790a31d03b59d8d7338" name="ae039293b0eec7790a31d03b59d8d7338"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae039293b0eec7790a31d03b59d8d7338">&#9670;&#160;</a></span>~ShaderManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RenderEngine::ShaderManager::~ShaderManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Деструктор класса - удаляет шейдерную программу </p>
+
+</div>
+</div>
+<a id="ad1ff740c03cda322703240967280227f" name="ad1ff740c03cda322703240967280227f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1ff740c03cda322703240967280227f">&#9670;&#160;</a></span>ShaderManager() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RenderEngine::ShaderManager::ShaderManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Запрещаем конструктор без параметров, так как это не имеет смысла. </p>
+
+</div>
+</div>
+<a id="aaf9769fb091fa0b7730050752249c7ca" name="aaf9769fb091fa0b7730050752249c7ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf9769fb091fa0b7730050752249c7ca">&#9670;&#160;</a></span>ShaderManager() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RenderEngine::ShaderManager::ShaderManager </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_render_engine_1_1_shader_manager.html">ShaderManager</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Запрещаем копирование менеджера шейдера в другой менеджер, так как у нас получатся два объекта с одним и тем же id и когда программа будет удаляться, выйдет казус неимоверный. </p>
+
+</div>
+</div>
+<a id="a9d2d58b0778dd6c648ccda103a9fede0" name="a9d2d58b0778dd6c648ccda103a9fede0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d2d58b0778dd6c648ccda103a9fede0">&#9670;&#160;</a></span>ShaderManager() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RenderEngine::ShaderManager::ShaderManager </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_render_engine_1_1_shader_manager.html">ShaderManager</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>shaderManager</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Конструктор копирования объекта, который скоро удалится тоже разрешён, так как казусов с id шейдера не возникнет </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">shaderManager</td><td>- объект, передающийся по move ссылке <div class="fragment"><div class="line"><span class="keywordtype">id</span> = shaderManager.id; <span class="comment">//Делаем новый id шейдерной программы, взятый у копируемого менеджера шейдеров</span></div>
+<div class="line">isCompiled = shaderManager.isCompiled; <span class="comment">//Передаём текушему isCompiled значение копируемого менеджера шейдеров</span></div>
+<div class="line"> </div>
+<div class="line">shaderManager.id = 0; /Отключаем копируемый шейдер менеджер</div>
+<div class="line">shaderManager.isCompiled = <span class="keyword">false</span>;</div>
+</div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a184a515c63f305b64e6d73a906787596" name="a184a515c63f305b64e6d73a906787596"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a184a515c63f305b64e6d73a906787596">&#9670;&#160;</a></span>IsCompiled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RenderEngine::ShaderManager::IsCompiled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Метод для проверки успешности работы с шейдерами </p><dl class="section return"><dt>Возвращает</dt><dd>isCompiled - приватное поле класса </dd></dl>
+
+</div>
+</div>
+<a id="a45a28401835f03a5bbe74e9a5ad545a7" name="a45a28401835f03a5bbe74e9a5ad545a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45a28401835f03a5bbe74e9a5ad545a7">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_render_engine_1_1_shader_manager.html">ShaderManager</a> &amp; RenderEngine::ShaderManager::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_render_engine_1_1_shader_manager.html">ShaderManager</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Запрещаем присваивание менеджера шейдера в другой менеджер, так как у нас получатся два объекта с одним и тем же id и когда программа будет удаляться, возникнет казус неимоверный. </p>
+
+</div>
+</div>
+<a id="a039a3eb0dfbd856583856b8dc5c8ab78" name="a039a3eb0dfbd856583856b8dc5c8ab78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a039a3eb0dfbd856583856b8dc5c8ab78">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_render_engine_1_1_shader_manager.html">ShaderManager</a> &amp; RenderEngine::ShaderManager::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_render_engine_1_1_shader_manager.html">ShaderManager</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>shaderManager</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Присваивать одному экземпляру менеджера шейдера другого, который скоро удалится, можно, так как не возникнет проблем с id, он будет уникальным. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">shaderManager</td><td>- объект, передающийся по move ссылке <div class="fragment"><div class="line">glDeleteProgram(<span class="keywordtype">id</span>); <span class="comment">//Удаляем прошлую шейдерную программу</span></div>
+<div class="line"><span class="keywordtype">id</span> = shaderManager.id; <span class="comment">//Делаем новый id шейдерной программы, взятый у присваиваемого менеджера шейдеров</span></div>
+<div class="line">isCompiled = shaderManager.isCompiled; <span class="comment">//Передаём текушему isCompiled значение присваемого менеджера шейдеров</span></div>
+<div class="line"> </div>
+<div class="line">shaderManager.id = 0; <span class="comment">//Отключаем присваиваемый шейдер менеджер</span></div>
+<div class="line">shaderManager.isCompiled = <span class="keyword">false</span>;</div>
+<div class="line"><span class="keywordflow">return</span> *<span class="keyword">this</span>; <span class="comment">//Возвращаем новоиспеченный объект</span></div>
+</div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acfeaa0cd3c4b4f2af3e8d1e09c10a5f4" name="acfeaa0cd3c4b4f2af3e8d1e09c10a5f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfeaa0cd3c4b4f2af3e8d1e09c10a5f4">&#9670;&#160;</a></span>SetFloat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RenderEngine::ShaderManager::SetFloat </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const GLfloat&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Используется при работе с текстурами для для того, чтобы установить позицию текстурного блока в uniform sampler (текстурный объект в файле). Устанавливая их через glUniform1f мы будем уверены, что uniform sampler соотносится с правильным текстурным блоком. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>- ссылка на имя шейдерной программы </td></tr>
+    <tr><td class="paramname">value</td><td>- номер текстурного блока </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a293b55bd2558d1558bb61031778df88c" name="a293b55bd2558d1558bb61031778df88c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a293b55bd2558d1558bb61031778df88c">&#9670;&#160;</a></span>SetInt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RenderEngine::ShaderManager::SetInt </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const GLint&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Используется при работе с текстурами для для того, чтобы установить позицию текстурного блока в uniform sampler (текстурный объект в файле). Устанавливая их через glUniform1i мы будем уверены, что uniform sampler соотносится с правильным текстурным блоком. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>- ссылка на имя шейдерной программы </td></tr>
+    <tr><td class="paramname">value</td><td>- номер текстурного блока </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6fb86f68833593e7db5cf41433dc741a" name="a6fb86f68833593e7db5cf41433dc741a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fb86f68833593e7db5cf41433dc741a">&#9670;&#160;</a></span>SetMatrix4x4()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RenderEngine::ShaderManager::SetMatrix4x4 </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::mat4 &amp;&#160;</td>
+          <td class="paramname"><em>matrix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Метод передачи трансформационной матрицы в шейдер. Нужен для того, чтобы объект двигался </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>- имя матрица </td></tr>
+    <tr><td class="paramname">matrix</td><td>- трансформационная матрица </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="add3acaa577779f10424e90160400805e" name="add3acaa577779f10424e90160400805e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add3acaa577779f10424e90160400805e">&#9670;&#160;</a></span>UseShader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RenderEngine::ShaderManager::UseShader </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Используем шейдерную программу для дальнейшей отрисовки объектов </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>GameEngineAndGame/src/Renderer/<a class="el" href="_shader_manager_8h_source.html">ShaderManager.h</a></li>
+<li>GameEngineAndGame/src/Renderer/ShaderManager.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>
