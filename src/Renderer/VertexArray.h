@@ -6,6 +6,9 @@
 
 namespace RenderEngine {
 
+    /*!
+    * Класс, описываюий массив врешин. Похож на VertexBuffer и IndexBuffer. Вообще VAO, т.е VertexArray, нужен для того, чтобы настроить атрибуты лишь единожды и передать их в VAO. 
+    */
     class VertexArray {
     public:
         VertexArray();
@@ -26,8 +29,8 @@ namespace RenderEngine {
         void AddVertexBuffer(const VertexBuffer& vertexBuffer, const VertexBufferLayout& layout);
 
     private:
-        unsigned int elementsCount = 0;
-        GLuint id;
+        unsigned int elementsCount = 0; //количество элементов в вертексном массиве
+        GLuint id; //id вертексного массива
     };
 
 }

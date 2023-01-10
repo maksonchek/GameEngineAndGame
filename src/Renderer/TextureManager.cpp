@@ -71,8 +71,8 @@ namespace RenderEngine {
         {
             return it->second;
         }
-        const static Tile defaultSubTexture;
-        return defaultSubTexture;
+        const static Tile defaultTile;
+        return defaultTile;
     }
 
     TextureManager::~TextureManager()

@@ -23,13 +23,13 @@ namespace RenderEngine {
             1.f, 0.f
         };
 
-        auto subTexture = this->pTexture->GetTile(std::move(initialTile));
+        auto tile = this->pTexture->GetTile(std::move(initialTile));
 
         const GLfloat textureCoords[] = {
-            subTexture.leftBottom.x, subTexture.leftBottom.y,
-            subTexture.leftBottom.x, subTexture.rightTop.y,
-            subTexture.rightTop.x,   subTexture.rightTop.y,
-            subTexture.rightTop.x,   subTexture.leftBottom.y,
+            tile.leftBottom.x, tile.leftBottom.y,
+            tile.leftBottom.x, tile.rightTop.y,
+            tile.rightTop.x,   tile.rightTop.y,
+            tile.rightTop.x,   tile.leftBottom.y,
         };
 
         const GLuint indices[] = {

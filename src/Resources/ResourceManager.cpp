@@ -157,12 +157,12 @@ std::shared_ptr<RenderEngine::TextureManager> ResourceManager::LoadTexture(const
     return newTexture;
 }
 
-std::shared_ptr<RenderEngine::TextureManager> ResourceManager::LoadTextureAtlas(std::string textureName,
+std::shared_ptr<RenderEngine::TextureManager> ResourceManager::LoadTextureAtlas(std::string atlasName,
                                                                               std::string texturePath,
                                                                                  std::vector<std::string> tilesNames,
                                                                                     const unsigned int tileWidth,
                                                                                        const unsigned int tileHeight) {
-    auto pTexture = LoadTexture(std::move(textureName), std::move(texturePath));
+    auto pTexture = LoadTexture(std::move(atlasName), std::move(texturePath));
     if (pTexture)
     {
         const unsigned int textureWidth = pTexture->GetWidth();

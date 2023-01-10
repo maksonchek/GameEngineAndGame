@@ -35,10 +35,12 @@ namespace RenderEngine {
         IndexBuffer& operator=(const IndexBuffer&) = delete;
         /*!
          * Присваивать одному экземпляру класса другого, который скоро удалится, можно, так как не возникнет проблем с id, он будет уникальным.
+         * Присваивает новому классу данные старого, а стрый класс очищает.
         */
         IndexBuffer& operator=(IndexBuffer&& indexBuffer) noexcept;
         /*!
          * Конструктор копирования объекта, который скоро удалится тоже разрешён, так как казусов с id буфера не возникнет
+         * Присваивает новому классу данные старого, а стрый класс очищает.
         */
         IndexBuffer(IndexBuffer&& indexBuffer) noexcept;
 
@@ -64,7 +66,11 @@ namespace RenderEngine {
         * Метод, отвязывающий индексный буффер путём передачи ему нулевого индекса
         */
         void UnBindBuffer() const;
-
+        
+        /*!
+        * Метод, возвращающий количество вершин-индексов.
+        * \return elementsCount - количество вершин-индексов
+        */
         unsigned int GetElementsCount() const
         {
             return elementsCount;

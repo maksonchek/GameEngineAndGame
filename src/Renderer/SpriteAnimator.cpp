@@ -4,10 +4,10 @@
 
 namespace RenderEngine {
     SpriteAnimator::SpriteAnimator(std::shared_ptr<Sprite> pSprite) : 
-        pSprite(std::move(pSprite)), 
-        currentFrame(0), 
-        currentFrameDuration(this->pSprite->GetFrameDuration(0)), 
-        currentAnimationTime(0)
+                                                    pSprite(std::move(pSprite)), 
+                                                    currentFrame(0), 
+                                                    currentFrameDuration(this->pSprite->GetFrameDuration(0)), 
+                                                    currentAnimationTime(0)
     {
     }
 
