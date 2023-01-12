@@ -92,7 +92,7 @@
             std::cerr << "Didn't found shaders :-( " << "SpriteShader" << std::endl;
         }
 
-        pLevel = std::make_shared<Level>(ResourceManager::GetLevels()[1]);
+        pLevel = std::make_shared<Level>(ResourceManager::GetLevels()[0]);
         windowSize.x = static_cast<int>(pLevel->GetLevelWidth());
         windowSize.y = static_cast<int>(pLevel->GetLevelHeight());
         PhysicsEngineManager::PhysicsEngine::SetCurrentLevel(pLevel);

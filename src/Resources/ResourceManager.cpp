@@ -270,7 +270,6 @@ bool ResourceManager::LoadResourcesFromJSON(const std::string& filePath)
                pSprite->InsertFrames(std::move(framesParams));
            }
        }
-       float a = 30 % 1;
        auto levelsIt = doc.FindMember("levels");
        if (levelsIt != doc.MemberEnd())
        {
@@ -289,13 +288,7 @@ bool ResourceManager::LoadResourcesFromJSON(const std::string& filePath)
                    }
                }
 
-               for (auto& currentRow : levelRows)
-               {
-                   while (currentRow.length() < maxLength)
-                   {
-                       currentRow.append("D");
-                   }
-               }
+
                levels.emplace_back(std::move(levelRows));
                
            }

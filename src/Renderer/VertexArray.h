@@ -7,7 +7,7 @@
 namespace RenderEngine {
 
     /*!
-    * Класс, описываюий массив врешин. Похож на VertexBuffer и IndexBuffer. Вообще VAO, т.е VertexArray, нужен для того, чтобы настроить атрибуты лишь единожды и передать их в VAO. 
+    * \brief Класс, описываюий массив врешин. Похож на VertexBuffer и IndexBuffer. Вообще VAO, т.е VertexArray, нужен для того, чтобы настроить атрибуты лишь единожды и передать их в VAO. 
     */
     class VertexArray {
     public:

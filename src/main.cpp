@@ -88,7 +88,7 @@ int main(int argc, char** argv)
 
     {
         ResourceManager::SetExecutablePath(argv[0]);
-        PhysicsEngineManager::PhysicsEngine::InitPhysics();
+        //PhysicsEngineManager::PhysicsEngine::InitPhysics();
         game->InitGame();
         glfwSetWindowSize(pWindow, static_cast<int>(scaling *game->GetCurrentLevelWidth()), static_cast<int>(scaling*game->GetCurrentLevelHeight()));
         auto lastTime = std::chrono::high_resolution_clock::now();

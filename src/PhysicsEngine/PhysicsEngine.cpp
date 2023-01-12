@@ -53,9 +53,6 @@ namespace PhysicsEngineManager {
         return false;
     }
 
-    void PhysicsEngine::InitPhysics()
-    {
-    }
 
     void PhysicsEngine::Update(const double delta)
     {

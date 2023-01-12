@@ -192,7 +192,7 @@ public:
     static std::shared_ptr<RenderEngine::Sprite> GetSprite(const std::string& spriteName);
 
     /*!
-    * Метод, считывающий все текстуры со всех текстурных атласов
+    * Метод, считывающий все текстуры с текстурного атласа
     * \param atlasName - имя атласа
     * \param texturePath - расположение атласа текстур
     * \param tilesNames - имена текстур
@@ -200,6 +200,7 @@ public:
     * \param tileHeight - высота спрайта
     * \return указатель на текстуру
     * Реализация:
+    * \code
             const unsigned int tileHeight) {
             auto pTexture = LoadTexture(std::move(atlasName), std::move(texturePath));
             if (pTexture)
@@ -224,6 +225,7 @@ public:
                 }
             }
             return pTexture;
+    *\endcode
     */
     static std::shared_ptr<RenderEngine::TextureManager> LoadTextureAtlas(const std::string atlasName,
                                                                          const std::string texturePath,
@@ -231,9 +233,123 @@ public:
                                                                             const unsigned int tileWidth,
                                                                               const unsigned int tileHeight);
     
+    /*!
+    * Метод, сопоставляющий разметку ресурсов из файла json с ресурсами в файлах и загружающий все ресурсы
+    * \param filePath - путь к json - файлу с разметкой
+    * \return загрузились ли ресурсы с разметкой или нет
+    * Реализация:
+    * \code
+            const std::string JSONString = GetTextFromFile(filePath);  //Считываем весь текст с json-файла
+            if (JSONString.empty())
+            {
+                std::cerr << "File with JSON is empty :-(" << std::endl;
+                return false;
+            }
 
+            rapidjson::Document doc; 
+            rapidjson::ParseResult parseResult = doc.Parse(JSONString.c_str()); //парсим текст в премлемый формад для работы с json
+            if (!parseResult)
+            {
+                std::cerr << "JSON parse error :-((((((((((((((( " << rapidjson::GetParseError_En(parseResult.Code()) << " In file " << filePath << std::endl;
+                return false;
+            }
+
+           auto shadersIter =  doc.FindMember("shaders"); //находим заголовок шейдеров 
+
+           if (shadersIter != doc.MemberEnd()) //если такой заголовок есть и под ним что-то написано, загружаем шейдеры
+           {
+               for (const auto &shader : shadersIter->value.GetArray())
+               {
+                   const std::string name = shader["name"].GetString();
+                   const std::string vertexPath = shader["vertex_path"].GetString();
+                   const std::string fragmentPath = shader["fragment_path"].GetString();
+                   LoadShaders(name, vertexPath, fragmentPath); 
+               }
+           }
+
+           auto textureAtlasIter = doc.FindMember("TextureAtlases");
+
+           if (textureAtlasIter != doc.MemberEnd()) //аналогично загружаем все данные со всех атласов текстур
+           {
+               for (const auto& atlas : textureAtlasIter->value.GetArray())
+               {
+                   const std::string name = atlas["name"].GetString();
+                   const std::string atlasPath = atlas["filePath"].GetString();
+                   const unsigned int tileWidth = atlas["tileWidth"].GetUint();
+                   const unsigned int tileHeight = atlas["tileHeight"].GetUint();
+
+                   const auto tilesArray = atlas["tiles"].GetArray();
+                   std::vector<std::string> tiles;
+                   tiles.reserve(tilesArray.Size());
+                   for (const auto& tile : tilesArray)
+                   {
+                       tiles.emplace_back(tile.GetString());
+                   }
+                   LoadTextureAtlas(name, atlasPath, std::move(tiles), tileWidth, tileHeight); 
+               }
+           }
+           auto spritesIter = doc.FindMember("sprites"); //Среди текстур обозначаем спрайты, привязываем к ним шейдеры. Если у них есть анимация, загружаем время анимаций и распологаем их по порядку.
+           if (spritesIter != doc.MemberEnd()) 
+           {
+               for (const auto& currentSprite : spritesIter->value.GetArray())
+               {
+                   const std::string name = currentSprite["name"].GetString();
+                   const std::string textureAtlas = currentSprite["textureAtlas"].GetString();
+                   const std::string shader = currentSprite["shader"].GetString();
+                   const std::string tile = currentSprite["initialTile"].GetString();
+
+                   auto pSprite = LoadSprite(name, textureAtlas, shader, tile);
+                   if (!pSprite)
+                   {
+                       continue;
+                   }
+                   auto framesIter = currentSprite.FindMember("frames");
+                   if (framesIter != currentSprite.MemberEnd())
+                   {
+                       const auto framesArray = framesIter->value.GetArray();
+                       std::vector<RenderEngine::Sprite::FrameParams> framesParams;
+                       framesParams.reserve(framesArray.Size());
+                       for (const auto& frame : framesArray)
+                       {
+                           const std::string tile = frame["tile"].GetString();
+                           const double duration = frame["duration"].GetDouble();
+                           const auto pTextureAtlas = GetTextureManager(textureAtlas);
+                           const auto pTile = pTextureAtlas->GetTile(tile);
+                           framesParams.emplace_back(pTile.leftBottom, pTile.rightTop, duration);
+                       }
+                       pSprite->InsertFrames(std::move(framesParams));
+                   }
+               }
+             
+               auto levelsIt = doc.FindMember("levels"); //считываем разметку каждого уровня
+               if (levelsIt != doc.MemberEnd())
+               {
+                   for (const auto& currentLevel : levelsIt->value.GetArray())
+                   {
+                       const auto description = currentLevel["description"].GetArray();
+                       std::vector<std::string> levelRows;
+                       levelRows.reserve(description.Size());
+                       size_t maxLength = 0;
+                       for (const auto& currentRow : description)
+                       {
+                           levelRows.emplace_back(currentRow.GetString());
+                           if (maxLength < levelRows.back().length())
+                           {
+                               maxLength = levelRows.back().length();
+                           }
+                       }
+                       levels.emplace_back(std::move(levelRows));             
+                   }
+               }
+           }
+           return true;
+    *\endcode
+    */
     static bool LoadResourcesFromJSON(const std::string& filePath);
 
+    /*!
+    * Метод, возвращаюий количество уровней в игре
+    */
     static const std::vector<std::vector<std::string>>& GetLevels() 
     { 
         return levels; 
@@ -245,18 +361,38 @@ public:
     ResourceManager(ResourceManager&&) = delete;
 
 private:
-    static std::string GetTextFromFile(const std::string& relativeFilePath);
+    /*!
+    * Метод, считывающий текст с файла
+    * \param relativeFilePath - путь к файлу, с которого нужно считать данные
+    * \return считанный с файла текст
+    * Реализация:
+    * \code
+                std::ifstream f;
+                f.open(path + "/" + relativeFilePath.c_str(), std::ios::in | std::ios::binary);
+                if (!f.is_open())
+                {
+                    std::cerr << "Failed to open file: " << relativeFilePath << std::endl;
+                    return std::string{};
+                }
 
-    typedef std::map<const std::string, std::shared_ptr<RenderEngine::ShaderManager>> mapShaderManager;
-    static mapShaderManager shaderManagers;
+                std::stringstream buffer;
+                buffer << f.rdbuf();
+                return buffer.str();
+    * \endcode
+    */
+    static std::string GetTextFromFile(const std::string& relativeFilePath); 
 
+    typedef std::map<const std::string, std::shared_ptr<RenderEngine::ShaderManager>> mapShaderManager; ///<Создаем псевдоним для удобства использования контейнера с именем шейдера и его шейдерной программой
+    static mapShaderManager shaderManagers; ///<Переменная созданного нами типа
+
+    ///< Аналогично с текстурами и спрайтами
     typedef std::map<const std::string, std::shared_ptr<RenderEngine::TextureManager>> mapTextureManager;
-    static mapTextureManager textures;
+    static mapTextureManager textures; 
 
-    typedef std::map<const std::string, std::shared_ptr<RenderEngine::Sprite>> mapSprite;
-    static mapSprite sprites;
+    typedef std::map<const std::string, std::shared_ptr<RenderEngine::Sprite>> mapSprite; 
+    static mapSprite sprites; 
 
-    static std::string path;
+    static std::string path; ///<переменная, хранящая путь к папке с ресурсами
 
-    static std::vector<std::vector<std::string>> levels;
+    static std::vector<std::vector<std::string>> levels; ///<Вектор векторов, хранящий разметку уровней
 };
