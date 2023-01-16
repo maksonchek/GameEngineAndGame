@@ -10,11 +10,14 @@
 #include "PhysicsEngine/PhysicsEngine.h"
 
 
-glm::ivec2 mainWindowSize(13*16, 14*16);
+glm::ivec2 mainWindowSize(13*16, 14*16); ///<Стандартный азмер игрового окна
 constexpr int scaling = 3;
 
-std::unique_ptr<Game> game = std::make_unique<Game>(mainWindowSize);
+std::unique_ptr<Game> game = std::make_unique<Game>(mainWindowSize); ///<Создание экземпляра класса игры
 
+/*!
+* Функция, отрисовывающая игру в нормальном для восприятия виде при изменении размеров игрового окна
+*/
 void glfwWindowSizeCallback(GLFWwindow* pWindow, int width, int height)
 {
     mainWindowSize.x = width;
@@ -39,6 +42,9 @@ void glfwWindowSizeCallback(GLFWwindow* pWindow, int width, int height)
     RenderEngine::Renderer::SetViewPort(viewPortWidth, viewPortHeight, viewPortLeftOffset, viewPortBottomOffset);
 }
 
+/*!
+* Функция, принимающая нажатия кнопок и передающая их классу игры для дальнейшей обработки
+*/
 void glfwKeyCallback(GLFWwindow* pWindow, int key, int scancode, int action, int mode)
 {
     if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
@@ -50,7 +56,9 @@ void glfwKeyCallback(GLFWwindow* pWindow, int key, int scancode, int action, int
 
 int main(int argc, char** argv)
 {
-    /* Инициализация glfw */
+    /*!
+    * Инициализация glfw 
+    */
     if (!glfwInit())
     {
         std::cout << "glfw initialization failed! :-(" << std::endl;
@@ -61,7 +69,9 @@ int main(int argc, char** argv)
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 6);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-    /* Создаём окошко для вывода картинок */
+    /*!
+    *Создаём окошко для вывода картинок 
+    */
     GLFWwindow* pWindow = glfwCreateWindow(mainWindowSize.x, mainWindowSize.y, "Хе-хеы", nullptr, nullptr);
     if (!pWindow)
     {
@@ -87,31 +97,29 @@ int main(int argc, char** argv)
     RenderEngine::Renderer::SetLayer(true);
 
     {
-        ResourceManager::SetExecutablePath(argv[0]);
-        //PhysicsEngineManager::PhysicsEngine::InitPhysics();
-        game->InitGame();
-        glfwSetWindowSize(pWindow, static_cast<int>(scaling *game->GetCurrentLevelWidth()), static_cast<int>(scaling*game->GetCurrentLevelHeight()));
-        auto lastTime = std::chrono::high_resolution_clock::now();
-        //int i = 0;
+        ResourceManager::SetExecutablePath(argv[0]); ///<Установка пути к папке с ресурсами игры
+        game->InitGame(); ///<Инициализация игры
+        glfwSetWindowSize(pWindow, static_cast<int>(scaling *game->GetCurrentLevelWidth()), static_cast<int>(scaling*game->GetCurrentLevelHeight())); ///<Установка размеров окна
+        auto lastTime = std::chrono::high_resolution_clock::now(); ///<Переменная времени, необходимая для вычисления длительности кадра
         /* Игровой цикл */
         while (!glfwWindowShouldClose(pWindow))
         {
-            auto currentTime = std::chrono::high_resolution_clock::now();
-            double timeDuration = std::chrono::duration<double, std::milli>(currentTime - lastTime).count();
+            auto currentTime = std::chrono::high_resolution_clock::now(); ///<<Переменная времени, необходимая для вычисления длительности кадра
+            double timeDuration = std::chrono::duration<double, std::milli>(currentTime - lastTime).count(); ///<Длительность кадра
             lastTime = currentTime;
-            game->Update(timeDuration);
-            PhysicsEngineManager::PhysicsEngine::Update(timeDuration);
-            /* Покадровая отрисовка */
-            RenderEngine::Renderer::Clear();
+            game->Update(timeDuration); ///<Обновление игровых данных
+            PhysicsEngineManager::PhysicsEngine::Update(timeDuration); ///<Обновление физических данных
+            RenderEngine::Renderer::Clear(); ///<Очистка прошлого кадра
 
-            game->Render();
-            glfwSwapBuffers(pWindow);
+            game->Render(); ///<Отрисовка нового кадра
+            glfwSwapBuffers(pWindow); 
 
             glfwPollEvents();
         }
         game = nullptr;
         ResourceManager::DestructAllRes();
     }
+    ///< Очистка ресурсов
     PhysicsEngineManager::PhysicsEngine::DeleteAll();
     glfwTerminate();
     return 0;
