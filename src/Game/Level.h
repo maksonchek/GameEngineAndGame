@@ -7,12 +7,13 @@
 #include "LevelInterface.h"
 
 
-class Level : public LevelInterface 
+class Level : public LevelInterface //Все уровни должны наследовать от класса LevelInterface 
 {
 public:
 
-    Level(const std::vector<std::string>& levelMarkup);
+    Level(const std::vector<std::string>& levelMarkup); //Конструктор уровня, в который передаётся разметк уровня из gameResources.json
 
+    //Кроме игровых объектов на уровне должны быть места появления игроков или ботов 
     const glm::ivec2& GetPlayerRespawn_1() const 
     { 
         return playerRespawn1; 
@@ -40,9 +41,9 @@ public:
 
 
 private:
-    glm::ivec2 playerRespawn1;
+    glm::ivec2 playerRespawn1; //координаты ремпавнов игрока
     glm::ivec2 playerRespawn2;
     glm::ivec2 enemyRespawn1;
-    glm::ivec2 enemyRespawn2;
+    glm::ivec2 enemyRespawn2; //координаты ремпавнов врагов
     glm::ivec2 enemyRespawn3;
 };

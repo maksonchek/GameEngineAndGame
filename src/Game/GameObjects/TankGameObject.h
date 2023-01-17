@@ -3,14 +3,14 @@
 #include <glm/vec2.hpp>
 
 #include "GameObjectInterface.h"
-#include "../../Renderer/SpriteAnimator.h"
-#include "../../EngineSystem/Timer.h"
+#include "../../Renderer/SpriteAnimator.h" //Танк нужно будет анимировать, поэтому инклудируем SpriteAnimator.h
+#include "../../EngineSystem/Timer.h" //При появлении танка будет временная анимация для её реализации понадобится Timer.h
 
 namespace RenderEngine
 {
 	class Sprite;
 }
-class Bullet;
+class Bullet; //Класс пули
 
 class TankGameObject : public GameObjectInterface
 {
@@ -31,13 +31,13 @@ public:
 
 	void SetOrientation(const ObjectOrientation orientation);
 
-	void UpdateFrame(const double delta) override;
+	void UpdateFrame(const double delta) override; //Нужен для анимации танка
 
 	double GetMaxVelocity() const;
 
-	void SetVelocity(const double velocity) override;
+	void SetVelocity(const double velocity) override; //Наследуемы метод передачи скорости объекту
 
-	void Fire();
+	void Fire(); //метод стрельбы
 
 private:
 	ObjectOrientation objectOrientation;

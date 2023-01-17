@@ -1,5 +1,5 @@
 #include "Level.h"
-
+//Инклудируем все игровые объекты, которые мы создали
 #include "../Resources/ResourceManager.h"
 #include "GameObjects/GameObjectInterface.h"
 #include "LevelInterface.h"
@@ -15,7 +15,7 @@
 #include <algorithm>
 #include <cmath>
 
-std::shared_ptr<GameObjectInterface> CreateGameObjectFromMarkup(const char markup, const glm::vec2& position, const glm::vec2& size, const float rotation)
+std::shared_ptr<GameObjectInterface> CreateGameObjectFromMarkup(const char markup, const glm::vec2& position, const glm::vec2& size, const float rotation) //Для каждого значения разметки уровня и его позиции нужно привязать игровой объект, который мы создали 
 {
     switch (markup)
     {
@@ -64,7 +64,7 @@ std::shared_ptr<GameObjectInterface> CreateGameObjectFromMarkup(const char marku
 }
 
 
-Level::Level(const std::vector<std::string>& levelMarkup) : LevelInterface()
+Level::Level(const std::vector<std::string>& levelMarkup) : LevelInterface() 
 {
     if (levelMarkup.empty())
     {
@@ -73,9 +73,10 @@ Level::Level(const std::vector<std::string>& levelMarkup) : LevelInterface()
 
     width = levelMarkup[0].length();
     height = levelMarkup.size();
-    widthPixels = static_cast<unsigned int>(width * BLOCK_SIZE);
+    //задаем ширину и высоту уровня в пикселях
+    widthPixels = static_cast<unsigned int>(width * BLOCK_SIZE); 
     heightPixels = static_cast<unsigned int>(height * BLOCK_SIZE);
-
+    //Задаём координаты спавнов
     playerRespawn1 = { BLOCK_SIZE * (width / 2 - 1), BLOCK_SIZE / 2 };
     playerRespawn2 = { BLOCK_SIZE * (width / 2 + 3), BLOCK_SIZE / 2 };
     enemyRespawn1 = { BLOCK_SIZE, BLOCK_SIZE * height - BLOCK_SIZE / 2 };
@@ -91,7 +92,7 @@ Level::Level(const std::vector<std::string>& levelMarkup) : LevelInterface()
         {
             switch (currentElement)
             {
-            case 'K':
+            case 'K': //Этими буквами в разметке обозначены спавны игроков и объектов
                 playerRespawn1 = { currentLeftOffset, currentBottomOffset };
                 levelObjects.emplace_back(nullptr);
                 break;
@@ -112,15 +113,16 @@ Level::Level(const std::vector<std::string>& levelMarkup) : LevelInterface()
                 levelObjects.emplace_back(nullptr);
                 break;
             default:
-                levelObjects.emplace_back(CreateGameObjectFromMarkup(currentElement, glm::vec2(currentLeftOffset, currentBottomOffset), glm::vec2(BLOCK_SIZE, BLOCK_SIZE), 0.f));
+                levelObjects.emplace_back(CreateGameObjectFromMarkup(currentElement, glm::vec2(currentLeftOffset, currentBottomOffset), glm::vec2(BLOCK_SIZE, BLOCK_SIZE), 0.f)); // Если буква разметки не для спавна, то 
+                //в объекты уровня помещаем созданные объекты с координатами
                 break;
             }
-            currentLeftOffset += BLOCK_SIZE;
+            currentLeftOffset += BLOCK_SIZE; //переходим на следующую итерацию, смещаяь на 16 пикселей
         }
-        currentBottomOffset -= BLOCK_SIZE;
+        currentBottomOffset -= BLOCK_SIZE; //Смещаемся вниз на 16 пикселей разметки, перемещаясь на другую строку
     }
     // нижняя граница
-    levelObjects.emplace_back(std::make_shared<Border>(glm::vec2(BLOCK_SIZE, 0.f), glm::vec2(height * BLOCK_SIZE, BLOCK_SIZE / 2.f), 0.f, 0.f));
+    levelObjects.emplace_back(std::make_shared<Border>(glm::vec2(BLOCK_SIZE, 0.f), glm::vec2(height * BLOCK_SIZE, BLOCK_SIZE / 2.f), 0.f, 0.f)); //Границы уровня
 
     // верхняя граница
     levelObjects.emplace_back(std::make_shared<Border>(glm::vec2(BLOCK_SIZE, height * BLOCK_SIZE + BLOCK_SIZE / 2.f), glm::vec2(width * BLOCK_SIZE, BLOCK_SIZE / 2.f), 0.f, 0.f));

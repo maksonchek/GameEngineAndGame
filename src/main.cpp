@@ -72,7 +72,7 @@ int main(int argc, char** argv)
     /*!
     *Создаём окошко для вывода картинок 
     */
-    GLFWwindow* pWindow = glfwCreateWindow(mainWindowSize.x, mainWindowSize.y, "Хе-хеы", nullptr, nullptr);
+    GLFWwindow* pWindow = glfwCreateWindow(mainWindowSize.x, mainWindowSize.y, "Game", nullptr, nullptr);
     if (!pWindow)
     {
         std::cout << "glfw didn't create window! :-(" << std::endl;
