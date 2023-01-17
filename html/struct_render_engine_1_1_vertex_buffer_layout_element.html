@@ -81,23 +81,34 @@ $(function() {
   <div class="headertitle"><div class="title">Структура RenderEngine::VertexBufferLayoutElement</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>эта структура хранит все неоходимые элементы создаваемого нами буффера, которые будут передаваться в glVertexAttribPointer - функцию-интерпритатор вершинных данных  
+ <a href="struct_render_engine_1_1_vertex_buffer_layout_element.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_vertex_buffer_layout_8h_source.html">VertexBufferLayout.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Открытые атрибуты</h2></td></tr>
 <tr class="memitem:ab4d1dbf37183f454fc1f3282723f8974"><td class="memItemLeft" align="right" valign="top"><a id="ab4d1dbf37183f454fc1f3282723f8974" name="ab4d1dbf37183f454fc1f3282723f8974"></a>
 GLint&#160;</td><td class="memItemRight" valign="bottom"><b>count</b></td></tr>
+<tr class="memdesc:ab4d1dbf37183f454fc1f3282723f8974"><td class="mdescLeft">&#160;</td><td class="mdescRight">Количество элементов <br /></td></tr>
 <tr class="separator:ab4d1dbf37183f454fc1f3282723f8974"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8ca5e480b5d976acefb7521a89faad5"><td class="memItemLeft" align="right" valign="top"><a id="ae8ca5e480b5d976acefb7521a89faad5" name="ae8ca5e480b5d976acefb7521a89faad5"></a>
 GLenum&#160;</td><td class="memItemRight" valign="bottom"><b>type</b></td></tr>
+<tr class="memdesc:ae8ca5e480b5d976acefb7521a89faad5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Их тип <br /></td></tr>
 <tr class="separator:ae8ca5e480b5d976acefb7521a89faad5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6205596726256d197157c95d471603a"><td class="memItemLeft" align="right" valign="top"><a id="ad6205596726256d197157c95d471603a" name="ad6205596726256d197157c95d471603a"></a>
 GLboolean&#160;</td><td class="memItemRight" valign="bottom"><b>isDoNormalize</b></td></tr>
+<tr class="memdesc:ad6205596726256d197157c95d471603a"><td class="mdescLeft">&#160;</td><td class="mdescRight">параметр, нужный для glVertexAttribPointer, но не нам. В двмжве он всегда false <br /></td></tr>
 <tr class="separator:ad6205596726256d197157c95d471603a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ff29b15e02b16867e0aa42592fa8545"><td class="memItemLeft" align="right" valign="top"><a id="a7ff29b15e02b16867e0aa42592fa8545" name="a7ff29b15e02b16867e0aa42592fa8545"></a>
 unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>size</b></td></tr>
+<tr class="memdesc:a7ff29b15e02b16867e0aa42592fa8545"><td class="mdescLeft">&#160;</td><td class="mdescRight">Размер элемента в байтах <br /></td></tr>
 <tr class="separator:a7ff29b15e02b16867e0aa42592fa8545"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>эта структура хранит все неоходимые элементы создаваемого нами буффера, которые будут передаваться в glVertexAttribPointer - функцию-интерпритатор вершинных данных </p>
+</div><hr/>Объявления и описания членов структуры находятся в файле:<ul>
 <li>GameEngineAndGame/src/Renderer/<a class="el" href="_vertex_buffer_layout_8h_source.html">VertexBufferLayout.h</a></li>
 </ul>
 </div><!-- contents -->

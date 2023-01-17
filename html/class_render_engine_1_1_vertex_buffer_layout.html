@@ -81,22 +81,161 @@ $(function() {
   <div class="headertitle"><div class="title">Класс RenderEngine::VertexBufferLayout</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Данный класс позволяет более компактно упаковать в памяти данные об объекте, который нужно нарисовать, путём создания одного буфферного объекта из веринного буффера и буффера с цветами. Таким образом в одном буффере по порядку будут размещены данные позиция,цвет,позиция,цвет и т.д  
+ <a href="class_render_engine_1_1_vertex_buffer_layout.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_vertex_buffer_layout_8h_source.html">VertexBufferLayout.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Открытые члены</h2></td></tr>
-<tr class="memitem:a449fd9ff7cf8389fb7877eab98201618"><td class="memItemLeft" align="right" valign="top"><a id="a449fd9ff7cf8389fb7877eab98201618" name="a449fd9ff7cf8389fb7877eab98201618"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ReserveElements</b> (const size_t count)</td></tr>
+<tr class="memitem:a9e402089b53e87aec760ca4ab038b6d0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_engine_1_1_vertex_buffer_layout.html#a9e402089b53e87aec760ca4ab038b6d0">VertexBufferLayout</a> ()</td></tr>
+<tr class="separator:a9e402089b53e87aec760ca4ab038b6d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a449fd9ff7cf8389fb7877eab98201618"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_engine_1_1_vertex_buffer_layout.html#a449fd9ff7cf8389fb7877eab98201618">ReserveElements</a> (const size_t count)</td></tr>
 <tr class="separator:a449fd9ff7cf8389fb7877eab98201618"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6893b6eda3982003a6e8d7bb9b55513c"><td class="memItemLeft" align="right" valign="top"><a id="a6893b6eda3982003a6e8d7bb9b55513c" name="a6893b6eda3982003a6e8d7bb9b55513c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>AddElementLayoutFloat</b> (const unsigned int count, const bool isDoNormalize)</td></tr>
+<tr class="memitem:a6893b6eda3982003a6e8d7bb9b55513c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_engine_1_1_vertex_buffer_layout.html#a6893b6eda3982003a6e8d7bb9b55513c">AddElementLayoutFloat</a> (const unsigned int count, const bool isDoNormalize)</td></tr>
 <tr class="separator:a6893b6eda3982003a6e8d7bb9b55513c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45c82d077b69f81db099441ed306ee7c"><td class="memItemLeft" align="right" valign="top"><a id="a45c82d077b69f81db099441ed306ee7c" name="a45c82d077b69f81db099441ed306ee7c"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>GetStride</b> () const</td></tr>
+<tr class="memitem:a45c82d077b69f81db099441ed306ee7c"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_engine_1_1_vertex_buffer_layout.html#a45c82d077b69f81db099441ed306ee7c">GetStride</a> () const</td></tr>
 <tr class="separator:a45c82d077b69f81db099441ed306ee7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3f991074ce9b299ee778f257ccbe581"><td class="memItemLeft" align="right" valign="top"><a id="ad3f991074ce9b299ee778f257ccbe581" name="ad3f991074ce9b299ee778f257ccbe581"></a>
-const std::vector&lt; <a class="el" href="struct_render_engine_1_1_vertex_buffer_layout_element.html">VertexBufferLayoutElement</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetLayoutElements</b> () const</td></tr>
+<tr class="memitem:ad3f991074ce9b299ee778f257ccbe581"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="struct_render_engine_1_1_vertex_buffer_layout_element.html">VertexBufferLayoutElement</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_engine_1_1_vertex_buffer_layout.html#ad3f991074ce9b299ee778f257ccbe581">GetLayoutElements</a> () const</td></tr>
 <tr class="separator:ad3f991074ce9b299ee778f257ccbe581"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Данный класс позволяет более компактно упаковать в памяти данные об объекте, который нужно нарисовать, путём создания одного буфферного объекта из веринного буффера и буффера с цветами. Таким образом в одном буффере по порядку будут размещены данные позиция,цвет,позиция,цвет и т.д </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a9e402089b53e87aec760ca4ab038b6d0" name="a9e402089b53e87aec760ca4ab038b6d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e402089b53e87aec760ca4ab038b6d0">&#9670;&#160;</a></span>VertexBufferLayout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RenderEngine::VertexBufferLayout::VertexBufferLayout </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Конструктор, в котором будет проинициализирован шаг между элементами, равный размеру типа элемента в байтах. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a6893b6eda3982003a6e8d7bb9b55513c" name="a6893b6eda3982003a6e8d7bb9b55513c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6893b6eda3982003a6e8d7bb9b55513c">&#9670;&#160;</a></span>AddElementLayoutFloat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RenderEngine::VertexBufferLayout::AddElementLayoutFloat </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned int&#160;</td>
+          <td class="paramname"><em>count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>isDoNormalize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Добавляет элемент типа float в layoutElments </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">count</td><td>- параметр, необходимый для вычисления размера элемента в байтах </td></tr>
+    <tr><td class="paramname">isDoNormalize</td><td>- параметр, нужный для glVertexAttribPointer, но не нам. В двмжве он всегда false Реализация: <div class="fragment"><div class="line"><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> elememtSize = count * <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(<span class="keyword">sizeof</span>(GLfloat)); <span class="comment">//Вычисляем размер элемента</span></div>
+<div class="line">layoutElments.push_back({ <span class="keyword">static_cast&lt;</span>GLint<span class="keyword">&gt;</span>(count), GL_FLOAT, isDoNormalize, elememtSize}); <span class="comment">//Помущаем элемент в вектор</span></div>
+<div class="line">elementStride += layoutElments.back().size; <span class="comment">//Увеличиваемм шаг элемента на количество вершин в элементе, штобы обшагивать их.</span></div>
+</div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad3f991074ce9b299ee778f257ccbe581" name="ad3f991074ce9b299ee778f257ccbe581"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3f991074ce9b299ee778f257ccbe581">&#9670;&#160;</a></span>GetLayoutElements()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; <a class="el" href="struct_render_engine_1_1_vertex_buffer_layout_element.html">VertexBufferLayoutElement</a> &gt; &amp; RenderEngine::VertexBufferLayout::GetLayoutElements </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Функция, возвращающая вектор элементов буффера </p>
+
+</div>
+</div>
+<a id="a45c82d077b69f81db099441ed306ee7c" name="a45c82d077b69f81db099441ed306ee7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45c82d077b69f81db099441ed306ee7c">&#9670;&#160;</a></span>GetStride()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int RenderEngine::VertexBufferLayout::GetStride </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Функция, возвращающая шаг между элементами </p>
+
+</div>
+</div>
+<a id="a449fd9ff7cf8389fb7877eab98201618" name="a449fd9ff7cf8389fb7877eab98201618"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a449fd9ff7cf8389fb7877eab98201618">&#9670;&#160;</a></span>ReserveElements()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RenderEngine::VertexBufferLayout::ReserveElements </td>
+          <td>(</td>
+          <td class="paramtype">const size_t&#160;</td>
+          <td class="paramname"><em>count</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Функция, резевирующая в векторе элементов буффера нужное количество мест </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">count</td><td>- нужное количество мест </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>Объявления и описания членов классов находятся в файлах:<ul>
 <li>GameEngineAndGame/src/Renderer/<a class="el" href="_vertex_buffer_layout_8h_source.html">VertexBufferLayout.h</a></li>
 <li>GameEngineAndGame/src/Renderer/VertexBufferLayout.cpp</li>

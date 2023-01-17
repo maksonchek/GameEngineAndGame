@@ -84,7 +84,7 @@ $(function() {
  <div class="center">
   <img src="class_tank_game_object.png" usemap="#TankGameObject_map" alt=""/>
   <map id="TankGameObject_map" name="TankGameObject_map">
-<area href="class_game_object_interface.html" alt="GameObjectInterface" shape="rect" coords="0,0,131,24"/>
+<area href="class_game_object_interface.html" title="Виртуальный класс, создержащий в себе поля и методы, общие для всех возможных игровых объектов...." alt="GameObjectInterface" shape="rect" coords="0,0,131,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -97,11 +97,12 @@ $(function() {
  }</td></tr>
 <tr class="separator:acf49362064a1c5b8ab6d04764e3e95a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_class_game_object_interface"><td colspan="2" onclick="javascript:toggleInherit('pub_types_class_game_object_interface')"><img src="closed.png" alt="-"/>&#160;Открытые типы унаследованные от <a class="el" href="class_game_object_interface.html">GameObjectInterface</a></td></tr>
-<tr class="memitem:a700898b87bb4751443e7846d838ec105 inherit pub_types_class_game_object_interface"><td class="memItemLeft" align="right" valign="top"><a id="a700898b87bb4751443e7846d838ec105" name="a700898b87bb4751443e7846d838ec105"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><b>ObjectType</b> { <b>Constant_Satic_Object</b>
+<tr class="memitem:a700898b87bb4751443e7846d838ec105 inherit pub_types_class_game_object_interface"><td class="memItemLeft" align="right" valign="top"><a id="a700898b87bb4751443e7846d838ec105" name="a700898b87bb4751443e7846d838ec105"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_interface.html#a700898b87bb4751443e7846d838ec105">ObjectType</a> { <b>Constant_Satic_Object</b>
 , <b>Constant_Dynamic_Object</b>
 , <b>Temporary_Satic_Object</b>
 , <b>Temporary_Dynamic_Object</b>
  }</td></tr>
+<tr class="memdesc:a700898b87bb4751443e7846d838ec105"><td class="mdescLeft">&#160;</td><td class="mdescRight">Класс, хранящий перечисления типов игровых объектов (Подвижный, способный к взаимодействию объект, подвижный неспособный к взаимодействию объект, неподвижный, способный к взаимодействию объект, непоодвижный неспособный к взаимодействию объект) <br /></td></tr>
 <tr class="separator:a700898b87bb4751443e7846d838ec105 inherit pub_types_class_game_object_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -125,41 +126,29 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>GetMaxVelocity</b> 
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Fire</b> ()</td></tr>
 <tr class="separator:a6770e1c302a00dc5a7dd71c31b07a6d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_game_object_interface"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_game_object_interface')"><img src="closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="class_game_object_interface.html">GameObjectInterface</a></td></tr>
-<tr class="memitem:aefc58a51fa82ee0f63e2d86e52cd4b27 inherit pub_methods_class_game_object_interface"><td class="memItemLeft" align="right" valign="top"><a id="aefc58a51fa82ee0f63e2d86e52cd4b27" name="aefc58a51fa82ee0f63e2d86e52cd4b27"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>GameObjectInterface</b> (const ObjectType objectType, const glm::vec2 &amp;position, const glm::vec2 &amp;size, const float rotation, const float layer)</td></tr>
+<tr class="memitem:aefc58a51fa82ee0f63e2d86e52cd4b27 inherit pub_methods_class_game_object_interface"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_interface.html#aefc58a51fa82ee0f63e2d86e52cd4b27">GameObjectInterface</a> (const <a class="el" href="class_game_object_interface.html#a700898b87bb4751443e7846d838ec105">ObjectType</a> objectType, const glm::vec2 &amp;position, const glm::vec2 &amp;size, const float rotation, const float layer)</td></tr>
 <tr class="separator:aefc58a51fa82ee0f63e2d86e52cd4b27 inherit pub_methods_class_game_object_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86695e8069b484923437e242f4f919ec inherit pub_methods_class_game_object_interface"><td class="memItemLeft" align="right" valign="top"><a id="a86695e8069b484923437e242f4f919ec" name="a86695e8069b484923437e242f4f919ec"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Render</b> () const =0</td></tr>
+<tr class="memitem:a86695e8069b484923437e242f4f919ec inherit pub_methods_class_game_object_interface"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_interface.html#a86695e8069b484923437e242f4f919ec">Render</a> () const =0</td></tr>
 <tr class="separator:a86695e8069b484923437e242f4f919ec inherit pub_methods_class_game_object_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb76a0cd14a7fb5beac38a3f9a9f285d inherit pub_methods_class_game_object_interface"><td class="memItemLeft" align="right" valign="top"><a id="abb76a0cd14a7fb5beac38a3f9a9f285d" name="abb76a0cd14a7fb5beac38a3f9a9f285d"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateFrame</b> (const double delta)</td></tr>
+<tr class="memitem:abb76a0cd14a7fb5beac38a3f9a9f285d inherit pub_methods_class_game_object_interface"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_interface.html#abb76a0cd14a7fb5beac38a3f9a9f285d">UpdateFrame</a> (const double delta)</td></tr>
 <tr class="separator:abb76a0cd14a7fb5beac38a3f9a9f285d inherit pub_methods_class_game_object_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38b428f88514c666300e5b1bc279c5ca inherit pub_methods_class_game_object_interface"><td class="memItemLeft" align="right" valign="top"><a id="a38b428f88514c666300e5b1bc279c5ca" name="a38b428f88514c666300e5b1bc279c5ca"></a>
-virtual glm::vec2 &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetCurrentPosition</b> ()</td></tr>
+<tr class="memitem:a38b428f88514c666300e5b1bc279c5ca inherit pub_methods_class_game_object_interface"><td class="memItemLeft" align="right" valign="top">virtual glm::vec2 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_interface.html#a38b428f88514c666300e5b1bc279c5ca">GetCurrentPosition</a> ()</td></tr>
 <tr class="separator:a38b428f88514c666300e5b1bc279c5ca inherit pub_methods_class_game_object_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28dac6ecbdc76a3d74e62974bb3610c4 inherit pub_methods_class_game_object_interface"><td class="memItemLeft" align="right" valign="top"><a id="a28dac6ecbdc76a3d74e62974bb3610c4" name="a28dac6ecbdc76a3d74e62974bb3610c4"></a>
-virtual glm::vec2 &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetCurrentDirection</b> ()</td></tr>
+<tr class="memitem:a28dac6ecbdc76a3d74e62974bb3610c4 inherit pub_methods_class_game_object_interface"><td class="memItemLeft" align="right" valign="top">virtual glm::vec2 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_interface.html#a28dac6ecbdc76a3d74e62974bb3610c4">GetCurrentDirection</a> ()</td></tr>
 <tr class="separator:a28dac6ecbdc76a3d74e62974bb3610c4 inherit pub_methods_class_game_object_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e39c6ed7d393fdba3f06f55abac65e2 inherit pub_methods_class_game_object_interface"><td class="memItemLeft" align="right" valign="top"><a id="a2e39c6ed7d393fdba3f06f55abac65e2" name="a2e39c6ed7d393fdba3f06f55abac65e2"></a>
-virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>GetCurrentVelocity</b> ()</td></tr>
+<tr class="memitem:a2e39c6ed7d393fdba3f06f55abac65e2 inherit pub_methods_class_game_object_interface"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_interface.html#a2e39c6ed7d393fdba3f06f55abac65e2">GetCurrentVelocity</a> ()</td></tr>
 <tr class="separator:a2e39c6ed7d393fdba3f06f55abac65e2 inherit pub_methods_class_game_object_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f9ba46e03f6228a1bea82446e69642b inherit pub_methods_class_game_object_interface"><td class="memItemLeft" align="right" valign="top"><a id="a9f9ba46e03f6228a1bea82446e69642b" name="a9f9ba46e03f6228a1bea82446e69642b"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SetVelocity</b> (const double velocity)</td></tr>
+<tr class="memitem:a9f9ba46e03f6228a1bea82446e69642b inherit pub_methods_class_game_object_interface"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_interface.html#a9f9ba46e03f6228a1bea82446e69642b">SetVelocity</a> (const double velocity)</td></tr>
 <tr class="separator:a9f9ba46e03f6228a1bea82446e69642b inherit pub_methods_class_game_object_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80527a9297cb818cbb03851aeb21a647 inherit pub_methods_class_game_object_interface"><td class="memItemLeft" align="right" valign="top"><a id="a80527a9297cb818cbb03851aeb21a647" name="a80527a9297cb818cbb03851aeb21a647"></a>
-const std::vector&lt; <a class="el" href="struct_physics_engine_manager_1_1_box_collider.html">PhysicsEngineManager::BoxCollider</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetColliders</b> () const</td></tr>
+<tr class="memitem:a80527a9297cb818cbb03851aeb21a647 inherit pub_methods_class_game_object_interface"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="struct_physics_engine_manager_1_1_box_collider.html">PhysicsEngineManager::BoxCollider</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_interface.html#a80527a9297cb818cbb03851aeb21a647">GetColliders</a> () const</td></tr>
 <tr class="separator:a80527a9297cb818cbb03851aeb21a647 inherit pub_methods_class_game_object_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9dabba2c9600b4c1009dcad5efb859be inherit pub_methods_class_game_object_interface"><td class="memItemLeft" align="right" valign="top"><a id="a9dabba2c9600b4c1009dcad5efb859be" name="a9dabba2c9600b4c1009dcad5efb859be"></a>
-const glm::vec2 &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetSize</b> () const</td></tr>
+<tr class="memitem:a9dabba2c9600b4c1009dcad5efb859be inherit pub_methods_class_game_object_interface"><td class="memItemLeft" align="right" valign="top">const glm::vec2 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_interface.html#a9dabba2c9600b4c1009dcad5efb859be">GetSize</a> () const</td></tr>
 <tr class="separator:a9dabba2c9600b4c1009dcad5efb859be inherit pub_methods_class_game_object_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3ae7140896e61a5e48fa256d4254d68 inherit pub_methods_class_game_object_interface"><td class="memItemLeft" align="right" valign="top"><a id="ac3ae7140896e61a5e48fa256d4254d68" name="ac3ae7140896e61a5e48fa256d4254d68"></a>
-ObjectType&#160;</td><td class="memItemRight" valign="bottom"><b>GetObjectType</b> () const</td></tr>
+<tr class="memitem:ac3ae7140896e61a5e48fa256d4254d68 inherit pub_methods_class_game_object_interface"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_game_object_interface.html#a700898b87bb4751443e7846d838ec105">ObjectType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_interface.html#ac3ae7140896e61a5e48fa256d4254d68">GetObjectType</a> () const</td></tr>
 <tr class="separator:ac3ae7140896e61a5e48fa256d4254d68 inherit pub_methods_class_game_object_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3113200293f82737d673158d64d6d4fa inherit pub_methods_class_game_object_interface"><td class="memItemLeft" align="right" valign="top"><a id="a3113200293f82737d673158d64d6d4fa" name="a3113200293f82737d673158d64d6d4fa"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsCollides</b> (const ObjectType objectType)</td></tr>
+<tr class="memitem:a3113200293f82737d673158d64d6d4fa inherit pub_methods_class_game_object_interface"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_interface.html#a3113200293f82737d673158d64d6d4fa">IsCollides</a> (const <a class="el" href="class_game_object_interface.html#a700898b87bb4751443e7846d838ec105">ObjectType</a> objectType)</td></tr>
 <tr class="separator:a3113200293f82737d673158d64d6d4fa inherit pub_methods_class_game_object_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad27ac106b350af45a39df94e1ee8ac96 inherit pub_methods_class_game_object_interface"><td class="memItemLeft" align="right" valign="top"><a id="ad27ac106b350af45a39df94e1ee8ac96" name="ad27ac106b350af45a39df94e1ee8ac96"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnCollision</b> ()</td></tr>
+<tr class="memitem:ad27ac106b350af45a39df94e1ee8ac96 inherit pub_methods_class_game_object_interface"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_interface.html#ad27ac106b350af45a39df94e1ee8ac96">OnCollision</a> ()</td></tr>
 <tr class="separator:ad27ac106b350af45a39df94e1ee8ac96 inherit pub_methods_class_game_object_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
@@ -167,27 +156,35 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnCollision</
 <tr class="inherit_header pro_attribs_class_game_object_interface"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_game_object_interface')"><img src="closed.png" alt="-"/>&#160;Защищенные данные унаследованные от <a class="el" href="class_game_object_interface.html">GameObjectInterface</a></td></tr>
 <tr class="memitem:a80483c0fafbb152fab1de67a8aee3b51 inherit pro_attribs_class_game_object_interface"><td class="memItemLeft" align="right" valign="top"><a id="a80483c0fafbb152fab1de67a8aee3b51" name="a80483c0fafbb152fab1de67a8aee3b51"></a>
 glm::vec2&#160;</td><td class="memItemRight" valign="bottom"><b>GOIposition</b></td></tr>
+<tr class="memdesc:a80483c0fafbb152fab1de67a8aee3b51 inherit pro_attribs_class_game_object_interface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Позиция объекта <br /></td></tr>
 <tr class="separator:a80483c0fafbb152fab1de67a8aee3b51 inherit pro_attribs_class_game_object_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e8f4c9a4f1334b5b7e8985cf6c58033 inherit pro_attribs_class_game_object_interface"><td class="memItemLeft" align="right" valign="top"><a id="a5e8f4c9a4f1334b5b7e8985cf6c58033" name="a5e8f4c9a4f1334b5b7e8985cf6c58033"></a>
 glm::vec2&#160;</td><td class="memItemRight" valign="bottom"><b>GOIsize</b></td></tr>
+<tr class="memdesc:a5e8f4c9a4f1334b5b7e8985cf6c58033 inherit pro_attribs_class_game_object_interface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Размер объекта <br /></td></tr>
 <tr class="separator:a5e8f4c9a4f1334b5b7e8985cf6c58033 inherit pro_attribs_class_game_object_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d0287f5036018177b3f020db4661630 inherit pro_attribs_class_game_object_interface"><td class="memItemLeft" align="right" valign="top"><a id="a5d0287f5036018177b3f020db4661630" name="a5d0287f5036018177b3f020db4661630"></a>
 glm::vec2&#160;</td><td class="memItemRight" valign="bottom"><b>GOIdirection</b></td></tr>
+<tr class="memdesc:a5d0287f5036018177b3f020db4661630 inherit pro_attribs_class_game_object_interface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Поворот объекта <br /></td></tr>
 <tr class="separator:a5d0287f5036018177b3f020db4661630 inherit pro_attribs_class_game_object_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54eeac7749cfc72dee1a74c86ccaad72 inherit pro_attribs_class_game_object_interface"><td class="memItemLeft" align="right" valign="top"><a id="a54eeac7749cfc72dee1a74c86ccaad72" name="a54eeac7749cfc72dee1a74c86ccaad72"></a>
-ObjectType&#160;</td><td class="memItemRight" valign="bottom"><b>GOIobjectType</b></td></tr>
+<a class="el" href="class_game_object_interface.html#a700898b87bb4751443e7846d838ec105">ObjectType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GOIobjectType</b></td></tr>
+<tr class="memdesc:a54eeac7749cfc72dee1a74c86ccaad72 inherit pro_attribs_class_game_object_interface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тип объекта <br /></td></tr>
 <tr class="separator:a54eeac7749cfc72dee1a74c86ccaad72 inherit pro_attribs_class_game_object_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77f95a1508f028cf31b8014b608fba20 inherit pro_attribs_class_game_object_interface"><td class="memItemLeft" align="right" valign="top"><a id="a77f95a1508f028cf31b8014b608fba20" name="a77f95a1508f028cf31b8014b608fba20"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>GOIvelocity</b></td></tr>
+<tr class="memdesc:a77f95a1508f028cf31b8014b608fba20 inherit pro_attribs_class_game_object_interface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Скорость объекта <br /></td></tr>
 <tr class="separator:a77f95a1508f028cf31b8014b608fba20 inherit pro_attribs_class_game_object_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a845a8581e0da96666e3e2517f93506e2 inherit pro_attribs_class_game_object_interface"><td class="memItemLeft" align="right" valign="top"><a id="a845a8581e0da96666e3e2517f93506e2" name="a845a8581e0da96666e3e2517f93506e2"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>GOIrotation</b></td></tr>
+<tr class="memdesc:a845a8581e0da96666e3e2517f93506e2 inherit pro_attribs_class_game_object_interface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Поворот объекта <br /></td></tr>
 <tr class="separator:a845a8581e0da96666e3e2517f93506e2 inherit pro_attribs_class_game_object_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39702127368a9cab00f1f18930855f99 inherit pro_attribs_class_game_object_interface"><td class="memItemLeft" align="right" valign="top"><a id="a39702127368a9cab00f1f18930855f99" name="a39702127368a9cab00f1f18930855f99"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>GOIlayer</b></td></tr>
+<tr class="memdesc:a39702127368a9cab00f1f18930855f99 inherit pro_attribs_class_game_object_interface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Слой объекта <br /></td></tr>
 <tr class="separator:a39702127368a9cab00f1f18930855f99 inherit pro_attribs_class_game_object_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f85f9cd43d4a10f6000177a19ceebca inherit pro_attribs_class_game_object_interface"><td class="memItemLeft" align="right" valign="top"><a id="a5f85f9cd43d4a10f6000177a19ceebca" name="a5f85f9cd43d4a10f6000177a19ceebca"></a>
 std::vector&lt; <a class="el" href="struct_physics_engine_manager_1_1_box_collider.html">PhysicsEngineManager::BoxCollider</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>boxColliders</b></td></tr>
+<tr class="memdesc:a5f85f9cd43d4a10f6000177a19ceebca inherit pro_attribs_class_game_object_interface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Коллайдеры объекта <br /></td></tr>
 <tr class="separator:a5f85f9cd43d4a10f6000177a19ceebca inherit pro_attribs_class_game_object_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Методы</h2>
@@ -213,8 +210,9 @@ std::vector&lt; <a class="el" href="struct_physics_engine_manager_1_1_box_collid
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Функция, отвечающая за отрисовку объекта, которую разработчик должен будет переопределить </p>
 
-<p>Замещает <a class="el" href="class_game_object_interface.html">GameObjectInterface</a>.</p>
+<p>Замещает <a class="el" href="class_game_object_interface.html#a86695e8069b484923437e242f4f919ec">GameObjectInterface</a>.</p>
 
 </div>
 </div>
@@ -241,8 +239,9 @@ std::vector&lt; <a class="el" href="struct_physics_engine_manager_1_1_box_collid
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Устанавливает на объекте новую скорость </p>
 
-<p>Переопределяет метод предка <a class="el" href="class_game_object_interface.html">GameObjectInterface</a>.</p>
+<p>Переопределяет метод предка <a class="el" href="class_game_object_interface.html#a9f9ba46e03f6228a1bea82446e69642b">GameObjectInterface</a>.</p>
 
 </div>
 </div>
@@ -269,8 +268,9 @@ std::vector&lt; <a class="el" href="struct_physics_engine_manager_1_1_box_collid
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Функция, обработку физики объекта каждый кадр, которую разработчик должен будет переопределить </p>
 
-<p>Переопределяет метод предка <a class="el" href="class_game_object_interface.html">GameObjectInterface</a>.</p>
+<p>Переопределяет метод предка <a class="el" href="class_game_object_interface.html#abb76a0cd14a7fb5beac38a3f9a9f285d">GameObjectInterface</a>.</p>
 
 </div>
 </div>

@@ -77,19 +77,102 @@ $(function() {
   <div class="headertitle"><div class="title">Класс Timer</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Класс, необходимый для событий/анимаций в игре, которые незациклены и не длятся бесконечно. Чтобы их можно было остановить  
+ <a href="class_timer.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_timer_8h_source.html">Timer.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Открытые члены</h2></td></tr>
-<tr class="memitem:a3066362bb7a0eb3e1eae2f8ce9cfe41f"><td class="memItemLeft" align="right" valign="top"><a id="a3066362bb7a0eb3e1eae2f8ce9cfe41f" name="a3066362bb7a0eb3e1eae2f8ce9cfe41f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Update</b> (const double delta)</td></tr>
+<tr class="memitem:a3066362bb7a0eb3e1eae2f8ce9cfe41f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_timer.html#a3066362bb7a0eb3e1eae2f8ce9cfe41f">Update</a> (const double delta)</td></tr>
 <tr class="separator:a3066362bb7a0eb3e1eae2f8ce9cfe41f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a165b76e18d698467276d96e020b016c5"><td class="memItemLeft" align="right" valign="top"><a id="a165b76e18d698467276d96e020b016c5" name="a165b76e18d698467276d96e020b016c5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Start</b> (const double duration)</td></tr>
+<tr class="memitem:a165b76e18d698467276d96e020b016c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_timer.html#a165b76e18d698467276d96e020b016c5">Start</a> (const double duration)</td></tr>
 <tr class="separator:a165b76e18d698467276d96e020b016c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abafdf11da8ae469cddcdcf3f06473f87"><td class="memItemLeft" align="right" valign="top"><a id="abafdf11da8ae469cddcdcf3f06473f87" name="abafdf11da8ae469cddcdcf3f06473f87"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetCallback</b> (std::function&lt; void()&gt; callback)</td></tr>
+<tr class="memitem:abafdf11da8ae469cddcdcf3f06473f87"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_timer.html#abafdf11da8ae469cddcdcf3f06473f87">SetCallback</a> (std::function&lt; void()&gt; callback)</td></tr>
 <tr class="separator:abafdf11da8ae469cddcdcf3f06473f87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс, необходимый для событий/анимаций в игре, которые незациклены и не длятся бесконечно. Чтобы их можно было остановить </p>
+</div><h2 class="groupheader">Методы</h2>
+<a id="abafdf11da8ae469cddcdcf3f06473f87" name="abafdf11da8ae469cddcdcf3f06473f87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abafdf11da8ae469cddcdcf3f06473f87">&#9670;&#160;</a></span>SetCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Timer::SetCallback </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void()&gt;&#160;</td>
+          <td class="paramname"><em>callback</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Получает и устанавливает в таймере функцию обратного отклика </p>
+
+</div>
+</div>
+<a id="a165b76e18d698467276d96e020b016c5" name="a165b76e18d698467276d96e020b016c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a165b76e18d698467276d96e020b016c5">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Timer::Start </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>duration</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Функция, запускающая таймер </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">duration</td><td>- длительность таймера <div class="fragment"><div class="line">timeLeft = duration;</div>
+<div class="line">isRunning = <span class="keyword">true</span>;</div>
+</div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3066362bb7a0eb3e1eae2f8ce9cfe41f" name="a3066362bb7a0eb3e1eae2f8ce9cfe41f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3066362bb7a0eb3e1eae2f8ce9cfe41f">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Timer::Update </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>delta</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Функция проверяющийся, истёкло ли время таймера. Включает </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">delta</td><td>-единица времени кадра Реализация: <div class="fragment"><div class="line"> <span class="keywordflow">if</span> (isRunning)</div>
+<div class="line">{</div>
+<div class="line">    timeLeft -= delta;</div>
+<div class="line">    <span class="keywordflow">if</span> (timeLeft &lt;= 0)</div>
+<div class="line">    {</div>
+<div class="line">        isRunning = <span class="keyword">false</span>;</div>
+<div class="line">        callback();</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>Объявления и описания членов классов находятся в файлах:<ul>
 <li>GameEngineAndGame/src/EngineSystem/<a class="el" href="_timer_8h_source.html">Timer.h</a></li>
 <li>GameEngineAndGame/src/EngineSystem/Timer.cpp</li>

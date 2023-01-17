@@ -82,19 +82,25 @@ $(function() {
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="class_timer.html">    5</a></span><span class="keyword">class </span><a class="code hl_class" href="class_timer.html">Timer</a> {</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <a class="code hl_class" href="class_timer.html">Timer</a>();</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="keywordtype">void</span> Update(<span class="keyword">const</span> <span class="keywordtype">double</span> delta);</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keywordtype">void</span> Start(<span class="keyword">const</span> <span class="keywordtype">double</span> duration);</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keywordtype">void</span> SetCallback(std::function&lt;<span class="keywordtype">void</span>()&gt; callback);</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_timer.html">    8</a></span><span class="keyword">class </span><a class="code hl_class" href="class_timer.html">Timer</a> {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <a class="code hl_class" href="class_timer.html">Timer</a>();</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    std::function&lt;void()&gt; callback;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">double</span> timeLeft;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordtype">bool</span> isRunning;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>};</div>
-<div class="ttc" id="aclass_timer_html"><div class="ttname"><a href="class_timer.html">Timer</a></div><div class="ttdef"><b>Definition:</b> Timer.h:5</div></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_timer.html#a3066362bb7a0eb3e1eae2f8ce9cfe41f">Update</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> delta);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_timer.html#a165b76e18d698467276d96e020b016c5">Start</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> duration);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_timer.html#abafdf11da8ae469cddcdcf3f06473f87">SetCallback</a>(std::function&lt;<span class="keywordtype">void</span>()&gt; callback);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    std::function&lt;void()&gt; callback; </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">double</span> timeLeft; </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">bool</span> isRunning; </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>};</div>
+<div class="ttc" id="aclass_timer_html"><div class="ttname"><a href="class_timer.html">Timer</a></div><div class="ttdoc">Класс, необходимый для событий/анимаций в игре, которые незациклены и не длятся бесконечно....</div><div class="ttdef"><b>Definition:</b> Timer.h:8</div></div>
+<div class="ttc" id="aclass_timer_html_a165b76e18d698467276d96e020b016c5"><div class="ttname"><a href="class_timer.html#a165b76e18d698467276d96e020b016c5">Timer::Start</a></div><div class="ttdeci">void Start(const double duration)</div><div class="ttdef"><b>Definition:</b> Timer.cpp:23</div></div>
+<div class="ttc" id="aclass_timer_html_a3066362bb7a0eb3e1eae2f8ce9cfe41f"><div class="ttname"><a href="class_timer.html#a3066362bb7a0eb3e1eae2f8ce9cfe41f">Timer::Update</a></div><div class="ttdeci">void Update(const double delta)</div><div class="ttdef"><b>Definition:</b> Timer.cpp:10</div></div>
+<div class="ttc" id="aclass_timer_html_abafdf11da8ae469cddcdcf3f06473f87"><div class="ttname"><a href="class_timer.html#abafdf11da8ae469cddcdcf3f06473f87">Timer::SetCallback</a></div><div class="ttdeci">void SetCallback(std::function&lt; void()&gt; callback)</div><div class="ttdef"><b>Definition:</b> Timer.cpp:29</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

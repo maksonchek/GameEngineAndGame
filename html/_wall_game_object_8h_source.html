@@ -129,8 +129,8 @@ $(function() {
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    };</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <a class="code hl_class" href="class_wall_game_object.html">WallGameObject</a>(<span class="keyword">const</span> WallGOType type, <span class="keyword">const</span> glm::vec2&amp; position, <span class="keyword">const</span> glm::vec2&amp; size, <span class="keyword">const</span> <span class="keywordtype">float</span> rotation, <span class="keyword">const</span> <span class="keywordtype">float</span> layer);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> Render() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> UpdateFrame(<span class="keyword">const</span> <span class="keywordtype">double</span> delta) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_wall_game_object.html#ad1c5bec3d6da717d716d3611aff12cb1">Render</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_wall_game_object.html#ae1fdc58aec59b2d0c553d2c6abc1f795">UpdateFrame</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> delta) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keyword">private</span>:</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">void</span> RenderWallGo(<span class="keyword">const</span> WallGOPosition position) <span class="keyword">const</span>;</div>
@@ -138,8 +138,10 @@ $(function() {
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    std::array&lt;WallGOState, 4&gt; currentWallGOState;</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    std::array&lt;std::shared_ptr&lt;RenderEngine::Sprite&gt;, 15&gt; pSprites;</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>};</div>
-<div class="ttc" id="aclass_game_object_interface_html"><div class="ttname"><a href="class_game_object_interface.html">GameObjectInterface</a></div><div class="ttdef"><b>Definition:</b> GameObjectInterface.h:7</div></div>
+<div class="ttc" id="aclass_game_object_interface_html"><div class="ttname"><a href="class_game_object_interface.html">GameObjectInterface</a></div><div class="ttdoc">Виртуальный класс, создержащий в себе поля и методы, общие для всех возможных игровых объектов....</div><div class="ttdef"><b>Definition:</b> GameObjectInterface.h:11</div></div>
 <div class="ttc" id="aclass_wall_game_object_html"><div class="ttname"><a href="class_wall_game_object.html">WallGameObject</a></div><div class="ttdef"><b>Definition:</b> WallGameObject.h:11</div></div>
+<div class="ttc" id="aclass_wall_game_object_html_ad1c5bec3d6da717d716d3611aff12cb1"><div class="ttname"><a href="class_wall_game_object.html#ad1c5bec3d6da717d716d3611aff12cb1">WallGameObject::Render</a></div><div class="ttdeci">virtual void Render() const override</div><div class="ttdef"><b>Definition:</b> WallGameObject.cpp:80</div></div>
+<div class="ttc" id="aclass_wall_game_object_html_ae1fdc58aec59b2d0c553d2c6abc1f795"><div class="ttname"><a href="class_wall_game_object.html#ae1fdc58aec59b2d0c553d2c6abc1f795">WallGameObject::UpdateFrame</a></div><div class="ttdeci">virtual void UpdateFrame(const double delta) override</div><div class="ttdef"><b>Definition:</b> WallGameObject.cpp:88</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

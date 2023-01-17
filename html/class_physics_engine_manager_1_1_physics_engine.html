@@ -82,6 +82,11 @@ $(function() {
   <div class="headertitle"><div class="title">Класс PhysicsEngineManager::PhysicsEngine</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Класс, отвечающий за взаимодействия игровых объектов с игроком и друг с другом. Статический  
+ <a href="class_physics_engine_manager_1_1_physics_engine.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_physics_engine_8h_source.html">PhysicsEngine.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Открытые члены</h2></td></tr>
@@ -100,22 +105,192 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Открытые статические члены</h2></td></tr>
-<tr class="memitem:add687e17c4a4f27e3a83a4937bfe67fe"><td class="memItemLeft" align="right" valign="top"><a id="add687e17c4a4f27e3a83a4937bfe67fe" name="add687e17c4a4f27e3a83a4937bfe67fe"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>InitPhysics</b> ()</td></tr>
-<tr class="separator:add687e17c4a4f27e3a83a4937bfe67fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64ac995fba55246c149da54216883b84"><td class="memItemLeft" align="right" valign="top"><a id="a64ac995fba55246c149da54216883b84" name="a64ac995fba55246c149da54216883b84"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>Update</b> (const double delta)</td></tr>
+<tr class="memitem:a64ac995fba55246c149da54216883b84"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_engine_manager_1_1_physics_engine.html#a64ac995fba55246c149da54216883b84">Update</a> (const double delta)</td></tr>
 <tr class="separator:a64ac995fba55246c149da54216883b84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43b311c2671f77e325061870cde4a93a"><td class="memItemLeft" align="right" valign="top"><a id="a43b311c2671f77e325061870cde4a93a" name="a43b311c2671f77e325061870cde4a93a"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>AddDynamicGameObject</b> (std::shared_ptr&lt; <a class="el" href="class_game_object_interface.html">GameObjectInterface</a> &gt; pGameObject)</td></tr>
+<tr class="memitem:a43b311c2671f77e325061870cde4a93a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_engine_manager_1_1_physics_engine.html#a43b311c2671f77e325061870cde4a93a">AddDynamicGameObject</a> (std::shared_ptr&lt; <a class="el" href="class_game_object_interface.html">GameObjectInterface</a> &gt; pGameObject)</td></tr>
 <tr class="separator:a43b311c2671f77e325061870cde4a93a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3f13e455106f7349c967e0313adb789"><td class="memItemLeft" align="right" valign="top"><a id="ab3f13e455106f7349c967e0313adb789" name="ab3f13e455106f7349c967e0313adb789"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>DeleteAll</b> ()</td></tr>
+<tr class="memitem:ab3f13e455106f7349c967e0313adb789"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_engine_manager_1_1_physics_engine.html#ab3f13e455106f7349c967e0313adb789">DeleteAll</a> ()</td></tr>
 <tr class="separator:ab3f13e455106f7349c967e0313adb789"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a6280e3bdcb5c1bb20e598129fb62a6"><td class="memItemLeft" align="right" valign="top"><a id="a6a6280e3bdcb5c1bb20e598129fb62a6" name="a6a6280e3bdcb5c1bb20e598129fb62a6"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>SetCurrentLevel</b> (std::shared_ptr&lt; <a class="el" href="class_level.html">Level</a> &gt; pLevel)</td></tr>
+<tr class="memitem:a6a6280e3bdcb5c1bb20e598129fb62a6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_engine_manager_1_1_physics_engine.html#a6a6280e3bdcb5c1bb20e598129fb62a6">SetCurrentLevel</a> (std::shared_ptr&lt; <a class="el" href="class_level.html">Level</a> &gt; pLevel)</td></tr>
 <tr class="separator:a6a6280e3bdcb5c1bb20e598129fb62a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс, отвечающий за взаимодействия игровых объектов с игроком и друг с другом. Статический </p>
+</div><h2 class="groupheader">Методы</h2>
+<a id="a43b311c2671f77e325061870cde4a93a" name="a43b311c2671f77e325061870cde4a93a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43b311c2671f77e325061870cde4a93a">&#9670;&#160;</a></span>AddDynamicGameObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PhysicsEngineManager::PhysicsEngine::AddDynamicGameObject </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_game_object_interface.html">GameObjectInterface</a> &gt;&#160;</td>
+          <td class="paramname"><em>pGameObject</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Добавляет в сет указателей на объекты, способные взаимодействовать, pGameObject - ещё один объект </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pGameObject</td><td>- умный указатель на объект, который надо добавить Реализация: <div class="fragment"><div class="line">dynamicObjects.insert(std::move(pGameObject));</div>
+</div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab3f13e455106f7349c967e0313adb789" name="ab3f13e455106f7349c967e0313adb789"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3f13e455106f7349c967e0313adb789">&#9670;&#160;</a></span>DeleteAll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PhysicsEngineManager::PhysicsEngine::DeleteAll </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Очищает данные об уровне в игре и игровых объектах Реализация: </p><div class="fragment"><div class="line">dynamicObjects.clear();</div>
+<div class="line">pCurrentLevel.reset();</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a6a6280e3bdcb5c1bb20e598129fb62a6" name="a6a6280e3bdcb5c1bb20e598129fb62a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a6280e3bdcb5c1bb20e598129fb62a6">&#9670;&#160;</a></span>SetCurrentLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PhysicsEngineManager::PhysicsEngine::SetCurrentLevel </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_level.html">Level</a> &gt;&#160;</td>
+          <td class="paramname"><em>pLevel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Метод, передающий pCurrentLevel текущтий уровень, а именно обменивается данными с pLevel </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pLevel</td><td>- указатель на уровень Реализация: <div class="fragment"><div class="line">pCurrentLevel.swap(pLevel);</div>
+</div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a64ac995fba55246c149da54216883b84" name="a64ac995fba55246c149da54216883b84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64ac995fba55246c149da54216883b84">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PhysicsEngineManager::PhysicsEngine::Update </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>delta</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Метод, обрабатывающий каждый кадр во время игры и проверяющий, есть ли взаимодействия объектов. Если есть, выполняется их взаимодействие </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">delta</td><td>- единица времени кадра Реализация: <div class="fragment"><div class="line"><span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; currentObject : dynamicObjects)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">if</span> (currentObject-&gt;GetCurrentVelocity() &gt; 0)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">if</span> (currentObject-&gt;GetCurrentDirection().x != 0.f) </div>
+<div class="line">        {</div>
+<div class="line">            currentObject-&gt;GetCurrentPosition() = glm::vec2(currentObject-&gt;GetCurrentPosition().x, <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(currentObject-&gt;GetCurrentPosition().y / 4.f + 0.5f) * 4.f);</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (currentObject-&gt;GetCurrentDirection().y != 0.f) </div>
+<div class="line">        {</div>
+<div class="line">            currentObject-&gt;GetCurrentPosition() = glm::vec2(<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(currentObject-&gt;GetCurrentPosition().x / 4.f + 0.5f) * 4.f, currentObject-&gt;GetCurrentPosition().y);</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> newPosition = currentObject-&gt;GetCurrentPosition() + currentObject-&gt;GetCurrentDirection() * <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(currentObject-&gt;GetCurrentVelocity() * delta);</div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; colliders = currentObject-&gt;GetColliders();</div>
+<div class="line">        std::vector&lt;std::shared_ptr&lt;GameObjectInterface&gt;&gt; objectsToCheck = pCurrentLevel-&gt;GetLevelObjects(newPosition, newPosition + currentObject-&gt;GetSize());</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordtype">bool</span> hasCollision = <span class="keyword">false</span>;</div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; currentObjectToCheck : objectsToCheck)</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keyword">const</span> <span class="keyword">auto</span>&amp; collidersToCheck = currentObjectToCheck-&gt;GetColliders();</div>
+<div class="line">            <span class="keywordflow">if</span> (currentObjectToCheck-&gt;IsCollides(currentObject-&gt;GetObjectType()) &amp;&amp; !collidersToCheck.empty())</div>
+<div class="line">            {</div>
+<div class="line">                <span class="keywordflow">if</span> (HasInteraction(colliders, newPosition, collidersToCheck, currentObjectToCheck-&gt;GetCurrentPosition()))</div>
+<div class="line">                {</div>
+<div class="line">                    hasCollision = <span class="keyword">true</span>;</div>
+<div class="line">                    currentObjectToCheck-&gt;OnCollision();</div>
+<div class="line">                    <span class="keywordflow">break</span>;</div>
+<div class="line">                }</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">if</span> (!hasCollision)</div>
+<div class="line">        {</div>
+<div class="line">            currentObject-&gt;GetCurrentPosition() = newPosition;</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">else</span></div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">if</span> (currentObject-&gt;GetCurrentDirection().x != 0.f) </div>
+<div class="line">            {</div>
+<div class="line">                currentObject-&gt;GetCurrentPosition() = glm::vec2(<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(currentObject-&gt;GetCurrentPosition().x / 8.f + 0.5f) * 8.f, currentObject-&gt;GetCurrentPosition().y);</div>
+<div class="line">            }</div>
+<div class="line">            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (currentObject-&gt;GetCurrentDirection().y != 0.f) </div>
+<div class="line">            {</div>
+<div class="line">                currentObject-&gt;GetCurrentPosition() = glm::vec2(currentObject-&gt;GetCurrentPosition().x, <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(currentObject-&gt;GetCurrentPosition().y / 8.f + 0.5f) * 8.f);</div>
+<div class="line">            }</div>
+<div class="line">            currentObject-&gt;OnCollision();</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>Объявления и описания членов классов находятся в файлах:<ul>
 <li>GameEngineAndGame/src/PhysicsEngine/<a class="el" href="_physics_engine_8h_source.html">PhysicsEngine.h</a></li>
 <li>GameEngineAndGame/src/PhysicsEngine/PhysicsEngine.cpp</li>

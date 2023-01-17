@@ -81,6 +81,11 @@ $(function() {
   <div class="headertitle"><div class="title">Класс RenderEngine::VertexBuffer</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Данный класс нужен для работы с объектами вершинного буфера. которые могут хранить большое количество вершин в памяти GPU. Преимущество использования таких объектов буфера, что мы можем посылать в видеокарту большое количество наборов данных за один раз, без необходимости отправлять по одной вершине за раз. Функционал данного класса полностью совпадает с функционалом <a class="el" href="class_render_engine_1_1_index_buffer.html" title="Зачастую в играх разработчики хотят придавать объектам разные формы, а не только треугольные....">IndexBuffer</a>, только некоторые команды и параметры OpenGL отличаются.  
+ <a href="class_render_engine_1_1_vertex_buffer.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_vertex_buffer_8h_source.html">VertexBuffer.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Открытые члены</h2></td></tr>
@@ -109,7 +114,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>BindBuffer</b> () con
 void&#160;</td><td class="memItemRight" valign="bottom"><b>UnBindBuffer</b> () const</td></tr>
 <tr class="separator:a20437e8e07881f8499425172c363f73d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Данный класс нужен для работы с объектами вершинного буфера. которые могут хранить большое количество вершин в памяти GPU. Преимущество использования таких объектов буфера, что мы можем посылать в видеокарту большое количество наборов данных за один раз, без необходимости отправлять по одной вершине за раз. Функционал данного класса полностью совпадает с функционалом <a class="el" href="class_render_engine_1_1_index_buffer.html" title="Зачастую в играх разработчики хотят придавать объектам разные формы, а не только треугольные....">IndexBuffer</a>, только некоторые команды и параметры OpenGL отличаются. </p>
+</div><hr/>Объявления и описания членов классов находятся в файлах:<ul>
 <li>GameEngineAndGame/src/Renderer/<a class="el" href="_vertex_buffer_8h_source.html">VertexBuffer.h</a></li>
 <li>GameEngineAndGame/src/Renderer/VertexBuffer.cpp</li>
 </ul>

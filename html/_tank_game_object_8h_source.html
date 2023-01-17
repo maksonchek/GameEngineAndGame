@@ -98,7 +98,7 @@ $(function() {
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <a class="code hl_class" href="class_tank_game_object.html">TankGameObject</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> maxVelocity, <span class="keyword">const</span> glm::vec2&amp; position, <span class="keyword">const</span> glm::vec2&amp; size, <span class="keyword">const</span> <span class="keywordtype">float</span> layer);</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">void</span> Render() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_tank_game_object.html#ae3af922e4e22b48755cc2793e4cd3620">Render</a>() <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">enum class</span> ObjectOrientation : uint8_t</div>
@@ -111,11 +111,11 @@ $(function() {
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">void</span> SetOrientation(<span class="keyword">const</span> ObjectOrientation orientation);</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">void</span> UpdateFrame(<span class="keyword">const</span> <span class="keywordtype">double</span> delta) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_tank_game_object.html#a9c82797a3c87c2e29399105d872a965c">UpdateFrame</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> delta) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">double</span> GetMaxVelocity() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">void</span> SetVelocity(<span class="keyword">const</span> <span class="keywordtype">double</span> velocity) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_tank_game_object.html#a3bb5b79f6807f619f71547169bb4c502">SetVelocity</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> velocity) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">void</span> Fire();</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
@@ -140,10 +140,13 @@ $(function() {
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">bool</span> isSpawning;</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>};</div>
 <div class="ttc" id="aclass_bullet_html"><div class="ttname"><a href="class_bullet.html">Bullet</a></div><div class="ttdef"><b>Definition:</b> Bullet.h:12</div></div>
-<div class="ttc" id="aclass_game_object_interface_html"><div class="ttname"><a href="class_game_object_interface.html">GameObjectInterface</a></div><div class="ttdef"><b>Definition:</b> GameObjectInterface.h:7</div></div>
-<div class="ttc" id="aclass_render_engine_1_1_sprite_animator_html"><div class="ttname"><a href="class_render_engine_1_1_sprite_animator.html">RenderEngine::SpriteAnimator</a></div><div class="ttdef"><b>Definition:</b> SpriteAnimator.h:9</div></div>
+<div class="ttc" id="aclass_game_object_interface_html"><div class="ttname"><a href="class_game_object_interface.html">GameObjectInterface</a></div><div class="ttdoc">Виртуальный класс, создержащий в себе поля и методы, общие для всех возможных игровых объектов....</div><div class="ttdef"><b>Definition:</b> GameObjectInterface.h:11</div></div>
+<div class="ttc" id="aclass_render_engine_1_1_sprite_animator_html"><div class="ttname"><a href="class_render_engine_1_1_sprite_animator.html">RenderEngine::SpriteAnimator</a></div><div class="ttdoc">Класс, отвечающий за анимацию спрайтов, т.е смену текстуры при опредленных услових и как правило с оп...</div><div class="ttdef"><b>Definition:</b> SpriteAnimator.h:11</div></div>
 <div class="ttc" id="aclass_tank_game_object_html"><div class="ttname"><a href="class_tank_game_object.html">TankGameObject</a></div><div class="ttdef"><b>Definition:</b> TankGameObject.h:16</div></div>
-<div class="ttc" id="aclass_timer_html"><div class="ttname"><a href="class_timer.html">Timer</a></div><div class="ttdef"><b>Definition:</b> Timer.h:5</div></div>
+<div class="ttc" id="aclass_tank_game_object_html_a3bb5b79f6807f619f71547169bb4c502"><div class="ttname"><a href="class_tank_game_object.html#a3bb5b79f6807f619f71547169bb4c502">TankGameObject::SetVelocity</a></div><div class="ttdeci">void SetVelocity(const double velocity) override</div><div class="ttdef"><b>Definition:</b> TankGameObject.cpp:133</div></div>
+<div class="ttc" id="aclass_tank_game_object_html_a9c82797a3c87c2e29399105d872a965c"><div class="ttname"><a href="class_tank_game_object.html#a9c82797a3c87c2e29399105d872a965c">TankGameObject::UpdateFrame</a></div><div class="ttdeci">void UpdateFrame(const double delta) override</div><div class="ttdef"><b>Definition:</b> TankGameObject.cpp:98</div></div>
+<div class="ttc" id="aclass_tank_game_object_html_ae3af922e4e22b48755cc2793e4cd3620"><div class="ttname"><a href="class_tank_game_object.html#ae3af922e4e22b48755cc2793e4cd3620">TankGameObject::Render</a></div><div class="ttdeci">void Render() const override</div><div class="ttdef"><b>Definition:</b> TankGameObject.cpp:37</div></div>
+<div class="ttc" id="aclass_timer_html"><div class="ttname"><a href="class_timer.html">Timer</a></div><div class="ttdoc">Класс, необходимый для событий/анимаций в игре, которые незациклены и не длятся бесконечно....</div><div class="ttdef"><b>Definition:</b> Timer.h:8</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
