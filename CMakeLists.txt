@@ -3,6 +3,9 @@ cmake_minimum_required(VERSION 3.22.2 FATAL_ERROR)
 set(PROJECT_NAME GameEngine)
 project(${PROJECT_NAME})
 
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
 add_executable(${PROJECT_NAME} 
 	src/main.cpp
 
@@ -68,6 +71,7 @@ set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
 set(GLFW_INSTALL OFF CACHE BOOL "" FORCE)
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR})
 
 add_subdirectory(external/glfw)
 target_link_libraries(${PROJECT_NAME} glfw)
@@ -78,9 +82,16 @@ target_link_libraries(${PROJECT_NAME} glad)
 include_directories(external/glm)
 include_directories(external/jsonParser/include)
 
-
 set_target_properties(${PROJECT_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin/)
 
 add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
 					COMMAND ${CMAKE_COMMAND} -E copy_directory
 					${CMAKE_SOURCE_DIR}/res $<TARGET_FILE_DIR:${PROJECT_NAME}>/res)
+if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
+  set(CMAKE_INSTALL_PREFIX "${CMAKE_CURRENT_BINARY_DIR}/install" CACHE PATH "..." FORCE)
+endif()
+
+install(TARGETS ${PROJECT_NAME} 
+        CONFIGURATIONS Release
+        RUNTIME DESTINATION GameEngine)
+install(DIRECTORY res/ RUNTIME DESTINATION GameEngine/res)
