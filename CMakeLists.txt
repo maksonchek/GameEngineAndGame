@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.22.2 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.15 FATAL_ERROR)
 
 set(PROJECT_NAME GameEngine)
 project(${PROJECT_NAME})
