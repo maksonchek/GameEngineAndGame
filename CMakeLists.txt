@@ -71,7 +71,7 @@ set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
 set(GLFW_INSTALL OFF CACHE BOOL "" FORCE)
-set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR})
+
 
 add_subdirectory(external/glfw)
 target_link_libraries(${PROJECT_NAME} glfw)
@@ -100,15 +100,5 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 
 install(TARGETS ${PROJECT_NAME} 
         CONFIGURATIONS Release
-        RUNTIME DESTINATION GameEngine)
-install(DIRECTORY res/ RUNTIME DESTINATION GameEngine/res)
-
-find_package(Doxygen)
-if(DOXYGEN_FOUND)
-    configure_file(${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile.in ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile @ONLY)
-    add_custom_target(doc
-        ${DOXYGEN_EXECUTABLE} ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile
-        WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
-        COMMENT "Generating API documentation with Doxygen" VERBATIM
-    )
-endif()
+        DESTINATION GameEngine)
+install(DIRECTORY res/ DESTINATION GameEngine/res)
